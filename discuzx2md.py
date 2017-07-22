@@ -1,4 +1,6 @@
 import re
+import codecs
+import os
 
 attachlist = []
 
@@ -43,7 +45,7 @@ def urltolink(line):
 	line=re.sub(r'\[hide\]',r'\r\n',line)
 	return line
 
-fout=open("blog.txt", "w")
+fout=open("out/blog.txt", "w")
 
 allmd=open("mytitle6.csv")
 
@@ -53,10 +55,37 @@ for line in allmd.readlines():
 	nl = re.findall('\[attach\](\d+)\[\/attach\]', line)
 	if nl:
 		for a in nl:
-			line=re.sub(r'\[attach\]'+a+'\[\/attach\]','\r\n![cpuwolf]('+id2src(a)+')\r\n',line)
+			linkpth='/images/' + id2src(a).replace('"','')
+			line=re.sub(r'\[attach\]'+a+'\[\/attach\]','\r\n![cpuwolf]('+ linkpth +')\r\n',line)
 			print a
 	line=urltolink(line)
 	fout.write(line)
 
 allmd.close()
 fout.close()
+#preprocess is done, let's open it again
+fpre=open("out/blog.txt")
+
+wholetext=fpre.read()
+
+wholetextsinglefile=wholetext.split('|||')
+
+idx=1
+for stext in wholetextsinglefile:
+	try:
+		filesec=stext.split(';;;')
+	except ValueError:
+		print "split done"
+	else:
+		if len(filesec) > 1 and len(filesec[1].strip()) > 1 and len(filesec[0].strip()) > 1:
+			smd=open('out/vip_old'+str(idx)+'.md','w')
+			smd.write('---\r\n')
+			smd.write(('title: '+filesec[1].strip()+'\r\n'))
+			smd.write('date: '+filesec[0].strip()+'\r\n')
+			smd.write('---\r\n\r\n')
+			smd.write('## '+filesec[1].strip()+'\r\n\r\n')
+			smd.write(filesec[2])
+			smd.close()
+			os.system('iconv -t utf-8 -f gb2312 ' + 'out/vip_old'+str(idx)+'.md' + '> blog/source/_posts/vip_old'+str(idx)+'.md')
+		idx=idx+1
+fpre.close()
