@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: X-Plane VIP
+title: 你就是X-Plane 11 VIP
 subtitle:
 description: X-Plane 10 X-Plane 11 pilot
 author: cpuwolf
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: material-flow
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

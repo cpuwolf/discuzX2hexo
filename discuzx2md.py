@@ -75,7 +75,7 @@ for line in allmd.readlines():
 	nl = re.findall('\[attach\](\d+)\[\/attach\]', line)
 	if nl:
 		for a in nl:
-			linkpth='/images/' + id2src(a).replace('"','')
+			linkpth='/images/data/attachment/' + id2src(a).replace('"','')
 			line=re.sub(r'\[attach\]'+a+'\[\/attach\]','\r\n![cpuwolf]('+ linkpth +')\r\n',line)
 			print a
 	line=urltolink(line)
@@ -103,9 +103,8 @@ for stext in wholetextsinglefile:
 			smd.write(('title: '+filesec[1].strip()+'\r\n'))
 			smd.write('date: '+filesec[0].strip()+'\r\n')
 			smd.write('---\r\n\r\n')
-			smd.write('## '+filesec[1].strip()+'\r\n\r\n')
 			smd.write(filesec[2])
 			smd.close()
-			os.system('iconv -c -t utf-8 -f gb2312 ' + 'out/vip_old'+str(idx)+'.md' + '> blog/source/_posts/vip_old'+str(idx)+'.md')
+			os.system('iconv -c -t utf-8 -f gb2312 ' + 'out/vip_old'+str(idx)+'.md' + '> blog/source/_posts/forum_old'+str(idx)+'.md')
 		idx=idx+1
 fpre.close()
