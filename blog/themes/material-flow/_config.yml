@@ -27,18 +27,15 @@ links:
 
 # navigation menu
 menu:
-  - name: Home
+  - name: 主页
     slug: home
     url: /
-  - name: Archives
+  - name: 文档存档
     slug: archives
     url: /archives
-  - name: Gallery
-    slug: gallery
-    url: https://photos.google.com/album/AF1QipNoqKYgspQo5O1YhlFXGCQ7p575KBH3Yxf8WHL4?hl=zh-CN
-  - name: About
-    slug: about
-    url: /about
+  - name: 聊天室功能
+    slug: chat
+    url: /chat
 
 # widgets
 widgets:
