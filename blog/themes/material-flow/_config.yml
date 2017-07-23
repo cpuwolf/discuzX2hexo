@@ -51,8 +51,8 @@ less:
 # use url, not username
 social:
 - slug: github
-  url: https://github.com/stkevintan
-- slug: twitter
-  url: https://twitter.com/kevinsfork
+  url: https://github.com/cpuwolf
+- slug: csdn
+  url: http://blog.csdn.net/cpuwolf
 - slug: rss
 	url: /atom.xml
