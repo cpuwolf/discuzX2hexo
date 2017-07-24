@@ -1,6 +1,8 @@
 ---
 title: X-Plane10飞行摇杆必看设置：按键功能配置
 date: 2015-05-17 13:17:43
+categories:
+tags:
 ---
 
 

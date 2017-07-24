@@ -1,6 +1,8 @@
 ---
 title: Saab340 AutoCoarsen and CTOT的功能说明
 date: 2016-04-13 10:36:04
+categories:
+tags:
 ---
 
 The AutoCoarsen system was designed into the aircraft per single-engine climb certification requirements. With the autocoarsen computer turned on for takeoff and landing (in event of go-around), should an engine failure occur, the airplane will automatically "coarsen" the pitch of the inoperative engine's propeller to a mimimum drag setting (not completely feathered).

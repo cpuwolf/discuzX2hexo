@@ -1,6 +1,10 @@
 ---
 title: X-Plane导航数据Navigraph 1509
 date: 2015-06-07 05:29:24
+categories:
+- 更新
+tags:
+- 更新
 ---
 
 Navigraph致力于更新给导航数据给模拟飞行世界，当然也包括X-Plane

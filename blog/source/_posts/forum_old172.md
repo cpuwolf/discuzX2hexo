@@ -1,6 +1,8 @@
 ---
 title: GeoTIFF和JPEG2000包含经纬度的图片
 date: 2016-03-21 02:35:22
+categories:
+tags:
 ---
 
 昨天在学习用WorldEditor

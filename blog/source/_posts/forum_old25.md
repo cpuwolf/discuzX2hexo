@@ -1,6 +1,8 @@
 ---
 title: Inertial Navigation惯性导航
 date: 2015-05-26 07:39:37
+categories:
+tags:
 ---
 
 Inertial Navigation惯性导航=加速度传感器+角速度传感器+电子罗盘+GNSS

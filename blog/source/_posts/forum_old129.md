@@ -1,6 +1,8 @@
 ---
 title: 一个真正的飞行员对X-Plane的评价
 date: 2017-01-26 07:46:00
+categories:
+tags:
 ---
 
 

@@ -1,6 +1,10 @@
 ---
 title: 说到X-Plane不得不说的Austin Meyer
 date: 2015-05-27 10:51:37
+categories:
+- 插件
+tags:
+- 插件
 ---
 
 Austin Meyer, Laminar Research公司创始人，也是X-Plane专业模拟飞行的生父。

@@ -1,6 +1,8 @@
 ---
 title: X-Plane导航数据更新FMS数据1601
 date: 2016-01-10 12:59:31
+categories:
+tags:
 ---
 
 [https://www.navigraph.com/FmsDataManualInstall.aspx](https://www.navigraph.com/FmsDataManualInstall.aspx)

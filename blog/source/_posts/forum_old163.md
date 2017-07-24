@@ -1,6 +1,8 @@
 ---
 title: X-CSL联网飞行VATSIM通用飞机模型
 date: 2016-03-03 12:37:58
+categories:
+tags:
 ---
 
 X-CSL官网上并没有说自己支持VATSIM，但实际他和XSquawkBox兼容的很好

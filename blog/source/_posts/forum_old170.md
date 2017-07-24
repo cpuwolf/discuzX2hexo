@@ -1,6 +1,10 @@
 ---
 title: X-Plane地景终结者Ortho4XP简单测试
 date: 2016-03-08 13:49:06
+categories:
+- 地景
+tags:
+- 地景
 ---
 
 X-Plane的岛屿默认地景+48-6

@@ -1,6 +1,8 @@
 ---
 title: 运12F飞机获CAAC型号合格证
 date: 2017-01-08 09:46:38
+categories:
+tags:
 ---
 
 

@@ -1,6 +1,10 @@
 ---
 title: 重大消息：flightfactor将推出专业真实版A320
 date: 2017-05-11 22:35:16
+categories:
+- 放出
+tags:
+- 放出
 ---
 
 Flightfactor已经放出了预览图，届时会先以beta版放出，所以首批购买的模拟飞行员，会有打折

@@ -1,6 +1,8 @@
 ---
 title: Carenado King Air B200 V3飞行中出现黑视
 date: 2015-11-01 14:05:36
+categories:
+tags:
 ---
 
 

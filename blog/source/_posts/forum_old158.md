@@ -1,6 +1,8 @@
 ---
 title: 螺旋桨飞机如何做超速调节器测试OSG (Over Speed Governor test)
 date: 2016-03-01 05:38:14
+categories:
+tags:
 ---
 
 

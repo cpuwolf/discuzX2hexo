@@ -1,6 +1,8 @@
 ---
 title: 发现一个用blender在X-Plane创建3D地景物理的例子
 date: 2016-02-19 16:49:50
+categories:
+tags:
 ---
 
 

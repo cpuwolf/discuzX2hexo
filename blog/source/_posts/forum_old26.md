@@ -1,6 +1,10 @@
 ---
 title: X-Plane SDK 插件开发
 date: 2015-05-26 08:18:33
+categories:
+- 插件
+tags:
+- 插件
 ---
 
 X-Plane作为一个开放平台，X-Plane SDK提供了公开的接口，共开发者们进行二次开发

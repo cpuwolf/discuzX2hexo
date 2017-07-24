@@ -1,6 +1,8 @@
 ---
 title: x-camera插件轨道视角围绕多尼尔328涡桨飞机拍摄
 date: 2015-06-06 04:03:49
+categories:
+tags:
 ---
 
 [http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html](http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html)

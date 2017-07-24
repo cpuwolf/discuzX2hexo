@@ -1,6 +1,8 @@
 ---
 title: f-act,f-sim,frame,cpu,gpu,grnd,flit得知X-Plane硬件瓶颈
 date: 2017-02-02 04:59:20
+categories:
+tags:
 ---
 
 

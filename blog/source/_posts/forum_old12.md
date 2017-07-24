@@ -1,6 +1,12 @@
 ---
 title: X-Plane 10正版购买指南
 date: 2015-05-18 10:17:16
+categories:
+- 地景
+- 免费
+tags:
+- 地景
+- 免费
 ---
 
 2015年三月Laminar Research发布版本X-Plane 10.35，它的版权购买分为一下几种：

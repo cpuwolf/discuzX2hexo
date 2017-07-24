@@ -1,6 +1,8 @@
 ---
 title: C172西雅图的早晨
 date: 2015-11-07 03:59:54
+categories:
+tags:
 ---
 
 

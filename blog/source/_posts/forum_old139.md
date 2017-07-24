@@ -1,6 +1,10 @@
 ---
 title: JARDesign关于X-Plane 11的声明
 date: 2017-01-21 23:12:17
+categories:
+- 更新
+tags:
+- 更新
 ---
 
 **X-Plane 11产品政策**

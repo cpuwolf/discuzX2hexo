@@ -1,6 +1,8 @@
 ---
 title: X-Plane 11到底需要什么的硬件配置
 date: 2017-02-22 14:21:41
+categories:
+tags:
 ---
 
 X-Plane 11在图形设置是High时，对硬件的敏感度对比

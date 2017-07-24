@@ -1,6 +1,12 @@
 ---
 title: X-PLANE公司首席艺术家给AC3D软件很高的评价
 date: 2016-02-16 14:05:15
+categories:
+- 插件
+- 免费
+tags:
+- 插件
+- 免费
 ---
 
 我的名字是Sergio Santagada。将近9年，我一直为X-PLANE飞行模拟器的首席艺术家。 

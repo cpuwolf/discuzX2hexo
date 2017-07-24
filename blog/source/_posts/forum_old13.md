@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10 跨平台Windows, Mac, Linux, Android, IOS
 date: 2015-05-18 09:30:03
+categories:
+tags:
 ---
 
 

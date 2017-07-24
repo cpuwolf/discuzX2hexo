@@ -1,6 +1,10 @@
 ---
 title: X-Plane 11 60美金含X-Plane 10最后的购买机会
 date: 2017-03-30 05:04:23
+categories:
+- 放出
+tags:
+- 放出
 ---
 
 60美金买X-Plane 11 送X-Plane 10最后的购买机会，因为X-Plane 11 RC1今天已经发布。也就是说，X-Plane 11正式版本马上就要放出。那么一旦发布，不敢保证60美金还能包含正版X-Plane 10。

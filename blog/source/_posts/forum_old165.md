@@ -1,6 +1,8 @@
 ---
 title: Airspace空域分类的快速记忆法
 date: 2016-03-04 13:14:01
+categories:
+tags:
 ---
 
 6种空域如何记忆

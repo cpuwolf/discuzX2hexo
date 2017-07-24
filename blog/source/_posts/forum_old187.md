@@ -1,6 +1,8 @@
 ---
 title: 萨博340 X-Plane 10
 date: 2016-04-10 11:55:21
+categories:
+tags:
 ---
 
 

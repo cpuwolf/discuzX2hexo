@@ -1,6 +1,8 @@
 ---
 title: X-Plane高端电脑配置标准
 date: 2015-05-18 11:11:35
+categories:
+tags:
 ---
 
 给大家做个参考，X-Plane需要怎样的机器。

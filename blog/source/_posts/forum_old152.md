@@ -1,6 +1,10 @@
 ---
 title: X-Plane必装地景插件OpenSceneryX
 date: 2016-02-21 13:49:15
+categories:
+- 地景
+tags:
+- 地景
 ---
 
 OpenSceneryX是个X-Plane地景3D物体库，这样地景开发者，就可以不用花太多心思在创建3D物体，而只需要直接把OpenSceneryX的3D物体直接拿来用。

@@ -1,6 +1,8 @@
 ---
 title: X Plane的飞机舱门如何打开
 date: 2015-06-03 00:53:57
+categories:
+tags:
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: 随便发两张图
 date: 2016-04-06 12:15:14
+categories:
+tags:
 ---
 
 :lol :lol :lol

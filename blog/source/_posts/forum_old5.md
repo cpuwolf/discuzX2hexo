@@ -1,6 +1,8 @@
 ---
 title: x-plane10安装直播
 date: 2015-05-09 01:08:03
+categories:
+tags:
 ---
 
 

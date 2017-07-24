@@ -1,6 +1,8 @@
 ---
 title: Embraer E175 by X-Crafts不到240元人民币
 date: 2016-02-20 14:45:57
+categories:
+tags:
 ---
 
 X-Crafts组合的Embraer E175无论外观还是，3D座舱都达到非常高的水平，现在的售价是240元人民币

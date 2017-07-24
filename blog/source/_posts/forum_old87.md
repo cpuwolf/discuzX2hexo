@@ -1,6 +1,8 @@
 ---
 title: 看看X-Plane 10的驾驶舱里的太阳光影
 date: 2016-01-24 13:05:57
+categories:
+tags:
 ---
 
 

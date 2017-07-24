@@ -1,6 +1,8 @@
 ---
 title: KingAir B200 Prop Gov test switch螺旋桨调节器测试按钮
 date: 2015-10-31 13:25:55
+categories:
+tags:
 ---
 
 KingAir B200 Prop Gov test switch螺旋桨调节器测试按钮到底在哪个位置？

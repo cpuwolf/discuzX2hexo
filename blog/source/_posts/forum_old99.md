@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10 Aircraft Coordinates飞机坐标系
 date: 2016-05-03 03:43:16
+categories:
+tags:
 ---
 
 

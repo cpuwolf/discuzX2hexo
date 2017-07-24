@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10.35升级后画质提升
 date: 2015-05-31 01:58:06
+categories:
+tags:
 ---
 
 X-Plane 10.35升级后画质提升

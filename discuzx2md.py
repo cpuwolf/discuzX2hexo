@@ -123,6 +123,22 @@ def convutf8(ipath, opath):
     outf.write(tmpwstr)
     inf.close()
     outf.close()
+    
+mytaglist=[u"视频",u"更新",u"地景",u"计算",u"放出",u"消息",u"插件",u"地形",u"免费"]
+
+def writetag(ofile,text):
+    textgbk = unicode(text, "gbk")  
+    ofile.write("categories:\n")
+    for cate in mytaglist:
+        res=re.search(cate,textgbk)
+        if res:
+            ofile.write("- "+cate.encode("GBK")+"\n")
+    ofile.write("tags:\n")
+    for cate in mytaglist:
+        rest=re.search(cate,textgbk)
+        if rest:
+            ofile.write("- "+cate.encode("GBK")+"\n")
+    
 
 # input file
 fpre=open("out/preblog.txt" ,"rU")
@@ -143,6 +159,7 @@ for stext in wholetextsinglefile:
             smd.write('---\n')
             smd.write(('title: '+filesec[1].strip()+'\n'))
             smd.write('date: '+filesec[0].strip()+'\n')
+            writetag(smd,filesec[2].strip())
             smd.write('---\n\n')
             smd.write(filesec[2])
             smd.close()

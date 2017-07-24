@@ -1,6 +1,8 @@
 ---
 title: 如何快速心算heading对面的角度
 date: 2016-01-28 06:49:22
+categories:
+tags:
 ---
 
 现在30度的对面角度是多少？

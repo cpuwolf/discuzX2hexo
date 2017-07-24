@@ -1,6 +1,8 @@
 ---
 title: X-Plane黑夜如何冷舱启动手电筒功能
 date: 2015-11-08 14:09:25
+categories:
+tags:
 ---
 
 X-Plane黑夜如何冷舱启动？答案就是手电筒功能.

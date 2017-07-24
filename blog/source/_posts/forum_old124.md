@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10从此有了商业版的IXEG波音737
 date: 2016-04-24 01:17:39
+categories:
+tags:
 ---
 
 2016年4月 IXEG团队在X-Aviation开始正式发售Boeing 737-300，售价在

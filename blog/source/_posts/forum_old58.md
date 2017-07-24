@@ -1,6 +1,8 @@
 ---
 title: 2005年航空纪录片《one six right》不可错过
 date: 2015-10-26 03:06:02
+categories:
+tags:
 ---
 
 

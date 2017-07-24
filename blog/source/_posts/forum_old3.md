@@ -1,6 +1,8 @@
 ---
 title: 飞行模拟器如何上手？
 date: 2015-05-07 02:02:59
+categories:
+tags:
 ---
 
 

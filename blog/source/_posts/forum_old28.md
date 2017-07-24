@@ -1,6 +1,10 @@
 ---
 title: SLI/CrossFire多高端显卡互联交火技术对X-Plane无用
 date: 2015-05-27 03:15:31
+categories:
+- 地景
+tags:
+- 地景
 ---
 
 SLI/CrossFire多高端显卡互联交火技术对X-Plane无用

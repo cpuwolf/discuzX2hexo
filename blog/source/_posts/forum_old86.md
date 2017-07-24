@@ -1,6 +1,8 @@
 ---
 title: Beechcraft kingair B200飞往约塞米蒂国家公园
 date: 2016-01-24 13:02:13
+categories:
+tags:
 ---
 
 

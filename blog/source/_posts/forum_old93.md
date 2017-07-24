@@ -1,6 +1,8 @@
 ---
 title: 737MAX于今日在西雅图BFI首飞成功
 date: 2016-01-30 01:57:33
+categories:
+tags:
 ---
 
 

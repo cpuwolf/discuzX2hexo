@@ -1,6 +1,8 @@
 ---
 title: 旧金山的空客A320
 date: 2016-05-29 03:00:38
+categories:
+tags:
 ---
 
 

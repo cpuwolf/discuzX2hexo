@@ -1,6 +1,10 @@
 ---
 title: KSFO-KSAN旧金山飞圣地亚哥
 date: 2016-03-07 05:01:12
+categories:
+- 地景
+tags:
+- 地景
 ---
 
 为了达到最佳的飞行视觉效果，需要下载 HD Mesh

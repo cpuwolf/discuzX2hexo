@@ -1,6 +1,8 @@
 ---
 title: touch and go
 date: 2016-04-22 13:33:30
+categories:
+tags:
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10.51的自动地景生成效果
 date: 2016-12-23 00:00:36
+categories:
+tags:
 ---
 
 

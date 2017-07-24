@@ -1,6 +1,8 @@
 ---
 title: X-Plane 11西雅图中午阳光效果太碉了
 date: 2017-02-11 01:45:22
+categories:
+tags:
 ---
 
 

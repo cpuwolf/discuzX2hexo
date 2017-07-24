@@ -1,6 +1,8 @@
 ---
 title: X-Plane 10 KingAir驾驶舱欣赏
 date: 2015-05-10 13:24:35
+categories:
+tags:
 ---
 
 X-Plane 10优化的图形算法，将驾驶舱渲染的如此逼真，每个按钮knobs在太阳的直射下，都投下了阴影。

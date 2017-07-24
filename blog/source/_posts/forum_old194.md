@@ -1,6 +1,8 @@
 ---
 title: 从空中鸟瞰机场
 date: 2016-04-22 13:29:46
+categories:
+tags:
 ---
 
 

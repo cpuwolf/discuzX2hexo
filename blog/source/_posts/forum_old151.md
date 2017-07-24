@@ -1,6 +1,12 @@
 ---
 title: X-Plane必装免费地景World2XPlane
 date: 2016-02-21 12:55:29
+categories:
+- 地景
+- 插件
+tags:
+- 地景
+- 插件
 ---
 
 先闲话少说，直接看看World2XPlane能给你带来什么

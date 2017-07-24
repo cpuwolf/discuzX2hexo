@@ -1,6 +1,8 @@
 ---
 title: Carenado B200 KingAir，210元
 date: 2015-06-06 07:42:07
+categories:
+tags:
 ---
 
 Carenado B200 KingAir 比奇航空空中国王B200
