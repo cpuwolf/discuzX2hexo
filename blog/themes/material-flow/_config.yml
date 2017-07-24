@@ -1,7 +1,7 @@
 # Search
 search: 
   enable: true
-  service: hexo # google/hexo/algolia/azure/baidu
+  service: baidu # google/hexo/algolia/azure/baidu
   # google 
   google_api_key:
   google_engine_id:
@@ -14,7 +14,7 @@ search:
   azure_index_name:
   azure_query_key:
   # baidu
-  baidu_api_id:
+  baidu_api_id: 13826537042608078079
 
 # friends link
 links:
