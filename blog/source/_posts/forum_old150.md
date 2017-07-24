@@ -5,9 +5,7 @@ date: 2016-02-21 06:30:38
 
 今天发现一个收费的ATC，针对模拟飞行的。每月收费20美金。
 
-
 ![](http://www.pilotedge.net/assets/logo-c5ad135c4428e6f44bf909411a67f128.png)
-
 
 [http://www.pilotedge.net/](http://www.pilotedge.net/)
 

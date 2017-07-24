@@ -7,7 +7,6 @@ date: 2015-05-18 11:11:35
 
 
 
-
 * Intel Quad Core i-5 4690K Processor overclocked to 4.3GHz
 * 16 Gigabytes of DDR-3 1600MHz RAM
 * Dual Layer DVD Burner

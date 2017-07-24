@@ -9,5 +9,4 @@ date: 2015-06-19 02:27:47
 视角插件X-Camera 2.0
 
 
-http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html
-
+<video>http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html</video>

@@ -4,7 +4,7 @@ date: 2015-10-26 03:00:30
 ---
 
 
-
+
 
 旧金山机场租来，空气之王B200，前往约塞米帝国家公园.
 空气之王B200旧金山（KSFO）起飞，沿途进过，约塞米帝国家公园，降落妈妈湖/马姆莫斯湖（KMMH）。拍摄于X-Plane 10.41
@@ -28,8 +28,7 @@ date: 2015-10-26 03:00:30
 ![cpuwolf](/images/data/attachment/201510/26/112441zoqdkqtqxfxdqrkj.jpg)
 
 
-http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html
-
+<video>http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html</video>
 
 KMMH降落的航迹
 

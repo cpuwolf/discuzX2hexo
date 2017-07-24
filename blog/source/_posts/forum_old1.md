@@ -4,6 +4,6 @@ date: 2015-05-01 13:57:56
 ---
 
 
-
 
-http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf
+
+<video>http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf</video>

@@ -6,7 +6,6 @@ date: 2015-05-18 10:17:16
 2015年三月Laminar Research发布版本X-Plane 10.35，它的版权购买分为一下几种：
 
 
-
 * X-Plane 10家用版，59.99美金（约人民币360元）+运费。
 包含9张DVD
   里有Windows, Mac, Linux安装程序

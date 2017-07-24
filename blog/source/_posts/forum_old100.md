@@ -4,7 +4,7 @@ date: 2016-05-16 01:58:27
 ---
 
 
-
+
 
 XPlane2Blender 3.3.10 is released! download link
 [https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip](https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip)
@@ -49,7 +49,7 @@ please always bake animation, which makes easier to delete bones dependency
 
 ![cpuwolf](/images/data/attachment/201605/17/101241ddkclkwmm9kmxppc.jpg)
 
-[b]
+
 Insert Keyframes
 
 

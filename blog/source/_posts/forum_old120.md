@@ -22,12 +22,10 @@ X-Plane 11在图形设置是Extreme时，对硬件的敏感度对比
 当设置extreme设置时，对显卡的性能还是有区别的。这里列出了NVIDIA的显卡：
 
 
-
 * GTX1080
 * GTX1070
 * GTX 1060
 * GTX1050Ti
-
 
 
 

@@ -4,7 +4,7 @@ date: 2015-05-24 11:50:14
 ---
 
 
-
+
 
 **Real Terra Haze v2.03b3**可以让X-Plane 10的真实度增加不少，但是它需要LlyWithLua的支持，因为它本身只是个脚本
 
@@ -28,9 +28,7 @@ RTH打开后的效果
 
 
 
-
 (http://pan.baidu.com/s/1jGAFEEa)
-
 
 
 使用方法

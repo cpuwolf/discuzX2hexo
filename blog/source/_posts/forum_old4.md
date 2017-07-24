@@ -4,7 +4,7 @@ date: 2015-05-07 03:01:59
 ---
 
 
-
+
 
 
 ![cpuwolf](/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg)
@@ -35,22 +35,16 @@ date: 2015-05-07 03:01:59
 不要让这些仪表吓倒你。有的你可能从未见过。飞行员经常津津乐道于“冷舱”。事实上，这些东西很一目了然。
 仪表板。这是什么东西？
 
-
 ![](http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Cessna%20172%20panel.gif)
-
 
 失速警告指示器
 
-
 ![](http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Stall%20indicator.gif)
-
 
 指示灯会点亮：这表明（连同“蜂鸣器/喇叭”）飞机处于或接近失速状态。这意味着机翼太慢，不足以产生升力使飞机保持在空中。
 飞机的尾号
 
-
 ![](http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/N%20number.gif)
-
 
 在使用无线电通话时，使用字眼“Cessna 8742 Golf”或者简称为“42 Golf”。
 每架飞机都有它自己的尾号。在美国，标识飞机使用尾号，而世界上其他国家也有自己的标准，有的采用严格的没有任何数字的字母序列。哦，你为什么要说“Golf”？航空界使有音标字母，军方也使用类似的东西。Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf等。
@@ -58,9 +52,7 @@ date: 2015-05-07 03:01:59
 空速表
 
 
-
 ![](http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Airspeed%20%20indicator.gif)
-
 
 这个仪表单位是”节“。这里颜色带标注一些重要的信息。
 白色的弧线代表的襟翼可操作的速度范围。襟翼放下的最大速度在白色弧线的底端是85节。弧线顶端代表的飞机的失速速度与全襟翼，在这种情况下，30节左右。

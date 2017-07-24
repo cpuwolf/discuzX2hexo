@@ -5,7 +5,6 @@ date: 2017-05-08 10:04:50
 
 X-Plane 11默认导航数据应该是这个样子
 
-
 * earth_fix.dat
 * earth_awy.dat
 * earth_nav.dat

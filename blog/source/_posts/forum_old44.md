@@ -18,8 +18,6 @@ Navigraph致力于更新给导航数据给模拟飞行世界，当然也包括X-
 
 下载地址
 
-
 (http://pan.baidu.com/s/1gepyI6B)
-
 
 

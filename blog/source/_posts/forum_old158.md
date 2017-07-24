@@ -8,13 +8,11 @@ date: 2016-03-01 05:38:14
 
 The test should be done with engines running, and props unfeathered
 
-
 * engage OSG test switch 
 
 
-
-* Power Levers C FLIGHT IDLE
-* Condition Levers C MAX
+* Power Levers – FLIGHT IDLE
+* Condition Levers – MAX
 * Observe OSG TEST IN PROG advisory on the ED
 * Slowly advance POWER LEVERs until propeller speed stops increasing and “OSG
 
@@ -22,8 +20,7 @@ TEST PASS” appears on ED
 
 
 
-
-* POWER LEVER C FLIGHT IDLE
+* POWER LEVER – FLIGHT IDLE
 * Release OSG test switch when PLA is at FLIGHT IDLE or below
 
 

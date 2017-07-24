@@ -3,7 +3,7 @@ title: 如何更新X-Plane 11 A320导航数据
 date: 2017-05-08 09:58:19
 ---
 
-如果你需要更新你的导航数据,请使用Aerosoft/Navigraph――
+如果你需要更新你的导航数据,请使用Aerosoft/Navigraph——
 
 “JARDesign a320/330 Native format”
 

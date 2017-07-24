@@ -13,7 +13,6 @@ SDK2.1需要X-Plane 10以上的平台
 编译器的需求
 
 
-
 * MAC平台： X-Code 3.2 or newer, 32 and 64-bit Intel
 * Windows平台：Microsoft Visual Studio 2010 (32 and 64-bit)
 * Linux平台：makefile for GCC 4.x (32 and 64-bit)
@@ -22,7 +21,6 @@ SDK2.1需要X-Plane 10以上的平台
 
 
 SDK下载地址
-
 
 
 (http://pan.baidu.com/s/1bnyIJQB)

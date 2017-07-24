@@ -12,9 +12,7 @@ X-Plane 10 最新地景编辑器 [WorldEditor 1.41](http://developer.x-plane.com
 
 
 
-
 ![](http://developer.x-plane.com/wp-content/uploads/2015/12/Apt_guidelines_badt.jpg)
-
 
 
 本教程就是修改机场跑道的教材
