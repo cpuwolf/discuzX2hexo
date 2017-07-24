@@ -28,7 +28,7 @@ date: 2015-10-26 03:00:30
 ![cpuwolf](/images/data/attachment/201510/26/112441zoqdkqtqxfxdqrkj.jpg)
 
 
-{% iframe http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html [320] [240] %}
+[http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html](http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html)
 
 KMMH降落的航迹
 

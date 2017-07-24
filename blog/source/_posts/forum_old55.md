@@ -10,6 +10,6 @@ X-Plane 10.41是有史以来最流畅的一次升级，画面有很大的提升�
 
 ![cpuwolf](/images/data/attachment/201510/18/214741blln24nk2delo3a3.jpg)
 
-{% iframe http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html [320] [240] %}
+[http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html](http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html)
 
 

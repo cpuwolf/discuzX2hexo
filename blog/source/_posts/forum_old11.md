@@ -11,5 +11,5 @@ date: 2015-05-16 09:55:20
 
 
 
-{% iframe http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html [320] [240] %}
+[http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html](http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html)
 
