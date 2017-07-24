@@ -1,0 +1,49 @@
+  - name: bettersky
+    url: http://bettersky.ga/
+  - name: IXEG
+    url: http://ixeg.net/
+  - name: 
+    url: http://www.stoenworks.com/
+  - name: steptosky
+    url: http://steptosky.com/
+  - name: ND ART
+    url: http://nd-art-and-technology.com/
+  - name: X aviation
+    url: http://www.x-aviation.com
+  - name: Flight Factor
+    url: http://flightfactor.aero/
+  - name: JAR Design
+    url: http://jardesign.org/
+  - name: QPAC US
+    url: http://www.qpac-us.com/
+  - name: FlyJSim
+    url: http://www.flyjsim.com/
+  - name: X-PlaneπŸ∑Ω…ÃµÍ
+    url: http://store.x-plane.org/
+  - name: X-Plane forum
+    url: http://forums.x-plane.org/
+  - name: VFlyteAir
+    url: http://www.vflyteair.com/
+  - name: Dai Media
+    url: http://www.dai-media.com/
+  - name: beti-X
+    url: http://beti-x.com/
+  - name: Airfoillabs 
+    url: http://www.airfoillabs.com/
+  - name: simheaven
+    url: http://simheaven.com
+  - name: Aerobask
+    url: http://aerobask.com/
+  - name: Joan PC
+    url: http://x-plane.joanpc.com/
+  - name: simcoders
+    url: http://www.simcoders.com/
+  - name: alpilotx
+    url: http://www.alpilotx.net/
+  - name: badbadwether
+    url: http://www.badbadweather.com/
+  - name: vskylab
+    url: http://www.vskylabs.com/
+  - name: Jrollon
+    url: http://www.jrollon.com/CRJ.html
+  - name: 

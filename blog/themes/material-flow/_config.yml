@@ -18,11 +18,11 @@ search:
 
 # friends link
 links:
-  - name: FAA机场SIDSTAR
+  - name: 美国FAA机场进离场程序
     url: http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/
   - name: 模拟飞行航路查询
     url: http://rfinder.asalink.net/free/
-  - name: FAA飞行员手册
+  - name: 美国FAA飞行员手册
     url: http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/pilot_handbook/
   - name: 真实航路查询
     url: http://www.fltplan.com/
@@ -89,9 +89,9 @@ menu:
   - name: 文档存档
     slug: archives
     url: /archives
-  - name: 聊天室功能
+  - name: 实时聊天室
     slug: chat
-    url: /chat
+    url: /chat/
 
 # widgets
 widgets:
@@ -108,7 +108,7 @@ less:
 social:
 - slug: github
   url: https://github.com/cpuwolf
-- slug: csdn
-  url: http://blog.csdn.net/cpuwolf
+- slug: weibo
+  url: http://weibo.com/cpuwolf
 - slug: rss
-	url: /atom.xml
+  url: /atom.xml
