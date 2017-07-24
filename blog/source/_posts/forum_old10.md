@@ -6,4 +6,4 @@ date: 2015-05-16 09:18:28
 
 
 
-<video>http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2</video>
+{% iframe http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2 [320] [240] %}

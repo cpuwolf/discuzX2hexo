@@ -6,4 +6,4 @@ date: 2015-05-01 13:57:56
 
 
 
-<video>http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf</video>
+{% iframe http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf [320] [240] %}
