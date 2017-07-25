@@ -108,7 +108,7 @@ less:
 social:
 - slug: github
   url: https://github.com/cpuwolf
-- slug: weibo
+- slug: sina-weibo
   url: http://weibo.com/cpuwolf
 - slug: rss
   url: /atom.xml
