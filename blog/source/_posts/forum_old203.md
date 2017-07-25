@@ -2,7 +2,9 @@
 title: 如何更新默认X-Plane 11的导航数据
 date: 2017-05-08 10:04:50
 categories:
+- 导航数据
 tags:
+- 更新
 ---
 
 X-Plane 11默认导航数据应该是这个样子

@@ -126,13 +126,26 @@ def convutf8(ipath, opath):
     
 mytaglist=[u"视频",u"更新",u"地景",u"计算",u"放出",u"消息",u"插件",u"地形",u"免费"]
 
+mycatelist=[[u"导航数据",[u"导航数据"]],
+            [u"插件飞机",[u"737",u"757",u"320",u"777",u"727",u"767",u"插件"]],
+            [u"插件地景",[u"机场",u"地景",u"插件",u"地形"]],
+            [u"教程",[u"设置",u"计算",u"安装",u"下载"]],
+            [u"新闻",[u"发布",u"放出",u"购买",u"美金"]],
+            ]
+            
+def gencategery(opath, t_gbk):
+    opath.write("categories:\n")
+    for cate in mycatelist:
+        for kword in cate[1]:
+            res=re.search(kword,t_gbk)
+        if res:
+            opath.write("- "+cate[0].encode("GBK")+"\n")
+            return
+
 def writetag(ofile,text):
     textgbk = unicode(text, "gbk")  
-    ofile.write("categories:\n")
-    for cate in mytaglist:
-        res=re.search(cate,textgbk)
-        if res:
-            ofile.write("- "+cate.encode("GBK")+"\n")
+    gencategery(ofile, textgbk)
+
     ofile.write("tags:\n")
     for cate in mytaglist:
         rest=re.search(cate,textgbk)
@@ -159,7 +172,7 @@ for stext in wholetextsinglefile:
             smd.write('---\n')
             smd.write(('title: '+filesec[1].strip()+'\n'))
             smd.write('date: '+filesec[0].strip()+'\n')
-            writetag(smd,filesec[2].strip())
+            writetag(smd,filesec[1].strip()+filesec[2].strip())
             smd.write('---\n\n')
             smd.write(filesec[2])
             smd.close()

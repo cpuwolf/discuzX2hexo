@@ -2,8 +2,7 @@
 title: NOAA weather2.2.1最真实免费X-Plane 10的实时天气插件
 date: 2016-03-01 05:24:14
 categories:
-- 插件
-- 免费
+- 插件飞机
 tags:
 - 插件
 - 免费

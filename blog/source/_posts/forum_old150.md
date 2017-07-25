@@ -2,6 +2,7 @@
 title: 发现一个收费的模拟飞行ATC 20美金每月
 date: 2016-02-21 06:30:38
 categories:
+- 新闻
 tags:
 ---
 

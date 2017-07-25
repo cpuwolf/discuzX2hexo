@@ -2,7 +2,7 @@
 title: X-Plane 11 60美金含X-Plane 10最后的购买机会
 date: 2017-03-30 05:04:23
 categories:
-- 放出
+- 新闻
 tags:
 - 放出
 ---

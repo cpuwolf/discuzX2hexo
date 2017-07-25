@@ -2,6 +2,7 @@
 title: Embraer E195 v2 by X-Crafts
 date: 2017-02-02 06:00:31
 categories:
+- 新闻
 tags:
 ---
 

@@ -2,7 +2,7 @@
 title: 发现另外一个X-Plane连飞网站
 date: 2017-05-17 08:54:00
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

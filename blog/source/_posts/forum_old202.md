@@ -2,7 +2,7 @@
 title: 如何更新X-Plane 11 A320导航数据
 date: 2017-05-08 09:58:19
 categories:
-- 更新
+- 导航数据
 tags:
 - 更新
 ---

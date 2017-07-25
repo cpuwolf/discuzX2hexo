@@ -2,7 +2,7 @@
 title: 最值得购买的X-Plane插件飞机
 date: 2016-02-20 13:17:41
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

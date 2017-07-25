@@ -2,7 +2,7 @@
 title: KSFO-KSAN旧金山飞圣地亚哥
 date: 2016-03-07 05:01:12
 categories:
-- 地景
+- 教程
 tags:
 - 地景
 ---
