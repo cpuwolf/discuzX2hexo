@@ -2,7 +2,7 @@
 title: X-plane 10刚安装完需要配置
 date: 2015-05-09 06:09:11
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

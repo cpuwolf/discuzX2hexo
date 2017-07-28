@@ -2,7 +2,7 @@
 title: X-Plane SDK 插件开发
 date: 2015-05-26 08:18:33
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

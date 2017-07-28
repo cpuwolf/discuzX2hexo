@@ -6,13 +6,14 @@ Created on July 2017
 """
 
 import re
-import codecs
-import os
-import io
 
 attachlist = []
 
 # get attachment list
+# format
+# 2,"201505/06/160507sxu6iuwaawpaay7b.jpg"
+# 3,"201505/07/172718j6ntgnfv7snttnfy.jpg"
+#
 fatch=open("myattachlist.csv")
 
 for line in fatch.readlines():
@@ -95,6 +96,11 @@ def preproc(line):
 
 
 # input file
+# format
+#
+# 2015-05-01 13:57:56;;;title;;;content
+#
+
 allmd=open("mytitle6.csv", 'rU')
 # output file
 fout=open("out/preblog.txt", "w")
@@ -115,6 +121,8 @@ fout.close()
 
 
 #preprocess is done, let's open it again
+
+#convert GBK to UTF-8 file
 def convutf8(ipath, opath):
     outf=open(opath, "w")
     inf=open(ipath ,"rU")
@@ -126,13 +134,26 @@ def convutf8(ipath, opath):
     
 mytaglist=[u"视频",u"更新",u"地景",u"计算",u"放出",u"消息",u"插件",u"地形",u"免费"]
 
-def writetag(ofile,text):
-    textgbk = unicode(text, "gbk")  
-    ofile.write("categories:\n")
-    for cate in mytaglist:
-        res=re.search(cate,textgbk)
+mycatelist=[[u"导航数据",[u"导航数据"]],
+            [u"插件飞机",[u"737",u"757",u"320",u"777",u"727",u"767",u"插件"]],
+            [u"插件地景",[u"机场",u"地景",u"插件",u"地形"]],
+            [u"教程",[u"设置",u"计算",u"安装",u"下载"]],
+            [u"新闻",[u"发布",u"放出",u"购买",u"美金"]],
+            ]
+            
+def gencategery(opath, t_gbk):
+    opath.write("categories:\n")
+    for cate in mycatelist:
+        for kword in cate[1]:
+            res=re.search(kword,t_gbk)
         if res:
-            ofile.write("- "+cate.encode("GBK")+"\n")
+            opath.write("- "+cate[0].encode("GBK")+"\n")
+            return
+
+def writetagcat(ofile,text):
+    textgbk = unicode(text, "gbk")  
+    gencategery(ofile, textgbk)
+
     ofile.write("tags:\n")
     for cate in mytaglist:
         rest=re.search(cate,textgbk)
@@ -159,11 +180,13 @@ for stext in wholetextsinglefile:
             smd.write('---\n')
             smd.write(('title: '+filesec[1].strip()+'\n'))
             smd.write('date: '+filesec[0].strip()+'\n')
-            writetag(smd,filesec[2].strip())
+            writetagcat(smd,filesec[1].strip()+filesec[2].strip())
             smd.write('---\n\n')
             smd.write(filesec[2])
             smd.close()
+            # input file => output file
             convutf8('out/vip_old'+str(idx)+'.md', 'blog/source/_posts/forum_old'+str(idx)+'.md')
+            #user external linux command to convert gb2312 to utf-8
             #os.system('iconv -c -t utf-8 -f gb2312 ' + 'out/vip_old'+str(idx)+'.md' + '> blog/source/_posts/forum_old'+str(idx)+'.md')
         idx=idx+1
 fpre.close()

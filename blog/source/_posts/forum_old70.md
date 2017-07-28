@@ -2,7 +2,6 @@
 title: 即将发布的X-Plane 11 beta3版：轮胎力建模..当飞机不动
 date: 2016-12-22 23:18:02
 categories:
-- 更新
 tags:
 - 更新
 ---

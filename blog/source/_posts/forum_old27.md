@@ -2,7 +2,9 @@
 title: X-Plane SDK 2.1.3插件开发包 开发人员专用
 date: 2015-05-26 08:32:27
 categories:
+- 插件飞机
 tags:
+- 插件
 ---
 
 X-Plane SDK 2.1.3

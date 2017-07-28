@@ -2,6 +2,7 @@
 title: X-Plane 10从此有了商业版的IXEG波音737
 date: 2016-04-24 01:17:39
 categories:
+- 新闻
 tags:
 ---
 

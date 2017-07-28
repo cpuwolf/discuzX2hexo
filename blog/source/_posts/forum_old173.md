@@ -2,6 +2,7 @@
 title: 如何下载google带地理坐标信息的卫星地图
 date: 2016-03-22 02:56:49
 categories:
+- 教程
 tags:
 ---
 

@@ -2,7 +2,7 @@
 title: EZPushback开源X-Plane 10插件
 date: 2016-04-24 05:50:31
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

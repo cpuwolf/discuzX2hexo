@@ -2,8 +2,9 @@
 title: JAR Design历时两年发布免费插件X-Life，飞行不再孤单
 date: 2016-02-28 11:19:09
 categories:
-- 免费
+- 插件飞机
 tags:
+- 插件
 - 免费
 ---
 

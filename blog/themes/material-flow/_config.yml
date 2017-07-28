@@ -1,7 +1,7 @@
 # Search
 search: 
   enable: true
-  service: hexo # google/hexo/algolia/azure/baidu
+  service: baidu # google/hexo/algolia/azure/baidu
   # google 
   google_api_key:
   google_engine_id:
@@ -14,7 +14,7 @@ search:
   azure_index_name:
   azure_query_key:
   # baidu
-  baidu_api_id:
+  baidu_api_id: 13826537042608078079
 
 # friends link
 links:
@@ -34,27 +34,27 @@ links:
     url: http://x-plane.vip/
   - name: cpuwolf Github
     url: https://github.com/cpuwolf/
-  - name: bettersky
+  - name: bettersky cloud
     url: http://bettersky.ga/
-  - name: IXEG
+  - name: IXEG 737
     url: http://ixeg.net/
-  - name: steptosky
+  - name: steptosky FF757
     url: http://steptosky.com/
   - name: ND ART
     url: http://nd-art-and-technology.com/
-  - name: X aviation
+  - name: X aviation IXEG737
     url: http://www.x-aviation.com
-  - name: Flight Factor
+  - name: Flight Factor FF757 FF777
     url: http://flightfactor.aero/
-  - name: JAR Design
+  - name: JAR Design A320 A330
     url: http://jardesign.org/
-  - name: QPAC US
+  - name: QPAC US A320
     url: http://www.qpac-us.com/
-  - name: FlyJSim
+  - name: FlyJSim B727 B732
     url: http://www.flyjsim.com/
   - name: X-Plane官方商店
     url: http://store.x-plane.org/
-  - name: X-Plane forum
+  - name: X-Plane最大论坛
     url: http://forums.x-plane.org/
   - name: VFlyteAir
     url: http://www.vflyteair.com/
@@ -64,7 +64,7 @@ links:
     url: http://beti-x.com/
   - name: Airfoillabs
     url: http://www.airfoillabs.com/
-  - name: simheaven
+  - name: simheaven 地景
     url: http://simheaven.com
   - name: Aerobask
     url: http://aerobask.com/
@@ -74,12 +74,14 @@ links:
     url: http://www.simcoders.com/
   - name: alpilotx
     url: http://www.alpilotx.net/
-  - name: badbadwether
+  - name: badbadweather super bad weather
     url: http://www.badbadweather.com/
   - name: vskylab
     url: http://www.vskylabs.com/
-  - name: Jrollon
+  - name: Jrollon CRJ-200
     url: http://www.jrollon.com/CRJ.html
+  - name: Classic Aircraft
+    url: http://forjets.netfirms.com/
 
 # navigation menu
 menu:
@@ -108,7 +110,7 @@ less:
 social:
 - slug: github
   url: https://github.com/cpuwolf
-- slug: weibo
+- slug: sina-weibo
   url: http://weibo.com/cpuwolf
 - slug: rss
   url: /atom.xml

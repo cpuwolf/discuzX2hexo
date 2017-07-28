@@ -2,7 +2,7 @@
 title: FlyWithLua 2.3.3 X-Plane 10 Lua脚本系统
 date: 2015-05-24 11:33:04
 categories:
-- 插件
+- 插件飞机
 tags:
 - 插件
 ---

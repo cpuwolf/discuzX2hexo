@@ -2,6 +2,7 @@
 title: X-Plane 11安装方法和下载地址
 date: 2017-02-02 05:54:07
 categories:
+- 教程
 tags:
 ---
 

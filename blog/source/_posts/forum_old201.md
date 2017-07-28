@@ -2,8 +2,7 @@
 title: x737FMC V3.22兼容X-Plane11
 date: 2017-05-04 08:08:51
 categories:
-- 插件
-- 免费
+- 插件飞机
 tags:
 - 插件
 - 免费

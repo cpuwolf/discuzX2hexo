@@ -2,6 +2,7 @@
 title: JAR Design A320 NEO 3.0 beta 2 for X-Plane 11已经发布
 date: 2017-02-16 23:19:08
 categories:
+- 教程
 tags:
 ---
 

@@ -2,8 +2,7 @@
 title: X-Plane 10正版购买指南
 date: 2015-05-18 10:17:16
 categories:
-- 地景
-- 免费
+- 教程
 tags:
 - 地景
 - 免费
