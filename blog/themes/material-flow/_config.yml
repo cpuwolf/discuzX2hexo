@@ -24,16 +24,16 @@ links:
     url: http://rfinder.asalink.net/free/
   - name: 美国FAA飞行员手册
     url: http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/pilot_handbook/
-  - name: 真实航路查询
+  - name: 北美真实航路查询
     url: http://www.fltplan.com/
-  - name: LOWI机场说明
+  - name: 奥地利LOWI机场说明
     url: https://www.vacc-austria.org/?page=content/chartlist&icao=LOWI
   - name: cpuwolf的博客
     url: http://blog.csdn.net/cpuwolf
-  - name: X-Plane 11
-    url: http://x-plane.vip/
-  - name: cpuwolf Github
-    url: https://github.com/cpuwolf/
+  - name: Marginal AutoGate
+    url: https://marginal.org.uk/x-planescenery/plugins.html
+  - name: RuScenery
+    url: http://ruscenery.x-air.ru/
   - name: bettersky cloud
     url: http://bettersky.ga/
   - name: IXEG 737
@@ -66,6 +66,8 @@ links:
     url: http://www.airfoillabs.com/
   - name: simheaven 地景
     url: http://simheaven.com
+  - name: OpenSceneryX 地景库
+    url: https://www.opensceneryx.com/
   - name: Aerobask
     url: http://aerobask.com/
   - name: Joan PC
@@ -74,7 +76,7 @@ links:
     url: http://www.simcoders.com/
   - name: alpilotx
     url: http://www.alpilotx.net/
-  - name: badbadweather super bad weather
+  - name: 实时世界坏天气机场
     url: http://www.badbadweather.com/
   - name: vskylab
     url: http://www.vskylabs.com/
