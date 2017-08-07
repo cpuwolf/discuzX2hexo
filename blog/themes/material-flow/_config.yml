@@ -30,6 +30,8 @@ links:
     url: https://www.vacc-austria.org/?page=content/chartlist&icao=LOWI
   - name: 国泰航空虚拟航空
     url: http://cpava.org/
+  - name: 语音控制副驾驶
+    url: https://planecommand.com/
   - name: XPUIPC
     url: http://www.tosi-online.de/XPUIPC/
   - name: cpuwolf的博客
@@ -42,11 +44,11 @@ links:
     url: http://bettersky.ga/
   - name: IXEG 737
     url: http://ixeg.net/
-  - name: steptosky FF757
+  - name: steptosky FF B757
     url: http://steptosky.com/
   - name: ND ART
     url: http://nd-art-and-technology.com/
-  - name: X aviation IXEG737
+  - name: X aviation IXEG B737
     url: http://www.x-aviation.com
   - name: Flight Factor FF757 FF777
     url: http://flightfactor.aero/
@@ -54,11 +56,11 @@ links:
     url: http://jardesign.org/
   - name: QPAC US A320
     url: http://www.qpac-us.com/
-  - name: FlyJSim B727 B732
+  - name: FlyJSim B727 B737-200
     url: http://www.flyjsim.com/
-  - name: X-Plane官方商店
+  - name: X-Plane.org官方商店
     url: http://store.x-plane.org/
-  - name: X-Plane最大论坛
+  - name: X-Plane 10/11世界最大论坛
     url: http://forums.x-plane.org/
   - name: VFlyteAir
     url: http://www.vflyteair.com/
@@ -66,7 +68,7 @@ links:
     url: http://www.dai-media.com/
   - name: beti-X
     url: http://beti-x.com/
-  - name: Airfoillabs
+  - name: Airfoillabs C172
     url: http://www.airfoillabs.com/
   - name: simheaven 地景
     url: http://simheaven.com
@@ -74,7 +76,7 @@ links:
     url: https://www.opensceneryx.com/
   - name: Aerobask
     url: http://aerobask.com/
-  - name: Joan PC
+  - name: Joan PC实时天气插件
     url: http://x-plane.joanpc.com/
   - name: simcoders
     url: http://www.simcoders.com/
