@@ -26,6 +26,8 @@ links:
     url: http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/pilot_handbook/
   - name: 北美真实航路查询
     url: http://www.fltplan.com/
+  - name: 真实航路天气查询
+    url: https://www.ventusky.com/
   - name: 奥地利LOWI机场说明
     url: https://www.vacc-austria.org/?page=content/chartlist&icao=LOWI
   - name: 国泰航空虚拟航空
