@@ -20,6 +20,8 @@ search:
 links:
   - name: 美国FAA机场进离场程序
     url: http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/
+  - name: 模拟飞行世界航路查询
+    url: https://flightplandatabase.com/
   - name: 模拟飞行航路查询
     url: http://rfinder.asalink.net/free/
   - name: 美国FAA飞行员手册
