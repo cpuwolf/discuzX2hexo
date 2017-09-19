@@ -56,3 +56,12 @@ XP的设置里面有多人游戏设置，如图
 {% asset_img setting.jpg x-plane 11 %}
 
 这里的逻辑是，把除你之外的其他所有小伙伴的IP，都要加进来。
+
+## Hamachi安装错误 ##
+
+如果hamachi.msi安装错误，那么导入下面的注册表，到你的系统。
+
+{% asset_link msi_runas_admin.reg %}
+
+之后，右键点击hamachi.msi文件，会多一个"Run as administrator“菜单，点击运行即可
+
