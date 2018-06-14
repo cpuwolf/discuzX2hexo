@@ -53,3 +53,9 @@ select * from pre_common_friendlink;
 ```
 
 现在我拿到了一堆的csv文件，下一步我准备把他们导出为一个个markdown文件，作为博客发布
+
+# Hexo usage
+
+how to post?
+
+hexo new post "title"
