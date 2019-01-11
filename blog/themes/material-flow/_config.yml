@@ -103,7 +103,7 @@ menu:
   - name: 文档存档
     slug: archives
     url: /archives
-  - name: 实时聊天室
+  - name: XTouchDownRecorder
     slug: chat
     url: /chat/
 
