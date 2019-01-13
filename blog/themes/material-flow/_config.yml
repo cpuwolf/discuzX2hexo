@@ -104,8 +104,8 @@ menu:
     slug: archives
     url: /archives
   - name: XTouchDownRecorder
-    slug: chat
-    url: /chat/
+    slug: landings
+    url: /xtdr/
 
 # widgets
 widgets:
