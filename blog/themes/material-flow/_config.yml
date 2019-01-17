@@ -18,6 +18,10 @@ search:
 
 # friends link
 links:
+  - name: XTouchDownRecorder官方网址
+    url: https://x-plane.vip/xtdr/
+  - name: ff777wingflexfix
+    url: https://github.com/cpuwolf/pyff777wingflexfix/releases
   - name: 美国FAA机场进离场程序
     url: http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/
   - name: 模拟飞行世界航路查询
