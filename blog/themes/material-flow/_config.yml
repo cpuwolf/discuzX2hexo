@@ -109,7 +109,7 @@ menu:
     url: /archives
   - name: XTouchDownRecorder
     slug: landings
-    url: /xtdr/
+    url: https://x-plane.vip/xtdr/
 
 # widgets
 widgets:
