@@ -25,7 +25,7 @@ X-Plane 11局域网连飞的飞机是会参与气动运算的。也就是说前�
 
 局域网联网是没有中心服务器的概念，每个小伙伴都是对等的。可是除了上大学时，宿舍里的同学可以局域网，在家怎么和小伙伴局域网？有个概念，就这样诞生了，叫虚拟局域网
 
-<embed src="https://vswf.douyucdn.cn/share/vshare.swf?vid=p2V0JMV85j4vRY5k" allowFullScreen="true" quality="high" width="480" height="350" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+<embed src="https://vswf.douyucdn.cn/share/vshare.swf?vid=p2V0JMV85j4vRY5k" allowFullScreen="true" quality="high" width="400" height="300" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 
 ## 虚拟局域网 ##
 
