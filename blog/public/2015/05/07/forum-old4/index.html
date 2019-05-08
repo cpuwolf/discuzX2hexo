@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>从零开始玩飞行模拟器 | X-Plane VIP</title>
+  <meta name="baidu-site-verification" content="aA7Ivg9CdN" />
+  <meta name="description" content="X-Plane 10 X-Plane 11 模拟飞行  下载" />
+  <meta name="keywords" content="X-plane10,XP10,X-plane11,XP11下载,x-plane11下载,FSX,p3dv4,XP11插件机,模拟飞行,飞行模拟游戏,模拟飞行10,飞行模拟器,微软模拟飞行2012,pmdg737,pmdg747,enb" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="X-Plane VIP">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本教程的目的飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不">
+<meta name="keywords" content="计算">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始玩飞行模拟器">
+<meta property="og:url" content="http://x-plane.vip/2015/05/07/forum-old4/index.html">
+<meta property="og:site_name" content="X-Plane VIP">
+<meta property="og:description" content="本教程的目的飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://x-plane.vip/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg">
+<meta property="og:image" content="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Cessna%20172%20panel.gif">
+<meta property="og:image" content="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Stall%20indicator.gif">
+<meta property="og:image" content="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/N%20number.gif">
+<meta property="og:image" content="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Airspeed%20%20indicator.gif">
+<meta property="og:updated_time" content="2017-07-28T23:48:04.556Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="从零开始玩飞行模拟器">
+<meta name="twitter:description" content="本教程的目的飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不">
+<meta name="twitter:image" content="http://x-plane.vip/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg">
+    
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?db6c07f70ed5e4a5d3324deb8a94fa51";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script> 
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				X-Plane VIP
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								文档存档
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-landings' href='https://x-plane.vip/xtdr/'>
+								XTouchDownRecorder
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon icon-search"></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><span class="icon icon-search flat-box"></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><span class="icon icon-menu flat-box"></span></a></li>
+			</ul>
+		</div>
+		
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'>
+				Word of Forks
+			</a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><span class="icon icon-chat_bubble_outline flat-box"></span></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><span class="icon icon-arrow_upward flat-box"></span></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><span class="icon icon-format_list_numbered flat-box"></span></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				主页
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				文档存档
+			</a>
+		
+			<a href="https://x-plane.vip/xtdr/" class="nav-landings nav">
+				XTouchDownRecorder
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-forum-old4"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2015/05/07/forum-old4/">
+    	从零开始玩飞行模拟器
+    </a>
+  </h2>
+	<time>
+	  5月 7, 2015
+	</time>
+	
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p><img src="/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg" alt="cpuwolf"></p>
+<p>本教程的目的<br>飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。<br>希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不管三七二十一加了油门就冲上云霄。但这会很难操作，并且会最终让你失望，如果你在上天前完全不懂的飞行的基本飞行原理。FSX, Prepar3D, X-plane, Flightgear等，这些模拟器有的会模拟的非常精准，所以如果你可以理解一些空气动力学，明白一个飞行原理，会让你的飞行旅程更加愉快。本教程的有些知识可能超出初学者范畴，但是他们会引导你进入更高层次的飞行境界。</p>
+<p>用于本教程中使用的飞行模拟器<br>市面上有许多模拟器，但是我不得不选择一个。下面图片是截取自X-Plane，然而在本教程适用于所有的飞行模拟器，甚至实际的飞机。</p>
+<p>本教程中使用的飞机<br>飞行培训的目的，我们将使用单发动机通用航空飞机Cessna 172 Skyhawk。</p>
+<p>如何讨论<br>知识点深度根据读者的不同而不同。有一些人只是想知道如何飞起来，这并没有什么错。还有一些想知道更详细的信息，以及为什么飞机有着各种理论。为了满足双方要求，我只讲述一些最需要的基本知识。有些段落会有些更深入的知识点，你不是必须去读这些的章节，但它会提升你的知识水平。</p>
+<p>“真实世界”与“模拟世界”</p>
+<p>但我们讨论飞行模拟器的时候，我对“真实世界”这个词汇过于敏感。在我看来，这有些自命不凡，所以请不要只是幻想所谓的“真实世界”。但是许多模拟飞行飞行员，他们很认真的对待自己每一次飞行，其中有些是有执照的飞行员，他们使用模拟器来提高自己的技能。<br>不得不说，这个词是公认的，所以用它我会，但我会退缩一点每次。如果你能拿出一个更好的词，请让我知道。<br>（荷兰的Bas Cost Budde说过：我对“物理世界”的理解是操作错误会导致死亡，而“计算机世界”不会）</p>
+<p>让我们点火启动飞机<br>当画面出现在您的显示器，而你坐在驾驶舱。这是X-Plane Cessna 172前面板。它可能出现与你的模拟器软件有些不同。没有问题的，请不要担心。这东西是标准的，面板上的仪表几乎相同，无论你用的是什么模拟器软件。然而，如果你把你的头塞进一架现代的塞斯纳172，这画面也是大同小异。</p>
+<p>不要让这些仪表吓倒你。有的你可能从未见过。飞行员经常津津乐道于“冷舱”。事实上，这些东西很一目了然。<br>仪表板。这是什么东西？</p>
+<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Cessna%20172%20panel.gif" alt=""></p>
+<p>失速警告指示器</p>
+<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Stall%20indicator.gif" alt=""></p>
+<p>指示灯会点亮：这表明（连同“蜂鸣器/喇叭”）飞机处于或接近失速状态。这意味着机翼太慢，不足以产生升力使飞机保持在空中。<br>飞机的尾号</p>
+<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/N%20number.gif" alt=""></p>
+<p>在使用无线电通话时，使用字眼“Cessna 8742 Golf”或者简称为“42 Golf”。<br>每架飞机都有它自己的尾号。在美国，标识飞机使用尾号，而世界上其他国家也有自己的标准，有的采用严格的没有任何数字的字母序列。哦，你为什么要说“Golf”？航空界使有音标字母，军方也使用类似的东西。Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf等。</p>
+<p>空速表</p>
+<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Airspeed%20%20indicator.gif" alt=""></p>
+<p>这个仪表单位是”节“。这里颜色带标注一些重要的信息。<br>白色的弧线代表的襟翼可操作的速度范围。襟翼放下的最大速度在白色弧线的底端是85节。弧线顶端代表的飞机的失速速度与全襟翼，在这种情况下，30节左右。</p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+      
+        <a href="/tags/计算/">计算</a>
+      
+	  </div>
+    
+		
+	
+		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2015/05/09/forum-old5/" rel="prev"  title="x-plane10安装直播">
+						x-plane10安装直播 
+					</a></span>
+				
+				
+					<span class="art-item-right">next：<a href="/2015/05/07/forum-old3/" rel="next"  title="飞行模拟器如何上手？">
+						飞行模拟器如何上手？
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+</article>
+<script>
+	window.subData = {
+		title: '从零开始玩飞行模拟器',
+		tools: true
+	}
+</script>
+
+      </div>
+      <aside class='l_side'>
+        
+  <section class='m_widget about'>
+
+<div class='header'>cpuwolf</div>
+<div class='content'>
+<embed width="100%" height="100%" allownetworking="all" allowscriptaccess="always" src="https://staticlive.douyucdn.cn/common/share/play.swf?room_id=1677580" quality="high" bgcolor="#000" wmode="window" allowfullscreen="true" allowFullScreenInteractive="true" type="application/x-shockwave-flash">
+<div class='desc'>
+<p><a target="_blank" href="https://www.douyu.com/cpuwolf">斗鱼直播：大叔带你：开飞机</a></p>
+<p style="margin-top: 1em;">
+<div style="width: 4em;">
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=181ecffdf6f7616c08501d20af3d7ed8207626318a5778a1f347c7841f8d5ce3"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="斗鱼大叔带你：开飞机" title="斗鱼大叔带你：开飞机"></a>
+</div><span>QQ群:378072629</span>
+</p>
+</div>
+</div>
+</section>
+
+
+  <section class='m_widget links'>
+<div class='header'>X-Plane链接</div>
+<div class='content'>
+    <ul class="entry">
+    
+        <li><a class="flat-box" target="_blank" href="https://x-plane.vip/xtdr/">
+            <div class='name'>XTouchDownRecorder官方网址</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://github.com/cpuwolf/pyff777wingflexfix/releases">
+            <div class='name'>ff777wingflexfix</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/">
+            <div class='name'>美国FAA机场进离场程序</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://flightplandatabase.com/">
+            <div class='name'>模拟飞行世界航路查询</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://rfinder.asalink.net/free/">
+            <div class='name'>模拟飞行航路查询</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/pilot_handbook/">
+            <div class='name'>美国FAA飞行员手册</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.fltplan.com/">
+            <div class='name'>北美真实航路查询</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://www.ventusky.com/">
+            <div class='name'>真实航路天气查询</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://www.vacc-austria.org/?page=content/chartlist&amp;icao=LOWI">
+            <div class='name'>奥地利LOWI机场说明</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://cpava.org/">
+            <div class='name'>国泰航空虚拟航空</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://planecommand.com/">
+            <div class='name'>语音控制副驾驶</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.tosi-online.de/XPUIPC/">
+            <div class='name'>XPUIPC</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://blog.csdn.net/cpuwolf">
+            <div class='name'>cpuwolf的博客</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://marginal.org.uk/x-planescenery/plugins.html">
+            <div class='name'>Marginal AutoGate</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://ruscenery.x-air.ru/">
+            <div class='name'>RuScenery</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://bettersky.ga/">
+            <div class='name'>bettersky cloud</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://ixeg.net/">
+            <div class='name'>IXEG 737</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://steptosky.com/">
+            <div class='name'>steptosky FF B757</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://nd-art-and-technology.com/">
+            <div class='name'>ND ART</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.x-aviation.com">
+            <div class='name'>X aviation IXEG B737</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://flightfactor.aero/">
+            <div class='name'>Flight Factor FF757 FF777</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://jardesign.org/">
+            <div class='name'>JAR Design A320 A330</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.qpac-us.com/">
+            <div class='name'>QPAC US A320</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.flyjsim.com/">
+            <div class='name'>FlyJSim B727 B737-200</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://store.x-plane.org/">
+            <div class='name'>X-Plane.org官方商店</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://forums.x-plane.org/">
+            <div class='name'>X-Plane 10/11世界最大论坛</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.vflyteair.com/">
+            <div class='name'>VFlyteAir</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.dai-media.com/">
+            <div class='name'>Dai Media</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://beti-x.com/">
+            <div class='name'>beti-X</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.airfoillabs.com/">
+            <div class='name'>Airfoillabs C172</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://simheaven.com">
+            <div class='name'>simheaven 地景</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="https://www.opensceneryx.com/">
+            <div class='name'>OpenSceneryX 地景库</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://aerobask.com/">
+            <div class='name'>Aerobask</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://x-plane.joanpc.com/">
+            <div class='name'>Joan PC实时天气插件</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.simcoders.com/">
+            <div class='name'>simcoders</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.alpilotx.net/">
+            <div class='name'>alpilotx</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.badbadweather.com/">
+            <div class='name'>实时世界坏天气机场</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.vskylabs.com/">
+            <div class='name'>vskylab</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://www.jrollon.com/CRJ.html">
+            <div class='name'>Jrollon CRJ-200</div>
+        </a></li>
+    
+        <li><a class="flat-box" target="_blank" href="http://forjets.netfirms.com/">
+            <div class='name'>Classic Aircraft</div>
+        </a></li>
+    
+    </ul>
+</div>
+</section>
+
+
+  <section class='m_widget categories'>
+<div class='header'>分类</div>
+<div class='content'>
+    
+    <ul class="entry">
+    
+        <li><a class="flat-box" href="/categories/导航数据/"><div class='name'>导航数据</div><div class='badget'>4</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/插件地景/"><div class='name'>插件地景</div><div class='badget'>2</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/插件飞机/"><div class='name'>插件飞机</div><div class='badget'>29</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/教程/"><div class='name'>教程</div><div class='badget'>10</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/新闻/"><div class='name'>新闻</div><div class='badget'>8</div></a></li>
+    
+    </ul>
+    
+</div>
+</section>
+
+
+  
+<div class="m_widget tagcloud">
+    <div class="header">Tags</div>
+    <div class='content'>
+        <a href="/tags/737/" style="font-size: 14.86px; color: #6e6e6e">737</a> <a href="/tags/FMC/" style="font-size: 14px; color: #808080">FMC</a> <a href="/tags/MCP/" style="font-size: 14px; color: #808080">MCP</a> <a href="/tags/RVSM/" style="font-size: 14px; color: #808080">RVSM</a> <a href="/tags/zibo/" style="font-size: 14px; color: #808080">zibo</a> <a href="/tags/主程序/" style="font-size: 15.71px; color: #5b5b5b">主程序</a> <a href="/tags/免费/" style="font-size: 17.43px; color: #373737">免费</a> <a href="/tags/地形/" style="font-size: 15.71px; color: #5b5b5b">地形</a> <a href="/tags/地景/" style="font-size: 19.14px; color: #121212">地景</a> <a href="/tags/声控/" style="font-size: 14px; color: #808080">声控</a> <a href="/tags/多人游戏/" style="font-size: 14px; color: #808080">多人游戏</a> <a href="/tags/安装/" style="font-size: 14px; color: #808080">安装</a> <a href="/tags/局域网/" style="font-size: 14px; color: #808080">局域网</a> <a href="/tags/插件/" style="font-size: 20px; color: #000">插件</a> <a href="/tags/插件飞机/" style="font-size: 14px; color: #808080">插件飞机</a> <a href="/tags/摇杆/" style="font-size: 14px; color: #808080">摇杆</a> <a href="/tags/放出/" style="font-size: 16.57px; color: #494949">放出</a> <a href="/tags/更新/" style="font-size: 18.29px; color: #252525">更新</a> <a href="/tags/消息/" style="font-size: 14px; color: #808080">消息</a> <a href="/tags/灵敏度/" style="font-size: 14px; color: #808080">灵敏度</a> <a href="/tags/视角/" style="font-size: 14px; color: #808080">视角</a> <a href="/tags/视频/" style="font-size: 15.71px; color: #5b5b5b">视频</a> <a href="/tags/计算/" style="font-size: 16.57px; color: #494949">计算</a> <a href="/tags/设置/" style="font-size: 14px; color: #808080">设置</a> <a href="/tags/连飞/" style="font-size: 14px; color: #808080">连飞</a> <a href="/tags/飞机插件/" style="font-size: 14px; color: #808080">飞机插件</a> <a href="/tags/高度层/" style="font-size: 14px; color: #808080">高度层</a>
+    </div>
+</div>
+
+
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="https://github.com/cpuwolf" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="http://weibo.com/cpuwolf" class="social sina-weibo"
+          target="_blank" rel="external">
+          <span class="icon icon-sina-weibo"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>2016-2017 <a href='https://x-plane.vip' class="codename">x-plane.vip</a> 版权所有</div>
+  
+</footer>
+
+
+  <script>setLoadingBarProgress(80);</script>
+  
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+	var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+	var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+	var ALGOLIA_API_KEY = "";
+	var ALGOLIA_APP_ID = "";
+	var ALGOLIA_INDEX_NAME = "";
+  var AZURE_SERVICE_NAME = "";
+  var AZURE_INDEX_NAME = "";
+  var AZURE_QUERY_KEY = "";
+  var BAIDU_API_ID = "13826537042608079000";
+  var SEARCH_SERVICE = "baidu";
+  var ROOT = "/"||"/";
+  if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
