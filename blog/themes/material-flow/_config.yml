@@ -19,7 +19,9 @@ search:
 # friends link
 links:
   - name: XTouchDownRecorder官方网址
-    url: https://x-plane.vip/xtdr/
+    url: /xtdr/
+  - name: 奎克质造
+    url: /quickmake/
   - name: ff777wingflexfix
     url: https://github.com/cpuwolf/pyff777wingflexfix/releases
   - name: 美国FAA机场进离场程序
@@ -36,8 +38,6 @@ links:
     url: https://www.ventusky.com/
   - name: 奥地利LOWI机场说明
     url: https://www.vacc-austria.org/?page=content/chartlist&icao=LOWI
-  - name: 国泰航空虚拟航空
-    url: http://cpava.org/
   - name: 语音控制副驾驶
     url: https://planecommand.com/
   - name: XPUIPC
@@ -109,7 +109,7 @@ menu:
     url: /archives
   - name: XTouchDownRecorder
     slug: landings
-    url: https://x-plane.vip/xtdr/
+    url: /xtdr/
   - name: QuickMake
     slug: flight simulation hardware
     url: /quickmake/
