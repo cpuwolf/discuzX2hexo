@@ -29,7 +29,7 @@ links:
   - name: 模拟飞行航路查询
     url: http://rfinder.asalink.net/free/
   - name: 美国FAA飞行员手册
-    url: http://www.faa.gov/regulations_policies/handbooks_manuals/aviation/pilot_handbook/
+    url: https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/
   - name: 北美真实航路查询
     url: http://www.fltplan.com/
   - name: 真实航路天气查询
@@ -110,7 +110,10 @@ menu:
   - name: XTouchDownRecorder
     slug: landings
     url: https://x-plane.vip/xtdr/
-
+  - name: QuickMake
+    slug: flight simulation hardware
+    url: /quickmake/
+	
 # widgets
 widgets:
   - about
