@@ -489,7 +489,7 @@ var BaiduSearch;
       self.dom.input.each(function(index,elem) {
         $(elem).attr('disabled', true);
       });
-      var script = "<script src='http://zhannei.baidu.com/api/customsearch/apiaccept?sid=" +self.config.apiId+ "&v=2.0&callback=customSearch.initBaidu' type='text/javascript' charset='utf-8'></script>";
+      var script = "<script src='//zhannei.baidu.com/api/customsearch/apiaccept?sid=" +self.config.apiId+ "&v=2.0&callback=customSearch.initBaidu' type='text/javascript' charset='utf-8'></script>";
       self.dom.body.append(script);
     };
 
