@@ -117,6 +117,8 @@ menu:
 # widgets
 widgets:
   - about
+  - qq
+  - adv
   - links
   - categories
   - tagcloud
