@@ -85,13 +85,13 @@
     }
     .content{
         padding:0;
+        text-align: center;
         .desc{
             position: relative;
-            padding: 0;
             background:@qoute-background-color;
             .enable-trans(.15s);
             line-height: 1.2em;
-            text-align: center;
+            
             font-style: italic;
             &:before{
                 content:'';
@@ -111,20 +111,14 @@
 }
 
 .m_widget.adv{
-    .waves-effect,img{
-        width: 100%;
-        display: block;
-    }
-    @media(max-width: @on-phone){
-        display:none;
-    }
+    line-height: 0em !important;
     .content{
         padding:0;
-        .desc{
-            line-height: 0em;
-        }
+        
     }
 }
+
+
 .m_widget.tagcloud{
     .content{
         padding: 10px 20px;
