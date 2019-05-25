@@ -101,10 +101,10 @@ links:
 
 # navigation menu
 menu:
-  - name: 主页
+  - name: 日记
     slug: home
     url: /
-  - name: 文档存档
+  - name: 日记列表
     slug: archives
     url: /archives
   - name: XTouchDownRecorder
