@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x-plane.vip/"/>
-  <updated>2019-05-24T10:14:11.700Z</updated>
+  <updated>2019-05-25T03:10:18.239Z</updated>
   <id>http://x-plane.vip/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你为什么需要一个硬件MCP</title>
+    <link href="http://x-plane.vip/2019/05/25/needmcp/"/>
+    <id>http://x-plane.vip/2019/05/25/needmcp/</id>
+    <published>2019-05-25T03:02:08.000Z</published>
+    <updated>2019-05-25T03:10:18.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>不知道你有没有这样的体验，在VATSIM或者一个连飞网站连飞时，管制让你heading 220，你的鼠标怎么样也点不上螺旋按钮HDG。<br>我们为了真实，经常会加装一个视角抖动插件，在降落时，或者气流时，给你的视角带来接近真实的体验，而这一动作，更加增大了鼠标操作难度。</p>
+<p>我的一个实际使用MCP的感受，我的视野变宽了，</p>
+<p>因为比如HDG左转操作时，我可以看飞机的左侧。而用鼠标操作的年代里，我的视野是不可以离开MCP的区域的，这导致模拟飞行的视野非常狭窄。</p>
+<p>当然一个实体硬件MCP，确实是进阶的模拟飞行爱好者值得拥有的。对于刚接触的菜鸟，就暂时不需要考虑了</p>
+<iframe src="//player.bilibili.com/player.html?aid=46270712&cid=81069736&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不知道你有没有这样的体验，在VATSIM或者一个连飞网站连飞时，管制让你heading 220，你的鼠标怎么样也点不上螺旋按钮HDG。&lt;br&gt;我们为了真实，经常会加装一个视角抖动插件，在降落时，或者气流时，给你的视角带来接近真实的体验，而这一动作，更加增大了鼠标操作难度。&lt;
+    
+    </summary>
+    
+    
+      <category term="硬件" scheme="http://x-plane.vip/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>airfoillabs收费机场KAWO居然免费下载</title>
@@ -549,9 +573,9 @@
     </summary>
     
     
-      <category term="737" scheme="http://x-plane.vip/tags/737/"/>
-    
       <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="737" scheme="http://x-plane.vip/tags/737/"/>
     
       <category term="zibo" scheme="http://x-plane.vip/tags/zibo/"/>
     
@@ -624,33 +648,9 @@
     </summary>
     
     
-      <category term="737" scheme="http://x-plane.vip/tags/737/"/>
-    
       <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
     
-  </entry>
-  
-  <entry>
-    <title>中国RVSM飞行高度层的定义</title>
-    <link href="http://x-plane.vip/2017/07/25/china-rvsm/"/>
-    <id>http://x-plane.vip/2017/07/25/china-rvsm/</id>
-    <published>2017-07-24T23:05:54.000Z</published>
-    <updated>2017-07-28T23:48:04.518Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2017/07/25/china-rvsm/rvsm.jpg" alt="中国RVSM飞行高度层" title="中国RVSM飞行高度层">
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2017/07/25/china-rvsm/rvsm.jpg&quot; alt=&quot;中国RVSM飞行高度层&quot; title=&quot;中国RVSM飞行高度层&quot;&gt;
-
-    
-    </summary>
-    
-    
-      <category term="高度层" scheme="http://x-plane.vip/tags/%E9%AB%98%E5%BA%A6%E5%B1%82/"/>
-    
-      <category term="RVSM" scheme="http://x-plane.vip/tags/RVSM/"/>
+      <category term="737" scheme="http://x-plane.vip/tags/737/"/>
     
   </entry>
   
