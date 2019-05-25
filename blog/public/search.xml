@@ -3,6 +3,42 @@
   
     
     <entry>
+      <title><![CDATA[X-Plane 11新手指南]]></title>
+      <url>/2019/05/25/newbie/</url>
+      <content type="html"><![CDATA[<p>我的QQ群运行2年多了，没变成死群，很庆幸。</p>
+<p>有些常常被群里飞友问的X-Plane 11的相关问题，我想趁这个机会总结一下，以便即使不在群里的新飞友也能看见。</p>
+<h1 id="主播，我想配个新电脑，有什么推荐的么？"><a href="#主播，我想配个新电脑，有什么推荐的么？" class="headerlink" title="主播，我想配个新电脑，有什么推荐的么？"></a>主播，我想配个新电脑，有什么推荐的么？</h1><p>群里飞友很多叫我主播，今天是2019年5月，我说的话的真理性是依赖这个时间点的。X-Plane 11.34以来，虽然支持多核，但是由于主要的图像运算是依赖于OpenGL，这种单线程图形运算库。也就说别管你你有多少CPU物理核，X-Plane 11只看你的单核运算能力。</p>
+<p>多年看飞友装机的经验，cpubenchmark.net这个网站还是相当靠谱的，它给出了一个列表，这个列表基本等价于X-Plane 11最适合CPU列表，并且还包含了CPU价格。</p>
+<img src="/2019/05/25/newbie/singlethread.jpg" alt="x-plane 11" title="x-plane 11">
+<p>我们一起看看这图能给我们什么信息，最上面9900K当然是最好的，价格也很好基本500美金，你不差钱，就买这个没错。</p>
+<p>我们再看看i5 9600KF，价格在260美金，是目前看起来性价比最高的X-Plane 11 CPU。</p>
+<p>所以懂了么？这图就是这样看，至于哪个CPU适合你，要看你的钱包。</p>
+<p><a href="https://www.cpubenchmark.net/singleThread.html" target="_blank" rel="external">https://www.cpubenchmark.net/singleThread.html</a></p>
+<p>这个CPU列表在不断更新的，所以这里链接贴出来</p>
+<h1 id="UP主，X-Plane-11在哪里下载？"><a href="#UP主，X-Plane-11在哪里下载？" class="headerlink" title="UP主，X-Plane 11在哪里下载？"></a>UP主，X-Plane 11在哪里下载？</h1><p>我的回答是：买。 没有正版的支持，就不会有优秀的开发团队。</p>
+<p>X-Plane 11可以不要钱先玩的，你知道不？这个链接可以下载个演示版，但是只有美国西雅图附近地景。</p>
+<p><a href="https://www.x-plane.com/desktop/try-it/" target="_blank" rel="external">https://www.x-plane.com/desktop/try-it/</a></p>
+<p>你可以用这个演示版本测试一下你的硬件能不能承受这个游戏。如果不能承受，那么也不用继续花钱了。</p>
+<p>最方便的就是直接steam购买，只要牵扯一个下载问题，steam有国内的镜像，所以下载速度相当不错。而且steam经常有优惠，最便宜的时候，我见过的只需100多点人民币。</p>
+<iframe src="https://store.steampowered.com/widget/269950/" frameborder="0" width="646" height="190"></iframe>
+
+<p>另外就是官方直接购买，这也是我的方式，价格在400人民币左右。</p>
+<p><a href="https://www.x-plane.com/desktop/buy-it/" target="_blank" rel="external">https://www.x-plane.com/desktop/buy-it/</a></p>
+<p>因为本人平时不玩其他游戏，所以steam对我没什么意义，而且作为X-Plane的超级粉丝，算是对官方的贡献一点绵薄之力。</p>
+<h1 id="群主，我是新手，有什么飞行摇杆推荐？"><a href="#群主，我是新手，有什么飞行摇杆推荐？" class="headerlink" title="群主，我是新手，有什么飞行摇杆推荐？"></a>群主，我是新手，有什么飞行摇杆推荐？</h1><p>鼠标，键盘飞行，我看是不可取的。那么一套飞行摇杆就是必须的啦。 本人也有6年以上的模拟飞行经验，买过大大小小的摇杆。如果你是新手，而且是第一次购买，没准备花很多钱，但是又想买个性价比高的。那么我的推荐是1000元摇杆套装T16000M。</p>
+<p><a href="https://union-click.jd.com/jdc?e=&amp;p=AyIGZRprEQoRBl0dUyVGTV8LRGtMR1dGFxBFC1pXUwkEBwpZRxgHRQcLREJEAQUcTVZUGAVJHk1cTQkTSxhBekcLURNYFAoUD2VIX0FkZEIjUjtAZBR7XRgsVkJNRzNNVxkyEzdVGloUAhcFUBtZJTISAGVNNRUDEwZUE10WChE3VCtbEQYbAVIeWRcGFgRXK1wVCyJVFF8dS19FN2UrWCUyIgdlGGtXbEUDVRILFQMbBl0bUxABR1JcHAwQAUFUBU4MQFVBAQZPaxcDEwNc&amp;t=W1dCFFlQCxxKQgFHREkdSVJKSQVJHFRXFk9FUlpGQUpLCVBaTFhbXQtWVmpSWR9TFgMaAV0%3D" target="_blank" rel="external"><img src="/2019/05/25/newbie/T16.jpg" alt="x-plane 11" title="x-plane 11"></a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 软件 硬件 插件 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[你为什么需要一个硬件MCP]]></title>
       <url>/2019/05/25/needmcp/</url>
       <content type="html"><![CDATA[<p>不知道你有没有这样的体验，在VATSIM或者一个连飞网站连飞时，管制让你heading 220，你的鼠标怎么样也点不上螺旋按钮HDG。<br>我们为了真实，经常会加装一个视角抖动插件，在降落时，或者气流时，给你的视角带来接近真实的体验，而这一动作，更加增大了鼠标操作难度。</p>
