@@ -107,6 +107,9 @@ menu:
   - name: 日记列表
     slug: archives
     url: /archives
+  - name: 新手指南
+    slug: newbie
+    url: /2019/05/25/newbie/
   - name: XTouchDownRecorder
     slug: landings
     url: /xtdr/
