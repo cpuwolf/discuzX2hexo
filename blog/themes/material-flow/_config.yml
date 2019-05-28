@@ -26,6 +26,8 @@ links:
     url: https://github.com/cpuwolf/pyff777wingflexfix/releases
   - name: ZIBO波音737涂装列表
     url: https://forums.x-plane.org/index.php?/forums/topic/161060-zibo-331-compatible-liveries-737-and-739-lists-available/ 
+  - name: X-Plane地景库最全列表
+    url: https://forums.x-plane.org/index.php?/forums/topic/90776-master-list-of-libraries/ 
   - name: 美国FAA机场进离场程序
     url: http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/
   - name: 模拟飞行世界航路查询
@@ -43,7 +45,7 @@ links:
   - name: 语音控制副驾驶
     url: https://planecommand.com/
   - name: XPUIPC
-    url: http://www.tosi-online.de/XPUIPC/
+    url: http://www.schiratti.com/xpuipc.html 
   - name: cpuwolf的博客
     url: http://blog.csdn.net/cpuwolf
   - name: Marginal AutoGate
