@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x-plane.vip/"/>
-  <updated>2020-01-15T00:11:14.107Z</updated>
+  <updated>2020-01-17T23:19:21.132Z</updated>
   <id>http://x-plane.vip/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ZIBO的波音737-800的3.39包已经是完整包</title>
+    <link href="http://x-plane.vip/2020/01/18/zibo-339/"/>
+    <id>http://x-plane.vip/2020/01/18/zibo-339/</id>
+    <published>2020-01-17T23:19:21.000Z</published>
+    <updated>2020-01-17T23:19:21.132Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天ZIBO放出的Boeing B737-800X 3.39已经是个完整包。这里是他的安装步骤</p><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><p>1/ Delete old release (backup folder before delete)<br>2/ Copy folder “B737-800X” to folder “XPLANE11/Aircraft/“<br>3/ Download and install latest TerrainRadar plugin by DrGluck<br>4/ Download and install latest AviTab plugin by Folko<br>5/ Enjoy</p><p>我们可以看见，已经不需要复制X-Plane 11自带的波音737，这说明ZIBO和LR X-Plane已经达成协议，ZIBO可以任意修改X-Plane 11自带的波音737，并且可以再次发布给其他人。</p><p>换成人话就是ZIBO得到了X-Plane官方的大力支持</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+&lt;p&gt;今天ZIBO放出的Boeing B737-800X 3.39已经是个完整包。这里是他的安装步骤&lt;/p&gt;
+&lt;h2 id=&quot;Installation&quot;&gt;&lt;a href=&quot;#Installation&quot; class=&quot;headerlink&quot; title=&quot;Installation
+      
+    
+    </summary>
+    
+      <category term="新闻" scheme="http://x-plane.vip/categories/%E6%96%B0%E9%97%BB/"/>
+    
+    
+      <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>JustFlight的飞机为X-Plane 11.4x的气动模型升级</title>
@@ -493,28 +520,6 @@
       <category term="737" scheme="http://x-plane.vip/tags/737/"/>
     
       <category term="zibo" scheme="http://x-plane.vip/tags/zibo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>x-plane 11.05r1抢先看</title>
-    <link href="http://x-plane.vip/2017/07/29/xp11-05-r1-757/"/>
-    <id>http://x-plane.vip/2017/07/29/xp11-05-r1-757/</id>
-    <published>2017-07-28T22:09:44.000Z</published>
-    <updated>2017-07-28T23:48:04.524Z</updated>
-    
-    <content type="html"><![CDATA[<p>x-plane 11 从 02版本直接跳到了版本05r1. 主要是更新了机场,帧数和02版本保持一致</p><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_1.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_2.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_4.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;x-plane 11 从 02版本直接跳到了版本05r1. 主要是更新了机场,帧数和02版本保持一致&lt;/p&gt;
-&lt;img src=&quot;/2017/07/29/xp11-05-r1-757/757-200_xp11_1.jpg&quot; alt=&quot;X-Plane 11.05R1&quot; tit
-      
-    
-    </summary>
-    
     
   </entry>
   

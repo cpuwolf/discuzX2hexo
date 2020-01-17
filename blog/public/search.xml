@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ZIBO的波音737-800的3.39包已经是完整包</title>
+      <link href="/2020/01/18/zibo-339/"/>
+      <url>/2020/01/18/zibo-339/</url>
+      
+        <content type="html"><![CDATA[<p>今天ZIBO放出的Boeing B737-800X 3.39已经是个完整包。这里是他的安装步骤</p><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation:"></a>Installation:</h2><p>1/ Delete old release (backup folder before delete)<br>2/ Copy folder “B737-800X” to folder “XPLANE11/Aircraft/“<br>3/ Download and install latest TerrainRadar plugin by DrGluck<br>4/ Download and install latest AviTab plugin by Folko<br>5/ Enjoy</p><p>我们可以看见，已经不需要复制X-Plane 11自带的波音737，这说明ZIBO和LR X-Plane已经达成协议，ZIBO可以任意修改X-Plane 11自带的波音737，并且可以再次发布给其他人。</p><p>换成人话就是ZIBO得到了X-Plane官方的大力支持</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 新闻 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JustFlight的飞机为X-Plane 11.4x的气动模型升级</title>
       <link href="/2020/01/15/JustFlight%E7%9A%84%E9%A3%9E%E6%9C%BA%E4%B8%BAX-Plane-11-4x%E7%9A%84%E6%B0%94%E5%8A%A8%E6%A8%A1%E5%9E%8B%E5%8D%87%E7%BA%A7/"/>
       <url>/2020/01/15/JustFlight%E7%9A%84%E9%A3%9E%E6%9C%BA%E4%B8%BAX-Plane-11-4x%E7%9A%84%E6%B0%94%E5%8A%A8%E6%A8%A1%E5%9E%8B%E5%8D%87%E7%BA%A7/</url>
