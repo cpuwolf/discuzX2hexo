@@ -30,6 +30,8 @@ links:
     url: https://forums.x-plane.org/index.php?/forums/topic/90776-master-list-of-libraries/ 
   - name: 美国FAA机场进离场程序
     url: http://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/search/
+  - name: 中国机场进离场程序查询
+    url: https://pilotcenter.vatprc.net/charts.html
   - name: 模拟飞行世界航路查询
     url: https://flightplandatabase.com/
   - name: 模拟飞行航路查询
