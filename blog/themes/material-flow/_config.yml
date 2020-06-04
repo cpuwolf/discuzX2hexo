@@ -119,7 +119,7 @@ menu:
   - name: XTouchDownRecorder
     slug: landings
     url: /xtdr/
-  - name: QuickMake
+  - name: QuickMade
     slug: flight simulation hardware
     url: /quickmake/
 	
