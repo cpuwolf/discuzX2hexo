@@ -21,7 +21,7 @@ links:
   - name: XTouchDownRecorder官方网址
     url: /xtdr/
   - name: 奎克质造
-    url: /quickmake/
+    url: /quickmade/
   - name: ff777wingflexfix
     url: https://github.com/cpuwolf/pyff777wingflexfix/releases
   - name: ZIBO波音737涂装列表
@@ -121,7 +121,7 @@ menu:
     url: /xtdr/
   - name: QuickMade
     slug: flight simulation hardware
-    url: /quickmake/
+    url: /quickmade/
 	
 # widgets
 widgets:
