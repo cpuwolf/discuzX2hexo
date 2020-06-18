@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x-plane.vip/"/>
-  <updated>2020-06-18T21:22:06.305Z</updated>
+  <updated>2020-06-18T21:35:05.116Z</updated>
   <id>http://x-plane.vip/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>X-Plane 11.50b11</title>
+    <link href="http://x-plane.vip/2020/06/19/X-Plane-11-50b11/"/>
+    <id>http://x-plane.vip/2020/06/19/X-Plane-11-50b11/</id>
+    <published>2020-06-18T21:30:19.000Z</published>
+    <updated>2020-06-18T21:35:05.116Z</updated>
+    
+    <content type="html"><![CDATA[<p>X-Plane 11.50b11终于把远处的山的罩子去掉了。这个版本我很满意<br><img src="/2020/06/19/X-Plane-11-50b11/C90B1.jpg" title="x-plane 11"></p><p>图片中的C90涂装下载地址<br><a href="https://forums.x-plane.org/index.php?/files/file/63364-king-air-c-90-fictional-brazilian-air-force-fab-2802/" target="_blank" rel="noopener">https://forums.x-plane.org/index.php?/files/file/63364-king-air-c-90-fictional-brazilian-air-force-fab-2802/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+&lt;p&gt;X-Plane 11.50b11终于把远处的山的罩子去掉了。这个版本我很满意&lt;br&gt;&lt;img src=&quot;/2020/06/19/X-Plane-11-50b11/C90B1.jpg&quot; title=&quot;x-plane 11&quot;&gt;&lt;/p&gt;
+&lt;p&gt;图片中的C90涂装下载地址&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>FF757开始支持11.50 Vulkan</title>
@@ -496,31 +521,6 @@
       <category term="MCP" scheme="http://x-plane.vip/tags/MCP/"/>
     
       <category term="FMC" scheme="http://x-plane.vip/tags/FMC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>视角插件x-camera的配置</title>
-    <link href="http://x-plane.vip/2017/08/10/xcamera/"/>
-    <id>http://x-plane.vip/2017/08/10/xcamera/</id>
-    <published>2017-08-10T05:57:39.000Z</published>
-    <updated>2017-09-12T23:08:36.240Z</updated>
-    
-    <content type="html"><![CDATA[<p>X-Camera和FSX的EZdok Camera是一个量级的视角插件软件。但是X-Camera的界面做的太不友好了，一堆框框。也应该是历史原因，而且采有自由付费，所以估计作者在这个软件上的收入不是很高。<br>这里不谈安装，因为所有的X-Plane插件安装就是复制粘贴。<br>该软件没有汉化。</p><p>插件安装完成后，一旦enable，就会在屏幕的最下角多一个浮动窗口，我们进入control panel</p><img src="/2017/08/10/xcamera/bottom.jpg" alt="x-plane 11" title="x-plane 11"><p>进入让我们抓狂的配置界面。</p><img src="/2017/08/10/xcamera/internal.jpg" alt="x-plane 11" title="x-plane 11"><p>其实这个control panel分成几个主要区域：</p><ol><li>橘红色：是摄像头分个几大类，看个人喜好</li><li>绿色是用来调整摄像头的3D空间位置的，这完全可以用X-Plane的视角快捷键来调整，比如上下左右,.r f e d w s之类</li><li>青色区域很重要：添加摄像头就点Add</li><li>红色区域：我认为是陷阱区，不用解释，按我勾选的选就好。我觉不明白作者为什么不默认勾选？！好吧我去问问他<ol><li>retain Mouse look postion 鼠标位置保持</li><li>enable temporary positioning 零时位置保持</li><li>enable smooth transistion 平滑移动</li><li>enable smooth camera joins 平滑摄像头转换</li><li>transition seconds填个1或者2秒</li></ol></li></ol><p>其他是高级玩意，你有本事就研究，没本事，就别管了。</p><p>上面是驾驶舱内的视角，如果我想配置机翼视角怎么办？对，这叫外部视角。<br>改勾选的都要勾上。</p><img src="/2017/08/10/xcamera/external.jpg" alt="x-plane 11" title="x-plane 11"><p>唯一和内部视角不同的是</p><p>external camera选项。这是唯一的区别</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;X-Camera和FSX的EZdok Camera是一个量级的视角插件软件。但是X-Camera的界面做的太不友好了，一堆框框。也应该是历史原因，而且采有自由付费，所以估计作者在这个软件上的收入不是很高。&lt;br&gt;这里不谈安装，因为所有的X-Plane插件安装就是复制粘贴。&lt;
-      
-    
-    </summary>
-    
-    
-      <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-      <category term="视角" scheme="http://x-plane.vip/tags/%E8%A7%86%E8%A7%92/"/>
     
   </entry>
   
