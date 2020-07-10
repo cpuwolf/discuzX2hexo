@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Linux Kernel joystick max button number limitation is 80</title>
+      <link href="/2020/07/11/kerneljoystickmax/"/>
+      <url>/2020/07/11/kerneljoystickmax/</url>
+      
+        <content type="html"><![CDATA[<img src="/2020/07/11/kerneljoystickmax/linux_joystick_maxbutton.jpg" title="x-plane 11"><p>Today latest Linux kernel stable version is 5.7.8.</p><p>we found Linux kernel has max joystick buttons up to 80, no more</p><p>We are selling USB joystick device QMCP737C for flight simulator, which is nothing but common USB HID joystick. it has physical 104 buttons</p><p>Product link<br><a href="https://x-plane.vip/quickmade/qmcp737c/">https://x-plane.vip/quickmade/qmcp737c/</a></p><p>it works good on Windows, Mac, but not on Linux.<br>Linux kernel exposes /dev/input/js0 max to 80 button, but we have 104 buttons.</p><p>I did a lots of google search, but nothing I got. then I have to look at Kernel source, to find out where this number max 80 comes from</p><p>Eventually I found the final limitation</p><p>#define BTN_JOYSTICK 0x120</p><p>#define BTN_DEAD 0x12f</p><p>#define BTN_TRIGGER_HAPPY 0x2c0</p><p>#define KEY_MAX 0x2ff</p><p>include/uapi/linux/input-event-codes.h</p><p>according to function hidinput_configure_usage() in file drivers/hid/hid-input.c</p><p>the joystick button mapping is not a continues space, general speak the mapping space is from</p><p>BTN_JOYSTICK~BTN_DEAD<br>BTN_TRIGGER_HAPPY~KEY_MAX</p><p>and finally I got the max limitation is 80.</p><p>my question is why KEY_MAX is 0x2ff?<br>this number 0x2ff looks like not align with char? integer? the answer is no</p><p>so may I ask to expand KEY_MAX to such as 0x4ff?</p><p>I did a quick test on Ubuntu, all 104 buttons are showing up</p><img src="/2020/07/11/kerneljoystickmax/after_linux_joystick_patch.jpg" title="x-plane 11"><p>then a patch is submitted to kernel driver input group<br><a href="https://patchwork.kernel.org/patch/11655815/" target="_blank" rel="noopener">https://patchwork.kernel.org/patch/11655815/</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 插件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>X-Plane 11.50b11</title>
       <link href="/2020/06/19/X-Plane-11-50b11/"/>
       <url>/2020/06/19/X-Plane-11-50b11/</url>
@@ -184,7 +203,7 @@
       <link href="/2019/05/24/kawo/"/>
       <url>/2019/05/24/kawo/</url>
       
-        <content type="html"><![CDATA[<p>airfoillabs收费机场KAWO,位于美国西雅图波音工厂的北侧，是一个非常适合通航（GA）飞行的机场。而且这个机场包说是只有一个机场，但是其实包含了三个机场：KAWO, Fugios ranch, Gabriel’s farm。不好翻译，我就不翻译了。</p><img src="/2019/05/24/kawo/kawo.jpg" alt="x-plane 11" title="x-plane 11"><p>正版价格现在30美金呢</p><p><a href="https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html" target="_blank" rel="external">https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html</a></p><p>关键是，我不确定是不是airfoillabs product manager出了bug，你拿任意一款AFL 172SP或者AFL kingair 350的序列号，放在KAWO的序列号里面，就可以激活。此方法其他人也验证过有效。</p><img src="/2019/05/24/kawo/afl_manager.jpg" alt="x-plane 11" title="x-plane 11"><p>不管是不是bug，有AFL飞机的正版飞友们，赶紧动起来吧，免费机场快下载呀</p>]]></content>
+        <content type="html"><![CDATA[<p>airfoillabs收费机场KAWO,位于美国西雅图波音工厂的北侧，是一个非常适合通航（GA）飞行的机场。而且这个机场包说是只有一个机场，但是其实包含了三个机场：KAWO, Fugios ranch, Gabriel’s farm。不好翻译，我就不翻译了。</p><img src="/2019/05/24/kawo/kawo.jpg" title="x-plane 11"><p>正版价格现在30美金呢</p><p><a href="https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html" target="_blank" rel="noopener">https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html</a></p><p>关键是，我不确定是不是airfoillabs product manager出了bug，你拿任意一款AFL 172SP或者AFL kingair 350的序列号，放在KAWO的序列号里面，就可以激活。此方法其他人也验证过有效。</p><img src="/2019/05/24/kawo/afl_manager.jpg" title="x-plane 11"><p>不管是不是bug，有AFL飞机的正版飞友们，赶紧动起来吧，免费机场快下载呀</p>]]></content>
       
       
       
@@ -203,7 +222,7 @@
       <link href="/2019/05/23/quickmake/"/>
       <url>/2019/05/23/quickmake/</url>
       
-        <content type="html"><![CDATA[<p>奎克质造B站空间</p><p><a href="https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="external">https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1</a></p><p>奎克质造官方地址</p><p><a href="https://x-plane.vip/quickmake/">https://x-plane.vip/quickmake/</a></p><img src="/2019/05/23/quickmake/quickmake_nav_logo.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>奎克质造B站空间</p><p><a href="https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1</a></p><p>奎克质造官方地址</p><p><a href="https://x-plane.vip/quickmake/">https://x-plane.vip/quickmake/</a></p><img src="/2019/05/23/quickmake/quickmake_nav_logo.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -222,7 +241,7 @@
       <link href="/2019/05/08/KA350/"/>
       <url>/2019/05/08/KA350/</url>
       
-        <content type="html"><![CDATA[<p>airfoillabs(AFL)匆匆忙忙放出了KA350 1.0版本，后面还有小的修饰版本beta。这个飞机已经开发了2年，我看AFL团队也是憋了很久了。一出来50美金的价格，我认为是捡到了大便宜，就赶紧抢了一架。</p><p>购买链接</p><p><a href="https://store.x-plane.org/King-Air-350_p_969.html" target="_blank" rel="external">https://store.x-plane.org/King-Air-350_p_969.html</a></p><img src="/2019/05/08/KA350/KA350_1.jpg" alt="x-plane 11" title="x-plane 11"><p>飞机的仪表可以说非常古老，或者说传统。但是对于真正热爱飞行的朋友，这根本不是障碍</p><img src="/2019/05/08/KA350/KA350_2.jpg" alt="x-plane 11" title="x-plane 11"><p>虽然采用默认FMC，但是你要知道XP11 FMC是飞利浦写的，这个德国人的水平可不一般。所以请收起你对默认FMC的刻板印象</p>]]></content>
+        <content type="html"><![CDATA[<p>airfoillabs(AFL)匆匆忙忙放出了KA350 1.0版本，后面还有小的修饰版本beta。这个飞机已经开发了2年，我看AFL团队也是憋了很久了。一出来50美金的价格，我认为是捡到了大便宜，就赶紧抢了一架。</p><p>购买链接</p><p><a href="https://store.x-plane.org/King-Air-350_p_969.html" target="_blank" rel="noopener">https://store.x-plane.org/King-Air-350_p_969.html</a></p><img src="/2019/05/08/KA350/KA350_1.jpg" title="x-plane 11"><p>飞机的仪表可以说非常古老，或者说传统。但是对于真正热爱飞行的朋友，这根本不是障碍</p><img src="/2019/05/08/KA350/KA350_2.jpg" title="x-plane 11"><p>虽然采用默认FMC，但是你要知道XP11 FMC是飞利浦写的，这个德国人的水平可不一般。所以请收起你对默认FMC的刻板印象</p>]]></content>
       
       
       
@@ -241,7 +260,7 @@
       <link href="/2019/02/22/tbm8-go-home-KSNA/"/>
       <url>/2019/02/22/tbm8-go-home-KSNA/</url>
       
-        <content type="html"><![CDATA[<p>现在正好是X-Plane 11.31，而TBM-900的版本也已经升级到1.1.4c</p><p>地景是美国加州照片地景。G1000 RNAV进近过了FAF点就可以激活APR，而APR模式是忽略高度设置的，这点一定要记住。和VNAV的区别就在这里，相反VNAV下高模式一定要设置ALT</p><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_17.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_19.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_24.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>现在正好是X-Plane 11.31，而TBM-900的版本也已经升级到1.1.4c</p><p>地景是美国加州照片地景。G1000 RNAV进近过了FAF点就可以激活APR，而APR模式是忽略高度设置的，这点一定要记住。和VNAV的区别就在这里，相反VNAV下高模式一定要设置ALT</p><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_17.jpg" title="x-plane 11"><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_19.jpg" title="x-plane 11"><img src="/2019/02/22/tbm8-go-home-KSNA/TBM900_24.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -260,7 +279,7 @@
       <link href="/2019/01/21/TBM-900-1-4-4/"/>
       <url>/2019/01/21/TBM-900-1-4-4/</url>
       
-        <content type="html"><![CDATA[<p>Hotstart TBM 900在X-Plane 11.30出来之际已经更新到了V1.1.4</p><p>这架飞机和FF320并列X-Plane目前最细腻的飞机，其他飞机根本不能比。也是我最近的最爱</p><p>飞机目前的价格还是65美元<br><a href="http://www.x-aviation.com/catalog/product_info.php/take-command-hot-start-tbm-900-p-158?osCsid=6bf73b602396aa93cd2a6669076f7bdc" target="_blank" rel="external">http://www.x-aviation.com/catalog/product_info.php/take-command-hot-start-tbm-900-p-158?osCsid=6bf73b602396aa93cd2a6669076f7bdc</a></p><p>前面飞了一个降落，这里是XTouchDownRecorder的记录结果</p><p><a href="https://x-plane.vip/xtdr/static/?uploadid=5c4588ebcbc5c65f5ffea20a">https://x-plane.vip/xtdr/static/?uploadid=5c4588ebcbc5c65f5ffea20a</a></p><p>美国高原机场aspen飞行视频<br><a href="https://www.bilibili.com/video/av39320969/" target="_blank" rel="external">https://www.bilibili.com/video/av39320969/</a></p><p>另还有我今天降落的KSNA的一些照片</p><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_1.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_2.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_3.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>Hotstart TBM 900在X-Plane 11.30出来之际已经更新到了V1.1.4</p><p>这架飞机和FF320并列X-Plane目前最细腻的飞机，其他飞机根本不能比。也是我最近的最爱</p><p>飞机目前的价格还是65美元<br><a href="http://www.x-aviation.com/catalog/product_info.php/take-command-hot-start-tbm-900-p-158?osCsid=6bf73b602396aa93cd2a6669076f7bdc" target="_blank" rel="noopener">http://www.x-aviation.com/catalog/product_info.php/take-command-hot-start-tbm-900-p-158?osCsid=6bf73b602396aa93cd2a6669076f7bdc</a></p><p>前面飞了一个降落，这里是XTouchDownRecorder的记录结果</p><p><a href="https://x-plane.vip/xtdr/static/?uploadid=5c4588ebcbc5c65f5ffea20a">https://x-plane.vip/xtdr/static/?uploadid=5c4588ebcbc5c65f5ffea20a</a></p><p>美国高原机场aspen飞行视频<br><a href="https://www.bilibili.com/video/av39320969/" target="_blank" rel="noopener">https://www.bilibili.com/video/av39320969/</a></p><p>另还有我今天降落的KSNA的一些照片</p><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_1.jpg" title="x-plane 11"><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_2.jpg" title="x-plane 11"><img src="/2019/01/21/TBM-900-1-4-4/TBM900_14_3.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -298,7 +317,7 @@
       <link href="/2018/06/14/xp1130whatwecanexpect/"/>
       <url>/2018/06/14/xp1130whatwecanexpect/</url>
       
-        <content type="html"><![CDATA[<p>2018年刚刚在美国拉斯维加斯举行的模拟飞行博览会，LR也给出了他们的一些更新消息</p><h1 id="新廊桥"><a href="#新廊桥" class="headerlink" title="新廊桥"></a>新廊桥</h1><p>11.25已经拥有645个机场集成了最新的真实廊桥</p><h1 id="地景库升级"><a href="#地景库升级" class="headerlink" title="地景库升级"></a>地景库升级</h1><p>11.30 地景库增加了更多的可用素材，包括铁栅栏，厂房</p><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_fans.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_lib.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_lib2.jpg" alt="x-plane 11" title="x-plane 11"><h1 id="实验性气动更新"><a href="#实验性气动更新" class="headerlink" title="实验性气动更新"></a>实验性气动更新</h1><p>螺旋桨会使空气加速，这会被加入空气动力运算中</p><img src="/2018/06/14/xp1130whatwecanexpect/air_prop.jpg" alt="x-plane 11" title="x-plane 11"><p>downwash会在一定程度减小升力，当飞机主轮着地后，你不需要动水平尾翼，机头会自动回落，X-Plane一直有这个效应，但是austin发现这个效应有点过在现在的版本中。</p><img src="/2018/06/14/xp1130whatwecanexpect/air_downwash.jpg" alt="x-plane 11" title="x-plane 11"><p>机身升力</p><p>以前X-Plane对机身产生的气动影响不是最正确，但是11.30不再如此。风洞设备太贵，只能简单测试</p><img src="/2018/06/14/xp1130whatwecanexpect/air_fuse.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/air_force.jpg" alt="x-plane 11" title="x-plane 11"><p>research mode</p><p>考虑到新气动对老飞机的影响，LR决定增加一个开关，来启动实验性气动模式。</p><img src="/2018/06/14/xp1130whatwecanexpect/air_research.jpg" alt="x-plane 11" title="x-plane 11"><h1 id="增压系统"><a href="#增压系统" class="headerlink" title="增压系统"></a>增压系统</h1><p>X-Plane一直以来都支持缺氧黑视效果。11.30开始，飞机插件开发商可以设置氧气量，以及机上有几个人再用氧气，它会自动计算氧气能持续时间。飞利浦前段时间拿到了高空驾驶执照，我相信这套系统将非常接近现实</p><h1 id="防冰系统"><a href="#防冰系统" class="headerlink" title="防冰系统"></a>防冰系统</h1><p>X-Plane一直已来支持飞机结冰，然后直接失控。11.30开始，不再如此简单粗暴，会支持电子防冰，压缩空气加热防冰，化学试剂防冰，充气放冰等类型</p><h1 id="可变桨距螺旋桨控制器"><a href="#可变桨距螺旋桨控制器" class="headerlink" title="可变桨距螺旋桨控制器"></a>可变桨距螺旋桨控制器</h1><p>11.30再次更新其中的逻辑接近现实</p><h1 id="CWS-control-wheel-steering"><a href="#CWS-control-wheel-steering" class="headerlink" title="CWS(control wheel steering)"></a>CWS(control wheel steering)</h1><p>这是自动驾驶模式，半人工参与自动驾驶。737MCP上就有CWS按钮，但是X-Plane以前一直没有实现，然而11.30将自带</p><h1 id="飞利浦自动驾驶系统"><a href="#飞利浦自动驾驶系统" class="headerlink" title="飞利浦自动驾驶系统"></a>飞利浦自动驾驶系统</h1><p>15节侧风737自动降落实验已经成功演示了自动驾驶系统是如何成功工作的。飞利浦从X-Plane 10 就为很多知名的插件飞机做飞行系统，比如CRJ-200，FF777等。所以他是最有资格，和经验懂得插件机是如何实现自己的飞行系统的。而现在11.30，这套系统不再需要插件机单独开发，因为他已经成为了X-Plane 11.30的一部分。所以对于没有太强的开发能力的飞机插件团队，可以直接用11.30以后的自带系统完美实现自动驾驶。</p><h1 id="Vulkan"><a href="#Vulkan" class="headerlink" title="Vulkan"></a>Vulkan</h1><p>airfoilmaker已经移植到vulkan。这是一个标志，Vulkan移植到X-Plane 11可行性证明了。同时openGL会一直保持一定的兼容。</p><img src="/2018/06/14/xp1130whatwecanexpect/vulkan_airmaker.jpg" alt="x-plane 11" title="x-plane 11"><h1 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h1><p>11.30粒子是最值得期待部分。引擎排出的烟，热量视觉浑浊，引擎吸入的水汽，飞机在湿跑道起飞机轮带起的水雾，引擎着火，都可以用新粒子系统更真实虚拟出来。</p><img src="/2018/06/14/xp1130whatwecanexpect/partical_engsuck.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_wheel.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_fire.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_ext.jpg" alt="x-plane 11" title="x-plane 11"><p>同时易用的粒子系统编辑器也会提供。</p><img src="/2018/06/14/xp1130whatwecanexpect/partical_smoke.jpg" alt="x-plane 11" title="x-plane 11"><h1 id="时间表"><a href="#时间表" class="headerlink" title="时间表"></a>时间表</h1><p>11.25 beta现在正在进行时</p><p>11.30 夏天结束或者秋天开始</p><p>Vulkan 可能2018年底beta，或者2019年</p>]]></content>
+        <content type="html"><![CDATA[<p>2018年刚刚在美国拉斯维加斯举行的模拟飞行博览会，LR也给出了他们的一些更新消息</p><h1 id="新廊桥"><a href="#新廊桥" class="headerlink" title="新廊桥"></a>新廊桥</h1><p>11.25已经拥有645个机场集成了最新的真实廊桥</p><h1 id="地景库升级"><a href="#地景库升级" class="headerlink" title="地景库升级"></a>地景库升级</h1><p>11.30 地景库增加了更多的可用素材，包括铁栅栏，厂房</p><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_fans.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_lib.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/libupdate_lib2.jpg" title="x-plane 11"><h1 id="实验性气动更新"><a href="#实验性气动更新" class="headerlink" title="实验性气动更新"></a>实验性气动更新</h1><p>螺旋桨会使空气加速，这会被加入空气动力运算中</p><img src="/2018/06/14/xp1130whatwecanexpect/air_prop.jpg" title="x-plane 11"><p>downwash会在一定程度减小升力，当飞机主轮着地后，你不需要动水平尾翼，机头会自动回落，X-Plane一直有这个效应，但是austin发现这个效应有点过在现在的版本中。</p><img src="/2018/06/14/xp1130whatwecanexpect/air_downwash.jpg" title="x-plane 11"><p>机身升力</p><p>以前X-Plane对机身产生的气动影响不是最正确，但是11.30不再如此。风洞设备太贵，只能简单测试</p><img src="/2018/06/14/xp1130whatwecanexpect/air_fuse.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/air_force.jpg" title="x-plane 11"><p>research mode</p><p>考虑到新气动对老飞机的影响，LR决定增加一个开关，来启动实验性气动模式。</p><img src="/2018/06/14/xp1130whatwecanexpect/air_research.jpg" title="x-plane 11"><h1 id="增压系统"><a href="#增压系统" class="headerlink" title="增压系统"></a>增压系统</h1><p>X-Plane一直以来都支持缺氧黑视效果。11.30开始，飞机插件开发商可以设置氧气量，以及机上有几个人再用氧气，它会自动计算氧气能持续时间。飞利浦前段时间拿到了高空驾驶执照，我相信这套系统将非常接近现实</p><h1 id="防冰系统"><a href="#防冰系统" class="headerlink" title="防冰系统"></a>防冰系统</h1><p>X-Plane一直已来支持飞机结冰，然后直接失控。11.30开始，不再如此简单粗暴，会支持电子防冰，压缩空气加热防冰，化学试剂防冰，充气放冰等类型</p><h1 id="可变桨距螺旋桨控制器"><a href="#可变桨距螺旋桨控制器" class="headerlink" title="可变桨距螺旋桨控制器"></a>可变桨距螺旋桨控制器</h1><p>11.30再次更新其中的逻辑接近现实</p><h1 id="CWS-control-wheel-steering"><a href="#CWS-control-wheel-steering" class="headerlink" title="CWS(control wheel steering)"></a>CWS(control wheel steering)</h1><p>这是自动驾驶模式，半人工参与自动驾驶。737MCP上就有CWS按钮，但是X-Plane以前一直没有实现，然而11.30将自带</p><h1 id="飞利浦自动驾驶系统"><a href="#飞利浦自动驾驶系统" class="headerlink" title="飞利浦自动驾驶系统"></a>飞利浦自动驾驶系统</h1><p>15节侧风737自动降落实验已经成功演示了自动驾驶系统是如何成功工作的。飞利浦从X-Plane 10 就为很多知名的插件飞机做飞行系统，比如CRJ-200，FF777等。所以他是最有资格，和经验懂得插件机是如何实现自己的飞行系统的。而现在11.30，这套系统不再需要插件机单独开发，因为他已经成为了X-Plane 11.30的一部分。所以对于没有太强的开发能力的飞机插件团队，可以直接用11.30以后的自带系统完美实现自动驾驶。</p><h1 id="Vulkan"><a href="#Vulkan" class="headerlink" title="Vulkan"></a>Vulkan</h1><p>airfoilmaker已经移植到vulkan。这是一个标志，Vulkan移植到X-Plane 11可行性证明了。同时openGL会一直保持一定的兼容。</p><img src="/2018/06/14/xp1130whatwecanexpect/vulkan_airmaker.jpg" title="x-plane 11"><h1 id="粒子系统"><a href="#粒子系统" class="headerlink" title="粒子系统"></a>粒子系统</h1><p>11.30粒子是最值得期待部分。引擎排出的烟，热量视觉浑浊，引擎吸入的水汽，飞机在湿跑道起飞机轮带起的水雾，引擎着火，都可以用新粒子系统更真实虚拟出来。</p><img src="/2018/06/14/xp1130whatwecanexpect/partical_engsuck.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_wheel.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_fire.jpg" title="x-plane 11"><img src="/2018/06/14/xp1130whatwecanexpect/partical_ext.jpg" title="x-plane 11"><p>同时易用的粒子系统编辑器也会提供。</p><img src="/2018/06/14/xp1130whatwecanexpect/partical_smoke.jpg" title="x-plane 11"><h1 id="时间表"><a href="#时间表" class="headerlink" title="时间表"></a>时间表</h1><p>11.25 beta现在正在进行时</p><p>11.30 夏天结束或者秋天开始</p><p>Vulkan 可能2018年底beta，或者2019年</p>]]></content>
       
       
       
@@ -317,7 +336,7 @@
       <link href="/2018/05/08/xp1120/"/>
       <url>/2018/05/08/xp1120/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane 11.20R4作为11.20正式版终于出来了。X-system installer显示，有600M的更新。</p><img src="/2018/05/08/xp1120/Aerolite.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>X-Plane 11.20R4作为11.20正式版终于出来了。X-system installer显示，有600M的更新。</p><img src="/2018/05/08/xp1120/Aerolite.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -355,7 +374,7 @@
       <link href="/2017/09/13/multiplayer/"/>
       <url>/2017/09/13/multiplayer/</url>
       
-        <content type="html"><![CDATA[<p>闲话少说，先看看连飞能不能吸引你。</p><img src="/2017/09/13/multiplayer/taxing.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2017/09/13/multiplayer/chase.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2017/09/13/multiplayer/bridge.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2017/09/13/multiplayer/mountain.jpg" alt="x-plane 11" title="x-plane 11"><img src="/2017/09/13/multiplayer/water.jpg" alt="x-plane 11" title="x-plane 11"><p>X-Plane 11局域网连飞的飞机是会参与气动运算的。也就是说前面的飞机有尾流。这是其他飞行模拟器没有的。</p><p>我要谈的是局域网联网。而不是一般说的连飞，一般的连飞，自己可以上各种飞行论坛，他们都有连飞服务器，这个不在这篇文章的范围内。</p><p>局域网联网是没有中心服务器的概念，每个小伙伴都是对等的。可是除了上大学时，宿舍里的同学可以局域网，在家怎么和小伙伴局域网？有个概念，就这样诞生了，叫虚拟局域网</p><embed src="https://vswf.douyucdn.cn/share/vshare.swf?vid=p2V0JMV85j4vRY5k" allowfullscreen="true" quality="high" width="400" height="300" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"><h2 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h2><p>经过一段学习，找到一个国外的网站提供虚拟局域网的服务。先注册账号，每个小伙伴都需要注册，就是邮箱和密码</p><p><a href="https://accounts.logme.in/registration.aspx" target="_blank" rel="external">https://accounts.logme.in/registration.aspx</a></p><p>注册完之后，需要到你的邮箱点击一个网站发给你的确认链接。</p><p>然后在我们群里有个叫hamachi的软件，需要安装，这个程序会为你的计算机安装驱动和后台服务，以后每次启动，默认都会加入虚拟局域网</p><p>重要：安装过程中，windows会提示你是否选择为工作网络，一定要选是。</p><p>如果一切顺利，程序启动后，会提示你输入注册的用户名和密码。</p><p>如果登陆也一切顺利，程序会提示你选择新建网络，还是加入现有网络。本群里有已有的虚拟局域网络，所以选加入已有的。</p><p>输入网络ID，群里已经公布</p><p>如果审核通过，你就正式加入了虚拟局域网，你的局域网IP地址就显示在hamachi这个软件上。我的IP是25.21.94.206</p><h2 id="X-plane-11"><a href="#X-plane-11" class="headerlink" title="X-plane 11"></a>X-plane 11</h2><p>XP的设置里面有多人游戏设置，如图</p><img src="/2017/09/13/multiplayer/setting.jpg" alt="x-plane 11" title="x-plane 11"><p>这里的逻辑是，把除你之外的其他所有小伙伴的IP，都要加进来。</p><h2 id="Hamachi安装错误"><a href="#Hamachi安装错误" class="headerlink" title="Hamachi安装错误"></a>Hamachi安装错误</h2><p>如果hamachi.msi安装错误，那么导入下面的注册表，到你的系统。</p><a href="/2017/09/13/multiplayer/msi_runas_admin.reg" title="msi_runas_admin.reg">msi_runas_admin.reg</a><p>之后，右键点击hamachi.msi文件，会多一个”Run as administrator“菜单，点击运行即可</p>]]></content>
+        <content type="html"><![CDATA[<p>闲话少说，先看看连飞能不能吸引你。</p><img src="/2017/09/13/multiplayer/taxing.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/chase.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/bridge.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/mountain.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/water.jpg" title="x-plane 11"><p>X-Plane 11局域网连飞的飞机是会参与气动运算的。也就是说前面的飞机有尾流。这是其他飞行模拟器没有的。</p><p>我要谈的是局域网联网。而不是一般说的连飞，一般的连飞，自己可以上各种飞行论坛，他们都有连飞服务器，这个不在这篇文章的范围内。</p><p>局域网联网是没有中心服务器的概念，每个小伙伴都是对等的。可是除了上大学时，宿舍里的同学可以局域网，在家怎么和小伙伴局域网？有个概念，就这样诞生了，叫虚拟局域网</p><embed src="https://vswf.douyucdn.cn/share/vshare.swf?vid=p2V0JMV85j4vRY5k" allowfullscreen="true" quality="high" width="400" height="300" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"><h2 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h2><p>经过一段学习，找到一个国外的网站提供虚拟局域网的服务。先注册账号，每个小伙伴都需要注册，就是邮箱和密码</p><p><a href="https://accounts.logme.in/registration.aspx" target="_blank" rel="noopener">https://accounts.logme.in/registration.aspx</a></p><p>注册完之后，需要到你的邮箱点击一个网站发给你的确认链接。</p><p>然后在我们群里有个叫hamachi的软件，需要安装，这个程序会为你的计算机安装驱动和后台服务，以后每次启动，默认都会加入虚拟局域网</p><p>重要：安装过程中，windows会提示你是否选择为工作网络，一定要选是。</p><p>如果一切顺利，程序启动后，会提示你输入注册的用户名和密码。</p><p>如果登陆也一切顺利，程序会提示你选择新建网络，还是加入现有网络。本群里有已有的虚拟局域网络，所以选加入已有的。</p><p>输入网络ID，群里已经公布</p><p>如果审核通过，你就正式加入了虚拟局域网，你的局域网IP地址就显示在hamachi这个软件上。我的IP是25.21.94.206</p><h2 id="X-plane-11"><a href="#X-plane-11" class="headerlink" title="X-plane 11"></a>X-plane 11</h2><p>XP的设置里面有多人游戏设置，如图</p><img src="/2017/09/13/multiplayer/setting.jpg" title="x-plane 11"><p>这里的逻辑是，把除你之外的其他所有小伙伴的IP，都要加进来。</p><h2 id="Hamachi安装错误"><a href="#Hamachi安装错误" class="headerlink" title="Hamachi安装错误"></a>Hamachi安装错误</h2><p>如果hamachi.msi安装错误，那么导入下面的注册表，到你的系统。</p><a href="/2017/09/13/multiplayer/msi_runas_admin.reg" title="msi_runas_admin.reg">msi_runas_admin.reg</a><p>之后，右键点击hamachi.msi文件，会多一个”Run as administrator“菜单，点击运行即可</p>]]></content>
       
       
       
@@ -378,7 +397,7 @@
       <link href="/2017/08/11/planecommand/"/>
       <url>/2017/08/11/planecommand/</url>
       
-        <content type="html"><![CDATA[<p>连飞时，一边要和管制沟通，一边还要旋转各种按钮，你忙的过来么？</p><p>你需要一个副驾来帮你飞行，对，早在X-Plane 10就有个语音副驾了，叫planecommand。因为是老外开发的，所以只能对副驾说英文。开飞机的学习专业英语也是必要的。</p><p>插件安装完毕后，你的屏幕右上角会多个耳机图标。</p><img src="/2017/08/11/planecommand/planecommand.jpg" alt="x-plane 11" title="x-plane 11"><p>你需要设置一个键盘，或者摇杆上的按钮，来对着老外副驾说话。我记得默认是键盘A</p><p>对着这个老外语音副驾我们能说些什么呢？</p><h3 id="起落架"><a href="#起落架" class="headerlink" title="起落架"></a>起落架</h3><p>gear up<br>gear down</p><h3 id="襟翼"><a href="#襟翼" class="headerlink" title="襟翼"></a>襟翼</h3><p>set flaps 0<br>set flpas 2</p><h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>Beacon lights on<br>Taxi lights off<br>Strobe lights on<br>landing lights on</p><h3 id="无线电"><a href="#无线电" class="headerlink" title="无线电"></a>无线电</h3><p>Flip COM1<br>Set COM2 to 124.3</p><h3 id="刹车"><a href="#刹车" class="headerlink" title="刹车"></a>刹车</h3><p>Set the parking brake<br>Release the brakes<br>Disengage the brakes</p><h3 id="应答机"><a href="#应答机" class="headerlink" title="应答机"></a>应答机</h3><p>Put the transponder on standby<br>Set the transponder to 4 2 5 5<br>Turn on the transponder</p><p>以上命令是免费区的，花20美金就可以升级为专业版</p><p>你就会有NAV调频率和自动驾驶等等的功能，我就不详述了，自己研究吧。</p>]]></content>
+        <content type="html"><![CDATA[<p>连飞时，一边要和管制沟通，一边还要旋转各种按钮，你忙的过来么？</p><p>你需要一个副驾来帮你飞行，对，早在X-Plane 10就有个语音副驾了，叫planecommand。因为是老外开发的，所以只能对副驾说英文。开飞机的学习专业英语也是必要的。</p><p>插件安装完毕后，你的屏幕右上角会多个耳机图标。</p><img src="/2017/08/11/planecommand/planecommand.jpg" title="x-plane 11"><p>你需要设置一个键盘，或者摇杆上的按钮，来对着老外副驾说话。我记得默认是键盘A</p><p>对着这个老外语音副驾我们能说些什么呢？</p><h3 id="起落架"><a href="#起落架" class="headerlink" title="起落架"></a>起落架</h3><p>gear up<br>gear down</p><h3 id="襟翼"><a href="#襟翼" class="headerlink" title="襟翼"></a>襟翼</h3><p>set flaps 0<br>set flpas 2</p><h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>Beacon lights on<br>Taxi lights off<br>Strobe lights on<br>landing lights on</p><h3 id="无线电"><a href="#无线电" class="headerlink" title="无线电"></a>无线电</h3><p>Flip COM1<br>Set COM2 to 124.3</p><h3 id="刹车"><a href="#刹车" class="headerlink" title="刹车"></a>刹车</h3><p>Set the parking brake<br>Release the brakes<br>Disengage the brakes</p><h3 id="应答机"><a href="#应答机" class="headerlink" title="应答机"></a>应答机</h3><p>Put the transponder on standby<br>Set the transponder to 4 2 5 5<br>Turn on the transponder</p><p>以上命令是免费区的，花20美金就可以升级为专业版</p><p>你就会有NAV调频率和自动驾驶等等的功能，我就不详述了，自己研究吧。</p>]]></content>
       
       
       
@@ -399,7 +418,7 @@
       <link href="/2017/08/10/cockpit-xp/"/>
       <url>/2017/08/10/cockpit-xp/</url>
       
-        <content type="html"><![CDATA[<p>这些做高仿驾驶舱部件的公司，都是先FSX，P3D起家。对于X-Plane的支持，一般都需要一个配置软件，因为X-plane的dataref灵活度太高了，而且自带，只需稍微编程，就可以拿到。</p><p>而FSX P3D则要依靠第三方的插件FSPCIPC之类的软件才能拿到模拟器内部的运行数据。</p><p>手头的几家公司</p><p>单拿MCP举例来说</p><h2 id="GOFLIGHT"><a href="#GOFLIGHT" class="headerlink" title="GOFLIGHT"></a>GOFLIGHT</h2><p><a href="https://goflightinc.com/store/gf-mcp-pro-airliner-autopilot-module/" target="_blank" rel="external">https://goflightinc.com/store/gf-mcp-pro-airliner-autopilot-module/</a></p><p>需要购买额外的软件来接通x-plane</p><p><a href="https://shop.pollypotsoftware.org.uk/goflight-interface-tool-xplane.html" target="_blank" rel="external">https://shop.pollypotsoftware.org.uk/goflight-interface-tool-xplane.html</a></p><h2 id="opencockpits"><a href="#opencockpits" class="headerlink" title="opencockpits"></a>opencockpits</h2><p><a href="http://www.opencockpits.com/catalog/mcp-737ng-v3h-p-486.html" target="_blank" rel="external">http://www.opencockpits.com/catalog/mcp-737ng-v3h-p-486.html</a></p>]]></content>
+        <content type="html"><![CDATA[<p>这些做高仿驾驶舱部件的公司，都是先FSX，P3D起家。对于X-Plane的支持，一般都需要一个配置软件，因为X-plane的dataref灵活度太高了，而且自带，只需稍微编程，就可以拿到。</p><p>而FSX P3D则要依靠第三方的插件FSPCIPC之类的软件才能拿到模拟器内部的运行数据。</p><p>手头的几家公司</p><p>单拿MCP举例来说</p><h2 id="GOFLIGHT"><a href="#GOFLIGHT" class="headerlink" title="GOFLIGHT"></a>GOFLIGHT</h2><p><a href="https://goflightinc.com/store/gf-mcp-pro-airliner-autopilot-module/" target="_blank" rel="noopener">https://goflightinc.com/store/gf-mcp-pro-airliner-autopilot-module/</a></p><p>需要购买额外的软件来接通x-plane</p><p><a href="https://shop.pollypotsoftware.org.uk/goflight-interface-tool-xplane.html" target="_blank" rel="noopener">https://shop.pollypotsoftware.org.uk/goflight-interface-tool-xplane.html</a></p><h2 id="opencockpits"><a href="#opencockpits" class="headerlink" title="opencockpits"></a>opencockpits</h2><p><a href="http://www.opencockpits.com/catalog/mcp-737ng-v3h-p-486.html" target="_blank" rel="noopener">http://www.opencockpits.com/catalog/mcp-737ng-v3h-p-486.html</a></p>]]></content>
       
       
       
@@ -420,7 +439,7 @@
       <link href="/2017/08/10/xcamera/"/>
       <url>/2017/08/10/xcamera/</url>
       
-        <content type="html"><![CDATA[<p>X-Camera和FSX的EZdok Camera是一个量级的视角插件软件。但是X-Camera的界面做的太不友好了，一堆框框。也应该是历史原因，而且采有自由付费，所以估计作者在这个软件上的收入不是很高。<br>这里不谈安装，因为所有的X-Plane插件安装就是复制粘贴。<br>该软件没有汉化。</p><p>插件安装完成后，一旦enable，就会在屏幕的最下角多一个浮动窗口，我们进入control panel</p><img src="/2017/08/10/xcamera/bottom.jpg" alt="x-plane 11" title="x-plane 11"><p>进入让我们抓狂的配置界面。</p><img src="/2017/08/10/xcamera/internal.jpg" alt="x-plane 11" title="x-plane 11"><p>其实这个control panel分成几个主要区域：</p><ol><li>橘红色：是摄像头分个几大类，看个人喜好</li><li>绿色是用来调整摄像头的3D空间位置的，这完全可以用X-Plane的视角快捷键来调整，比如上下左右,.r f e d w s之类</li><li>青色区域很重要：添加摄像头就点Add</li><li>红色区域：我认为是陷阱区，不用解释，按我勾选的选就好。我觉不明白作者为什么不默认勾选？！好吧我去问问他<ol><li>retain Mouse look postion 鼠标位置保持</li><li>enable temporary positioning 零时位置保持</li><li>enable smooth transistion 平滑移动</li><li>enable smooth camera joins 平滑摄像头转换</li><li>transition seconds填个1或者2秒</li></ol></li></ol><p>其他是高级玩意，你有本事就研究，没本事，就别管了。</p><p>上面是驾驶舱内的视角，如果我想配置机翼视角怎么办？对，这叫外部视角。<br>改勾选的都要勾上。</p><img src="/2017/08/10/xcamera/external.jpg" alt="x-plane 11" title="x-plane 11"><p>唯一和内部视角不同的是</p><p>external camera选项。这是唯一的区别</p>]]></content>
+        <content type="html"><![CDATA[<p>X-Camera和FSX的EZdok Camera是一个量级的视角插件软件。但是X-Camera的界面做的太不友好了，一堆框框。也应该是历史原因，而且采有自由付费，所以估计作者在这个软件上的收入不是很高。<br>这里不谈安装，因为所有的X-Plane插件安装就是复制粘贴。<br>该软件没有汉化。</p><p>插件安装完成后，一旦enable，就会在屏幕的最下角多一个浮动窗口，我们进入control panel</p><img src="/2017/08/10/xcamera/bottom.jpg" title="x-plane 11"><p>进入让我们抓狂的配置界面。</p><img src="/2017/08/10/xcamera/internal.jpg" title="x-plane 11"><p>其实这个control panel分成几个主要区域：</p><ol><li>橘红色：是摄像头分个几大类，看个人喜好</li><li>绿色是用来调整摄像头的3D空间位置的，这完全可以用X-Plane的视角快捷键来调整，比如上下左右,.r f e d w s之类</li><li>青色区域很重要：添加摄像头就点Add</li><li>红色区域：我认为是陷阱区，不用解释，按我勾选的选就好。我觉不明白作者为什么不默认勾选？！好吧我去问问他<ol><li>retain Mouse look postion 鼠标位置保持</li><li>enable temporary positioning 零时位置保持</li><li>enable smooth transistion 平滑移动</li><li>enable smooth camera joins 平滑摄像头转换</li><li>transition seconds填个1或者2秒</li></ol></li></ol><p>其他是高级玩意，你有本事就研究，没本事，就别管了。</p><p>上面是驾驶舱内的视角，如果我想配置机翼视角怎么办？对，这叫外部视角。<br>改勾选的都要勾上。</p><img src="/2017/08/10/xcamera/external.jpg" title="x-plane 11"><p>唯一和内部视角不同的是</p><p>external camera选项。这是唯一的区别</p>]]></content>
       
       
       
@@ -441,7 +460,7 @@
       <link href="/2017/08/06/vhhh/"/>
       <url>/2017/08/06/vhhh/</url>
       
-        <content type="html"><![CDATA[<p>香港机场VHHH的一个著名的地面导航VOR就是TD，TUNG LUNG。我再google上找到它的样子</p><img src="/2017/08/06/vhhh/td_vor.jpg" alt="x-plane 11" title="x-plane 11"><p>VOR台可是一个真实的建筑物。</p><p>关于BEKOL标准离场，具体自己看航图。我这里只是拿地图看看标准离场到底怎么走的。</p><p>BEKOL 3C从VHHH 07L/R跑道起飞，到达ROVER，高度控制在5000英尺以下。</p><p>右转到TD，其中左侧会看到那个香港曾经世界最危险的机场。TD之前是限速的220节。</p><p>到达TD后，左转ATENA,再一个直角左转，到达BEKOL，高度要求15700英尺以上</p><img src="/2017/08/06/vhhh/bekol_sid.jpg" alt="x-plane 11" title="x-plane 11"><p>所以TD ATENA BEKOL就是不停的爬，爬到FL157以上</p><p>以下是大部分香港机场离场标准流程</p><img src="/2017/08/06/vhhh/vhhh_dp.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>香港机场VHHH的一个著名的地面导航VOR就是TD，TUNG LUNG。我再google上找到它的样子</p><img src="/2017/08/06/vhhh/td_vor.jpg" title="x-plane 11"><p>VOR台可是一个真实的建筑物。</p><p>关于BEKOL标准离场，具体自己看航图。我这里只是拿地图看看标准离场到底怎么走的。</p><p>BEKOL 3C从VHHH 07L/R跑道起飞，到达ROVER，高度控制在5000英尺以下。</p><p>右转到TD，其中左侧会看到那个香港曾经世界最危险的机场。TD之前是限速的220节。</p><p>到达TD后，左转ATENA,再一个直角左转，到达BEKOL，高度要求15700英尺以上</p><img src="/2017/08/06/vhhh/bekol_sid.jpg" title="x-plane 11"><p>所以TD ATENA BEKOL就是不停的爬，爬到FL157以上</p><p>以下是大部分香港机场离场标准流程</p><img src="/2017/08/06/vhhh/vhhh_dp.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -460,7 +479,7 @@
       <link href="/2017/08/03/xiamen-china-zsam-scenery/"/>
       <url>/2017/08/03/xiamen-china-zsam-scenery/</url>
       
-        <content type="html"><![CDATA[<p>X-plane 11的中国的地景是极其缺乏的。</p><p>在2012年ZSAM Xiamen Gaoqi Airport 2.0出世了。是中国地景艺术家ShaneMontoya在2012年的作品，他将作品厦门高崎机场ZSAM地景发布在</p><p><a href="http://forums.x-plane.org/index.php?/files/file/17451-zsam-xiamen-gaoqi-airport/" target="_blank" rel="external">http://forums.x-plane.org/index.php?/files/file/17451-zsam-xiamen-gaoqi-airport/</a></p><p>5年之后，我们迎来了XP11。问题是这个5年前的作品是否兼容XP11？</p><p>高崎机场ZSAM地景文件大小为70MB左右。</p><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol><li>解压缩安装包到 …\X-Plane 11\Custom Scenery\</li><li>这里有两个依赖安装包你必须安装，否则地景是没法正常显示的，而且XP启动时，会报错。</li></ol><p><a href="https://www.opensceneryx.com/downloads/OpenSceneryX.zip" target="_blank" rel="external">OpenSceneryX</a><br><a href="http://ruscenery.x-air.ru/files/RuScenery.zip" target="_blank" rel="external">Ruscenery</a></p><p>上面两个插件很大，可能需要科学上网。</p><ol><li>如果你需要让廊桥能动，你还需要安装插件</li></ol><p><a href="https://marginal.org.uk/x-planescenery/AutoGate.zip" target="_blank" rel="external">marginal’s autogate plugin</a></p><img src="/2017/08/03/xiamen-china-zsam-scenery/zsam_1.jpg" alt="x-plane 11" title="x-plane 11">]]></content>
+        <content type="html"><![CDATA[<p>X-plane 11的中国的地景是极其缺乏的。</p><p>在2012年ZSAM Xiamen Gaoqi Airport 2.0出世了。是中国地景艺术家ShaneMontoya在2012年的作品，他将作品厦门高崎机场ZSAM地景发布在</p><p><a href="http://forums.x-plane.org/index.php?/files/file/17451-zsam-xiamen-gaoqi-airport/" target="_blank" rel="noopener">http://forums.x-plane.org/index.php?/files/file/17451-zsam-xiamen-gaoqi-airport/</a></p><p>5年之后，我们迎来了XP11。问题是这个5年前的作品是否兼容XP11？</p><p>高崎机场ZSAM地景文件大小为70MB左右。</p><h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol><li>解压缩安装包到 …\X-Plane 11\Custom Scenery\</li><li>这里有两个依赖安装包你必须安装，否则地景是没法正常显示的，而且XP启动时，会报错。</li></ol><p><a href="https://www.opensceneryx.com/downloads/OpenSceneryX.zip" target="_blank" rel="noopener">OpenSceneryX</a><br><a href="http://ruscenery.x-air.ru/files/RuScenery.zip" target="_blank" rel="noopener">Ruscenery</a></p><p>上面两个插件很大，可能需要科学上网。</p><ol start="3"><li>如果你需要让廊桥能动，你还需要安装插件</li></ol><p><a href="https://marginal.org.uk/x-planescenery/AutoGate.zip" target="_blank" rel="noopener">marginal’s autogate plugin</a></p><img src="/2017/08/03/xiamen-china-zsam-scenery/zsam_1.jpg" title="x-plane 11">]]></content>
       
       
       
@@ -481,7 +500,7 @@
       <link href="/2017/07/31/howto-zibo737/"/>
       <url>/2017/07/31/howto-zibo737/</url>
       
-        <content type="html"><![CDATA[<h2 id="什么是zibo波音737"><a href="#什么是zibo波音737" class="headerlink" title="什么是zibo波音737"></a>什么是zibo波音737</h2><p>zibo是一个人，他在默认XP11的自带飞机波音737的基础上，改造成了一个几乎可以于商用插件机媲美的插件飞机。但是它是免费的</p><h2 id="复制一份默认机B737-800"><a href="#复制一份默认机B737-800" class="headerlink" title="复制一份默认机B737-800"></a>复制一份默认机B737-800</h2><p>复制目录</p><p>X-Plane 11\Aircraft\Laminar Research\Boeing B737-800</p><img src="/2017/07/31/howto-zibo737/zibo_copy.jpg" alt="zibo737" title="zibo737"><p>到</p><p>X-Plane 11\Aircraft\Extra Aircraft\Boeing B737-800X</p><p>注意这里加一个X以示区别</p><img src="/2017/07/31/howto-zibo737/zibo_paste.jpg" alt="zibo738" title="zibo738"><h2 id="将zibo的包解压覆盖Boeing-B737-800X里的内容"><a href="#将zibo的包解压覆盖Boeing-B737-800X里的内容" class="headerlink" title="将zibo的包解压覆盖Boeing B737-800X里的内容"></a>将zibo的包解压覆盖Boeing B737-800X里的内容</h2><p>zibo的发行包的名字一般为Boeing B737-800X_3_05n.zip，大小目前为20M左右。其中3.05n就是版本号</p><img src="/2017/07/31/howto-zibo737/zipo_over.jpg" alt="zibo738" title="zibo738">]]></content>
+        <content type="html"><![CDATA[<h2 id="什么是zibo波音737"><a href="#什么是zibo波音737" class="headerlink" title="什么是zibo波音737"></a>什么是zibo波音737</h2><p>zibo是一个人，他在默认XP11的自带飞机波音737的基础上，改造成了一个几乎可以于商用插件机媲美的插件飞机。但是它是免费的</p><h2 id="复制一份默认机B737-800"><a href="#复制一份默认机B737-800" class="headerlink" title="复制一份默认机B737-800"></a>复制一份默认机B737-800</h2><p>复制目录</p><p>X-Plane 11\Aircraft\Laminar Research\Boeing B737-800</p><img src="/2017/07/31/howto-zibo737/zibo_copy.jpg" title="zibo737"><p>到</p><p>X-Plane 11\Aircraft\Extra Aircraft\Boeing B737-800X</p><p>注意这里加一个X以示区别</p><img src="/2017/07/31/howto-zibo737/zibo_paste.jpg" title="zibo738"><h2 id="将zibo的包解压覆盖Boeing-B737-800X里的内容"><a href="#将zibo的包解压覆盖Boeing-B737-800X里的内容" class="headerlink" title="将zibo的包解压覆盖Boeing B737-800X里的内容"></a>将zibo的包解压覆盖Boeing B737-800X里的内容</h2><p>zibo的发行包的名字一般为Boeing B737-800X_3_05n.zip，大小目前为20M左右。其中3.05n就是版本号</p><img src="/2017/07/31/howto-zibo737/zipo_over.jpg" title="zibo738">]]></content>
       
       
       
@@ -504,7 +523,7 @@
       <link href="/2017/07/29/xp11-05-r1-757/"/>
       <url>/2017/07/29/xp11-05-r1-757/</url>
       
-        <content type="html"><![CDATA[<p>x-plane 11 从 02版本直接跳到了版本05r1. 主要是更新了机场,帧数和02版本保持一致</p><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_1.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_2.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_4.jpg" alt="X-Plane 11.05R1" title="X-Plane 11.05R1">]]></content>
+        <content type="html"><![CDATA[<p>x-plane 11 从 02版本直接跳到了版本05r1. 主要是更新了机场,帧数和02版本保持一致</p><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_1.jpg" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_2.jpg" title="X-Plane 11.05R1"><img src="/2017/07/29/xp11-05-r1-757/757-200_xp11_4.jpg" title="X-Plane 11.05R1">]]></content>
       
       
       
@@ -517,7 +536,7 @@
       <link href="/2017/07/25/xp11-sens/"/>
       <url>/2017/07/25/xp11-sens/</url>
       
-        <content type="html"><![CDATA[<img src="/2017/07/25/xp11-sens/xp11_sens.jpg" alt="X-Plane 11摇杆灵敏度设置" title="X-Plane 11摇杆灵敏度设置">]]></content>
+        <content type="html"><![CDATA[<img src="/2017/07/25/xp11-sens/xp11_sens.jpg" title="X-Plane 11摇杆灵敏度设置">]]></content>
       
       
       
@@ -540,7 +559,7 @@
       <link href="/2017/07/25/ixeg-737/"/>
       <url>/2017/07/25/ixeg-737/</url>
       
-        <content type="html"><![CDATA[<p>IXEG 737 1.2已经发布,并且完全兼容X-Plane 11<br><img src="/2017/07/25/ixeg-737/ixeg737_1_2.jpg" alt="X-Plane 11" title="X-Plane 11"></p>]]></content>
+        <content type="html"><![CDATA[<p>IXEG 737 1.2已经发布,并且完全兼容X-Plane 11<br><img src="/2017/07/25/ixeg-737/ixeg737_1_2.jpg" title="X-Plane 11"></p>]]></content>
       
       
       
@@ -561,7 +580,7 @@
       <link href="/2017/07/25/china-rvsm/"/>
       <url>/2017/07/25/china-rvsm/</url>
       
-        <content type="html"><![CDATA[<img src="/2017/07/25/china-rvsm/rvsm.jpg" alt="中国RVSM飞行高度层" title="中国RVSM飞行高度层">]]></content>
+        <content type="html"><![CDATA[<img src="/2017/07/25/china-rvsm/rvsm.jpg" title="中国RVSM飞行高度层">]]></content>
       
       
       
@@ -582,7 +601,7 @@
       <link href="/2017/07/25/heli/"/>
       <url>/2017/07/25/heli/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://forums.x-plane.org/index.php?/files/file/34702-bell-429-global-ranger/" target="_blank" rel="external">Bell 429 Global Ranger下载地址</a></p><img src="/2017/07/25/heli/Bell429_gr.jpg" alt="Bell429" title="Bell429">]]></content>
+        <content type="html"><![CDATA[<p><a href="http://forums.x-plane.org/index.php?/files/file/34702-bell-429-global-ranger/" target="_blank" rel="noopener">Bell 429 Global Ranger下载地址</a></p><img src="/2017/07/25/heli/Bell429_gr.jpg" title="Bell429">]]></content>
       
       
       
@@ -603,7 +622,7 @@
       <link href="/2017/05/17/forum-old207/"/>
       <url>/2017/05/17/forum-old207/</url>
       
-        <content type="html"><![CDATA[<p>它也是FSX， X-Plane同时支持的连飞网站。但是它是个德国网站，不知道网速行不行</p><p><a href="http://fscloud.net" target="_blank" rel="external">http://fscloud.net</a></p><p>并且需要下载特别的连飞插件</p>]]></content>
+        <content type="html"><![CDATA[<p>它也是FSX， X-Plane同时支持的连飞网站。但是它是个德国网站，不知道网速行不行</p><p><a href="http://fscloud.net" target="_blank" rel="noopener">http://fscloud.net</a></p><p>并且需要下载特别的连飞插件</p>]]></content>
       
       
       <categories>
@@ -674,7 +693,7 @@
       <link href="/2017/05/09/forum-old204/"/>
       <url>/2017/05/09/forum-old204/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane 11兼容地景</p><p>洛杉矶地景</p><p><a href="http://forums.x-plane.org/index.php?/files/file/26246-klax-los-angeles-international/&amp;page=6#comment-214803" target="_blank" rel="external">http://forums.x-plane.org/index.php?/files/file/26246-klax-los-angeles-international/&amp;page=6#comment-214803</a></p><p>圣地哥地景</p><p><a href="http://forums.x-plane.org/index.php?/files/file/24953-ksan-san-diego-international/&amp;page=9#comment-214292" target="_blank" rel="external">http://forums.x-plane.org/index.php?/files/file/24953-ksan-san-diego-international/&amp;page=9#comment-214292</a></p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane 11兼容地景</p><p>洛杉矶地景</p><p><a href="http://forums.x-plane.org/index.php?/files/file/26246-klax-los-angeles-international/&amp;page=6#comment-214803" target="_blank" rel="noopener">http://forums.x-plane.org/index.php?/files/file/26246-klax-los-angeles-international/&amp;page=6#comment-214803</a></p><p>圣地哥地景</p><p><a href="http://forums.x-plane.org/index.php?/files/file/24953-ksan-san-diego-international/&amp;page=9#comment-214292" target="_blank" rel="noopener">http://forums.x-plane.org/index.php?/files/file/24953-ksan-san-diego-international/&amp;page=9#comment-214292</a></p>]]></content>
       
       
       
@@ -743,7 +762,7 @@
       <link href="/2017/05/04/forum-old201/"/>
       <url>/2017/05/04/forum-old201/</url>
       
-        <content type="html"><![CDATA[<p>x737FMC V3.22兼容X-Plane11，但是它并不是免费插件。需要20欧元，下面是购买页面<br><a href="http://ufmc.eadt.eu/Purchase" target="_blank" rel="external">http://ufmc.eadt.eu/Purchase</a></p>]]></content>
+        <content type="html"><![CDATA[<p>x737FMC V3.22兼容X-Plane11，但是它并不是免费插件。需要20欧元，下面是购买页面<br><a href="http://ufmc.eadt.eu/Purchase" target="_blank" rel="noopener">http://ufmc.eadt.eu/Purchase</a></p>]]></content>
       
       
       <categories>
@@ -797,7 +816,7 @@
       <link href="/2017/04/17/forum-old199/"/>
       <url>/2017/04/17/forum-old199/</url>
       
-        <content type="html"><![CDATA[<p>JARDesign A320 NEO 3.0 R6已经放出，为X-Plane 11而生，已经可以正常使用</p><p><a href="http://jardesign.org/a320/download/install/JD320XP11.zip" target="_blank" rel="external">http://jardesign.org/a320/download/install/JD320XP11.zip</a></p>]]></content>
+        <content type="html"><![CDATA[<p>JARDesign A320 NEO 3.0 R6已经放出，为X-Plane 11而生，已经可以正常使用</p><p><a href="http://jardesign.org/a320/download/install/JD320XP11.zip" target="_blank" rel="noopener">http://jardesign.org/a320/download/install/JD320XP11.zip</a></p>]]></content>
       
       
       
@@ -905,7 +924,7 @@
       <link href="/2017/02/16/forum-old118/"/>
       <url>/2017/02/16/forum-old118/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201702/17/071828sf2knq8aqeebpa9y.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201702/17/072048o0u5t0k6s0r5mot0.jpg" alt="cpuwolf"></p><p>下载地址</p><p><a href="http://jardesign.org/a320/download/install/JD320XP11.zip" target="_blank" rel="external">JAR Design A320 NEO 3.0 beta 2</a></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201702/17/071828sf2knq8aqeebpa9y.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201702/17/072048o0u5t0k6s0r5mot0.jpg" alt="cpuwolf"></p><p>下载地址</p><p><a href="http://jardesign.org/a320/download/install/JD320XP11.zip" target="_blank" rel="noopener">JAR Design A320 NEO 3.0 beta 2</a></p>]]></content>
       
       
       <categories>
@@ -982,7 +1001,7 @@
       <link href="/2017/02/10/forum-old113/"/>
       <url>/2017/02/10/forum-old113/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://us.sinaimg.cn/003RhyTVjx078n6FLdu0010401000VjR0k01.mp4" target="_blank" rel="external">http://us.sinaimg.cn/003RhyTVjx078n6FLdu0010401000VjR0k01.mp4</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://us.sinaimg.cn/003RhyTVjx078n6FLdu0010401000VjR0k01.mp4" target="_blank" rel="noopener">http://us.sinaimg.cn/003RhyTVjx078n6FLdu0010401000VjR0k01.mp4</a></p>]]></content>
       
       
       
@@ -1014,7 +1033,7 @@
       <link href="/2017/02/04/forum-old127/"/>
       <url>/2017/02/04/forum-old127/</url>
       
-        <content type="html"><![CDATA[<p>根据X-Plane 11pb9用户的最新测试结果</p><p>Intel 6700k + GTX 1080可以跑到40帧无压力</p><p>都知道X-Plane是一个对单核CPU性能较高的游戏，那么Intel 6700K的单核性能是一个什么档次？<br>CPU性能统计数据（2017年2月4日更新）来自<br><a href="https://www.cpubenchmark.net/singleThread.html" target="_blank" rel="external">https://www.cpubenchmark.net/singleThread.html</a></p><p><img src="/images/data/attachment/201702/04/220525qipnofi3mz1pmu55.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>根据X-Plane 11pb9用户的最新测试结果</p><p>Intel 6700k + GTX 1080可以跑到40帧无压力</p><p>都知道X-Plane是一个对单核CPU性能较高的游戏，那么Intel 6700K的单核性能是一个什么档次？<br>CPU性能统计数据（2017年2月4日更新）来自<br><a href="https://www.cpubenchmark.net/singleThread.html" target="_blank" rel="noopener">https://www.cpubenchmark.net/singleThread.html</a></p><p><img src="/images/data/attachment/201702/04/220525qipnofi3mz1pmu55.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -1033,7 +1052,7 @@
       <link href="/2017/02/02/forum-old126/"/>
       <url>/2017/02/02/forum-old126/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://store.x-plane.org/Embraer-E-175-v2_p_515.html" target="_blank" rel="external">Embraer E195购买地址</a></p><p>售价为40美金<br><img src="/images/data/attachment/201702/02/141001j02opni9pnloza1n.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://store.x-plane.org/Embraer-E-175-v2_p_515.html" target="_blank" rel="noopener">Embraer E195购买地址</a></p><p>售价为40美金<br><img src="/images/data/attachment/201702/02/141001j02opni9pnloza1n.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -1052,7 +1071,7 @@
       <link href="/2017/02/02/forum-old125/"/>
       <url>/2017/02/02/forum-old125/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://www.x-plane.com/desktop/try-it/" target="_blank" rel="external">X-Plane 11下载地址页面</a><br><a href="http://www.x-plane.com/desktop/try-it/thanks/?downloadNow=true&amp;os=Windows&amp;download_url=%2Fupdate%2Finstallers11%2FX-Plane11InstallerWindows.zip" target="_blank" rel="external">X-Plane 11 Windows版下载地址</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://www.x-plane.com/desktop/try-it/" target="_blank" rel="noopener">X-Plane 11下载地址页面</a><br><a href="http://www.x-plane.com/desktop/try-it/thanks/?downloadNow=true&amp;os=Windows&amp;download_url=%2Fupdate%2Finstallers11%2FX-Plane11InstallerWindows.zip" target="_blank" rel="noopener">X-Plane 11 Windows版下载地址</a></p>]]></content>
       
       
       <categories>
@@ -1175,7 +1194,7 @@
       <link href="/2017/01/21/forum-old139/"/>
       <url>/2017/01/21/forum-old139/</url>
       
-        <content type="html"><![CDATA[<p><strong>X-Plane 11产品政策</strong></p><p><img src="/images/data/attachment/201701/26/145749jheoumqaekj5mme1.jpg" alt="cpuwolf"></p><p>亲爱的JARDesign客户！</p><p>由于即将发布的2016年10月发布的新型X-Plane 11模拟器，我们想告诉您关于使用和更新X-Plane 11的JARDesign产品的政策，如下：</p><p>客户谁在新的X-Plane 11模拟器演示活动（2016年10月及以后）购买A320neo / A330飞机后，在发布用于X-Plane 11的新版本A320neo / A330的情况下，使用新版本，<strong>无需额外费用</strong>。为此，我们将更改旧的串行密钥，或者客户将能够使用现有的串行密钥激活产品。如何做，我们将在以后出版。</p><p>在2016年10月之前购买了X-Plane 10的A320neo / A330的客户将能够在X-Plane 11中使用新版本，<strong>并额外付费<em>*</em></strong>。我们将在X-Plane 11发布后发布更多关于此的详细信息。</p><p>的X生活，地面操作，FMCar和拖轮船长客户在新版本发布的情况下，X飞机11，将可以使用新版本<strong>在不增加成本</strong>，并且可以使用现有的串行键激活产品（ s）。</p><p>我们感谢您的理解和忠诚。我们将继续竭尽全力为您带来更多使用我们产品的满意度。</p><p><strong>*</strong>注：**什么意思是“将能够使用新版本在X平面11与一些额外费用”？它的意义如下：<br>a）关于A320 / 330的现有版本：如果您当前的版本A320 / 330为X-Plane 10将在XP11下正常工作，所以你可以激活和使用XP10或XP11（因为你喜欢）。在这种情况下，应该考虑到使XP10飞机兼容新的XP11是层流研究任务。<br>b）关于A320 / 330的新版本（或更新），特别是对于XP11：我们将使用A320 / 330进行一些调整工作，以确保它们将与XP11完全兼容（但是现在，我们不知道所需的调整量），当然下一步是使用新的XP11酷功能，所以我们将覆盖这些以及在X-Plane 11的新版本的准备。所以你“将能够使用新版本X平面11带有一些额外的电荷“。</p>]]></content>
+        <content type="html"><![CDATA[<p><strong>X-Plane 11产品政策</strong></p><p><img src="/images/data/attachment/201701/26/145749jheoumqaekj5mme1.jpg" alt="cpuwolf"></p><p>亲爱的JARDesign客户！</p><p>由于即将发布的2016年10月发布的新型X-Plane 11模拟器，我们想告诉您关于使用和更新X-Plane 11的JARDesign产品的政策，如下：</p><p>客户谁在新的X-Plane 11模拟器演示活动（2016年10月及以后）购买A320neo / A330飞机后，在发布用于X-Plane 11的新版本A320neo / A330的情况下，使用新版本，<strong>无需额外费用</strong>。为此，我们将更改旧的串行密钥，或者客户将能够使用现有的串行密钥激活产品。如何做，我们将在以后出版。</p><p>在2016年10月之前购买了X-Plane 10的A320neo / A330的客户将能够在X-Plane 11中使用新版本，<strong>并额外付费***</strong>。我们将在X-Plane 11发布后发布更多关于此的详细信息。</p><p>的X生活，地面操作，FMCar和拖轮船长客户在新版本发布的情况下，X飞机11，将可以使用新版本<strong>在不增加成本</strong>，并且可以使用现有的串行键激活产品（ s）。</p><p>我们感谢您的理解和忠诚。我们将继续竭尽全力为您带来更多使用我们产品的满意度。</p><p><strong>*</strong>注：**什么意思是“将能够使用新版本在X平面11与一些额外费用”？它的意义如下：<br>a）关于A320 / 330的现有版本：如果您当前的版本A320 / 330为X-Plane 10将在XP11下正常工作，所以你可以激活和使用XP10或XP11（因为你喜欢）。在这种情况下，应该考虑到使XP10飞机兼容新的XP11是层流研究任务。<br>b）关于A320 / 330的新版本（或更新），特别是对于XP11：我们将使用A320 / 330进行一些调整工作，以确保它们将与XP11完全兼容（但是现在，我们不知道所需的调整量），当然下一步是使用新的XP11酷功能，所以我们将覆盖这些以及在X-Plane 11的新版本的准备。所以你“将能够使用新版本X平面11带有一些额外的电荷“。</p>]]></content>
       
       
       
@@ -1332,7 +1351,7 @@
       <link href="/2016/12/22/forum-old71/"/>
       <url>/2016/12/22/forum-old71/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://github.com/der-On/XPlane2Blender/archive/v3.3.12.zip" target="_blank" rel="external">https://github.com/der-On/XPlane2Blender/archive/v3.3.12.zip</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://github.com/der-On/XPlane2Blender/archive/v3.3.12.zip" target="_blank" rel="noopener">https://github.com/der-On/XPlane2Blender/archive/v3.3.12.zip</a></p>]]></content>
       
       
       
@@ -1501,7 +1520,7 @@
       <link href="/2016/05/16/forum-old100/"/>
       <url>/2016/05/16/forum-old100/</url>
       
-        <content type="html"><![CDATA[<p>XPlane2Blender 3.3.10 is released! download link<br><a href="https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip" target="_blank" rel="external">https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip</a></p><p>for Blender Windows Version, Blender Addon installation patch as below</p><p><img src="/images/data/attachment/201605/16/095654l6fbskl8szbk76zb.jpg" alt="cpuwolf"></p><p>after copy XPlane2Blender to addon folder, you have to enable the addon firstly, in Blender User Preference</p><p><img src="/images/data/attachment/201605/16/115207jldp1pa37u1j4plj.jpg" alt="cpuwolf"></p><p>remember to save your settings, and restart Blender<br><strong>Some tips for you when you play with XPlane2Blender</strong></p><p><strong>Scale=1.0</strong></p><p><img src="/images/data/attachment/201605/16/115802sbeebbzbbybfhlbu.jpg" alt="cpuwolf"></p><p>after you scaled objects with key ‘S’, you scales parameters will be changed, which is other than 1.0</p><p>you should use ‘Ctrl+A’ to reset your scale parameter to 1.0, because XPlane2Blender only works fine with scale=1.0<br><strong>Metric</strong></p><p>I recommend you to use metric</p><p><img src="/images/data/attachment/201605/16/120441ubpjew6p5qqzqepv.jpg" alt="cpuwolf"></p><p>Blender 3D view, a grid is 1 meter, and Xplane OBJ8 distance is in meter as well. it is easier for you to measure the object or distance.</p><p>but one thing I found is Blender 1 meter is not perfectly equal to XPlane 10 OBJ meter. I will investigate it further<br><strong>Bake Animation</strong></p><p>please always bake animation, which makes easier to delete bones dependency</p><p><img src="/images/data/attachment/201605/17/101241ddkclkwmm9kmxppc.jpg" alt="cpuwolf"></p><p>Insert Keyframes</p><p>use Animation to create location and rotation animation</p>]]></content>
+        <content type="html"><![CDATA[<p>XPlane2Blender 3.3.10 is released! download link<br><a href="https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip" target="_blank" rel="noopener">https://github.com/der-On/XPlane2Blender/archive/v3.3.10.zip</a></p><p>for Blender Windows Version, Blender Addon installation patch as below</p><p><img src="/images/data/attachment/201605/16/095654l6fbskl8szbk76zb.jpg" alt="cpuwolf"></p><p>after copy XPlane2Blender to addon folder, you have to enable the addon firstly, in Blender User Preference</p><p><img src="/images/data/attachment/201605/16/115207jldp1pa37u1j4plj.jpg" alt="cpuwolf"></p><p>remember to save your settings, and restart Blender<br><strong>Some tips for you when you play with XPlane2Blender</strong></p><p><strong>Scale=1.0</strong></p><p><img src="/images/data/attachment/201605/16/115802sbeebbzbbybfhlbu.jpg" alt="cpuwolf"></p><p>after you scaled objects with key ‘S’, you scales parameters will be changed, which is other than 1.0</p><p>you should use ‘Ctrl+A’ to reset your scale parameter to 1.0, because XPlane2Blender only works fine with scale=1.0<br><strong>Metric</strong></p><p>I recommend you to use metric</p><p><img src="/images/data/attachment/201605/16/120441ubpjew6p5qqzqepv.jpg" alt="cpuwolf"></p><p>Blender 3D view, a grid is 1 meter, and Xplane OBJ8 distance is in meter as well. it is easier for you to measure the object or distance.</p><p>but one thing I found is Blender 1 meter is not perfectly equal to XPlane 10 OBJ meter. I will investigate it further<br><strong>Bake Animation</strong></p><p>please always bake animation, which makes easier to delete bones dependency</p><p><img src="/images/data/attachment/201605/17/101241ddkclkwmm9kmxppc.jpg" alt="cpuwolf"></p><p>Insert Keyframes</p><p>use Animation to create location and rotation animation</p>]]></content>
       
       
       
@@ -1559,7 +1578,7 @@
       <link href="/2016/04/24/forum-old96/"/>
       <url>/2016/04/24/forum-old96/</url>
       
-        <content type="html"><![CDATA[<p>想学习X-Plane 10插件的开发，先把EZPushback的代码看懂<br><a href="https://github.com/thePuffyPuff/EZPushback/blob/master/src/ezpushback.c" target="_blank" rel="external">https://github.com/thePuffyPuff/EZPushback/blob/master/src/ezpushback.c</a></p>]]></content>
+        <content type="html"><![CDATA[<p>想学习X-Plane 10插件的开发，先把EZPushback的代码看懂<br><a href="https://github.com/thePuffyPuff/EZPushback/blob/master/src/ezpushback.c" target="_blank" rel="noopener">https://github.com/thePuffyPuff/EZPushback/blob/master/src/ezpushback.c</a></p>]]></content>
       
       
       <categories>
@@ -1584,7 +1603,7 @@
       <link href="/2016/04/24/forum-old124/"/>
       <url>/2016/04/24/forum-old124/</url>
       
-        <content type="html"><![CDATA[<p>2016年4月 IXEG团队在X-Aviation开始正式发售Boeing 737-300，售价在</p><p><img src="/images/data/attachment/201604/24/091505jb488940q6723dap.jpg" alt="cpuwolf"></p><p><a href="http://www.x-aviation.com/catalog/product_info.php/take-command-ixeg-737-classic-p-122" target="_blank" rel="external">http://www.x-aviation.com/catalog/product_info.php/take-command-ixeg-737-classic-p-122</a></p><p>目前售价在75美金，这个价格还是偏高的，但既然IXEG有信心给出这个价格，想必东西一定很好</p>]]></content>
+        <content type="html"><![CDATA[<p>2016年4月 IXEG团队在X-Aviation开始正式发售Boeing 737-300，售价在</p><p><img src="/images/data/attachment/201604/24/091505jb488940q6723dap.jpg" alt="cpuwolf"></p><p><a href="http://www.x-aviation.com/catalog/product_info.php/take-command-ixeg-737-classic-p-122" target="_blank" rel="noopener">http://www.x-aviation.com/catalog/product_info.php/take-command-ixeg-737-classic-p-122</a></p><p>目前售价在75美金，这个价格还是偏高的，但既然IXEG有信心给出这个价格，想必东西一定很好</p>]]></content>
       
       
       <categories>
@@ -1952,7 +1971,7 @@
       <link href="/2016/03/22/forum-old173/"/>
       <url>/2016/03/22/forum-old173/</url>
       
-        <content type="html"><![CDATA[<p>我们常需要在WED中，用带地理坐标的图片，来帮助我们定位</p><p><a href="http://www.allallsoft.com/gsmd/index.html" target="_blank" rel="external">Google Satellite MapsDownloader</a></p>]]></content>
+        <content type="html"><![CDATA[<p>我们常需要在WED中，用带地理坐标的图片，来帮助我们定位</p><p><a href="http://www.allallsoft.com/gsmd/index.html" target="_blank" rel="noopener">Google Satellite MapsDownloader</a></p>]]></content>
       
       
       <categories>
@@ -2056,7 +2075,7 @@
       <link href="/2016/03/07/forum-old167/"/>
       <url>/2016/03/07/forum-old167/</url>
       
-        <content type="html"><![CDATA[<p>为了达到最佳的飞行视觉效果，需要下载 HD Mesh</p><p><a href="http://mirror-eu.aerosoft.com/hd_mesh/index.php" target="_blank" rel="external">http://mirror-eu.aerosoft.com/hd_mesh/index.php</a></p><p><img src="/images/data/attachment/201603/07/125955z60cv69f0crxfx91.jpg" alt="cpuwolf"></p><p>KSFO 28R起飞，调头向南爬升</p><p><img src="/images/data/attachment/201603/08/225330aphp0djzje5jahhn.jpg" alt="cpuwolf"></p><p>感觉地景还挺美的</p><p><img src="/images/data/attachment/201603/08/225645d6rzrlo9lu6ru7ro.jpg" alt="cpuwolf"></p><p>美丽的海岸线，以及蓝色的太平洋</p><p><img src="/images/data/attachment/201603/08/225819bwzp1jna0011d4ws.jpg" alt="cpuwolf"></p><p>继续</p><p><img src="/images/data/attachment/201603/08/225902jfr2pfd923nz9wfo.jpg" alt="cpuwolf"></p><p>飞过洛杉矶</p><p><img src="/images/data/attachment/201603/08/225958hqzo4veuuezeuobo.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201603/08/230031tb7blgrqt353h347.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>为了达到最佳的飞行视觉效果，需要下载 HD Mesh</p><p><a href="http://mirror-eu.aerosoft.com/hd_mesh/index.php" target="_blank" rel="noopener">http://mirror-eu.aerosoft.com/hd_mesh/index.php</a></p><p><img src="/images/data/attachment/201603/07/125955z60cv69f0crxfx91.jpg" alt="cpuwolf"></p><p>KSFO 28R起飞，调头向南爬升</p><p><img src="/images/data/attachment/201603/08/225330aphp0djzje5jahhn.jpg" alt="cpuwolf"></p><p>感觉地景还挺美的</p><p><img src="/images/data/attachment/201603/08/225645d6rzrlo9lu6ru7ro.jpg" alt="cpuwolf"></p><p>美丽的海岸线，以及蓝色的太平洋</p><p><img src="/images/data/attachment/201603/08/225819bwzp1jna0011d4ws.jpg" alt="cpuwolf"></p><p>继续</p><p><img src="/images/data/attachment/201603/08/225902jfr2pfd923nz9wfo.jpg" alt="cpuwolf"></p><p>飞过洛杉矶</p><p><img src="/images/data/attachment/201603/08/225958hqzo4veuuezeuobo.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201603/08/230031tb7blgrqt353h347.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -2113,7 +2132,7 @@
       <link href="/2016/03/03/forum-old164/"/>
       <url>/2016/03/03/forum-old164/</url>
       
-        <content type="html"><![CDATA[<p>官方网址</p><p><a href="http://www.californiaair.net/" target="_blank" rel="external">http://www.californiaair.net/</a></p>]]></content>
+        <content type="html"><![CDATA[<p>官方网址</p><p><a href="http://www.californiaair.net/" target="_blank" rel="noopener">http://www.californiaair.net/</a></p>]]></content>
       
       
       
@@ -2126,7 +2145,7 @@
       <link href="/2016/03/03/forum-old163/"/>
       <url>/2016/03/03/forum-old163/</url>
       
-        <content type="html"><![CDATA[<p>X-CSL官网上并没有说自己支持VATSIM，但实际他和XSquawkBox兼容的很好</p><p><img src="/images/data/attachment/201603/04/001237ehauiaappfljzaai.jpg" alt="cpuwolf"></p><p>这里有个教程如何安装X-CSL和XSquawkBox<br><a href="http://x-airways.ru/va/modules/newbb/viewtopic.php?topic_id=454&amp;lang=english" target="_blank" rel="external">http://x-airways.ru/va/modules/n … id=454&amp;lang=english</a></p>]]></content>
+        <content type="html"><![CDATA[<p>X-CSL官网上并没有说自己支持VATSIM，但实际他和XSquawkBox兼容的很好</p><p><img src="/images/data/attachment/201603/04/001237ehauiaappfljzaai.jpg" alt="cpuwolf"></p><p>这里有个教程如何安装X-CSL和XSquawkBox<br><a href="http://x-airways.ru/va/modules/newbb/viewtopic.php?topic_id=454&amp;lang=english" target="_blank" rel="noopener">http://x-airways.ru/va/modules/n … id=454&amp;lang=english</a></p>]]></content>
       
       
       
@@ -2267,7 +2286,7 @@
       <link href="/2016/02/28/forum-old156/"/>
       <url>/2016/02/28/forum-old156/</url>
       
-        <content type="html"><![CDATA[<p>FlyWithLua 2.4.3已经放出</p><p><img src="/images/data/attachment/201602/28/204021irccezcv2tkny2nh.jpg" alt="cpuwolf"></p><p>(<a href="http://pan.baidu.com/s/1bpkFs8B" target="_blank" rel="external">http://pan.baidu.com/s/1bpkFs8B</a>)</p>]]></content>
+        <content type="html"><![CDATA[<p>FlyWithLua 2.4.3已经放出</p><p><img src="/images/data/attachment/201602/28/204021irccezcv2tkny2nh.jpg" alt="cpuwolf"></p><p>(<a href="http://pan.baidu.com/s/1bpkFs8B" target="_blank" rel="noopener">http://pan.baidu.com/s/1bpkFs8B</a>)</p>]]></content>
       
       
       
@@ -2326,7 +2345,7 @@
       <link href="/2016/02/21/forum-old152/"/>
       <url>/2016/02/21/forum-old152/</url>
       
-        <content type="html"><![CDATA[<p>OpenSceneryX是个X-Plane地景3D物体库，这样地景开发者，就可以不用花太多心思在创建3D物体，而只需要直接把OpenSceneryX的3D物体直接拿来用。<br><a href="http://www.opensceneryx.com/" target="_blank" rel="external">http://www.opensceneryx.com/</a><br>下面的物体给你个印象</p><p><img src="/images/data/attachment/201602/21/214729mg9pqpf9sl1ytatl.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>OpenSceneryX是个X-Plane地景3D物体库，这样地景开发者，就可以不用花太多心思在创建3D物体，而只需要直接把OpenSceneryX的3D物体直接拿来用。<br><a href="http://www.opensceneryx.com/" target="_blank" rel="noopener">http://www.opensceneryx.com/</a><br>下面的物体给你个印象</p><p><img src="/images/data/attachment/201602/21/214729mg9pqpf9sl1ytatl.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -2353,7 +2372,7 @@
       <link href="/2016/02/21/forum-old151/"/>
       <url>/2016/02/21/forum-old151/</url>
       
-        <content type="html"><![CDATA[<p>先闲话少说，直接看看World2XPlane能给你带来什么</p><p><img src="/images/data/attachment/201602/21/205439qmvag4vlb9lvfue6.jpg" alt="cpuwolf"></p><p>看见没有？<br>地面上多出了很多房子，森林，还是多了很多地表，比默认的X-Plane 10真实了很多。</p><p>World2XPlane官方网站<br><a href="http://world2xplane.com/" target="_blank" rel="external">http://world2xplane.com/</a></p><p>如果安装呢？<br><a href="http://world2xplane.com/2014/03/12/quick-start-guide/" target="_blank" rel="external">http://world2xplane.com/2014/03/12/quick-start-guide/</a></p><p>需要一提的是，World2XPlane依赖另外几个插件：</p><ul><li>RR</li><li>FFLibrary</li><li>R2_Library</li><li><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=144&amp;fromuid=1/" target="_blank" rel="external">OpenSceneryX</a></li></ul><p>上面的插件，只是提供3D物体<br>你还需要OpenStreetMap的数据，就是道路，建筑物的地理位置数据，这个数据包非常大<br><a href="http://download.geofabrik.de/" target="_blank" rel="external">http://download.geofabrik.de/</a></p><p>然后World2XPlane是一个转换工具，将 3D物体+OpenStreetMap=地景数据<br>最终你需要的是地景数据</p><p>有个网站<br><a href="http://simheaven.com/" target="_blank" rel="external">http://simheaven.com/</a><br>这里有最后的成品，地景数据。你就需要World2Xplane去转换</p><p>我终于把World2XPlane和SimHeaven的关系理解清楚了</p>]]></content>
+        <content type="html"><![CDATA[<p>先闲话少说，直接看看World2XPlane能给你带来什么</p><p><img src="/images/data/attachment/201602/21/205439qmvag4vlb9lvfue6.jpg" alt="cpuwolf"></p><p>看见没有？<br>地面上多出了很多房子，森林，还是多了很多地表，比默认的X-Plane 10真实了很多。</p><p>World2XPlane官方网站<br><a href="http://world2xplane.com/" target="_blank" rel="noopener">http://world2xplane.com/</a></p><p>如果安装呢？<br><a href="http://world2xplane.com/2014/03/12/quick-start-guide/" target="_blank" rel="noopener">http://world2xplane.com/2014/03/12/quick-start-guide/</a></p><p>需要一提的是，World2XPlane依赖另外几个插件：</p><ul><li>RR</li><li>FFLibrary</li><li>R2_Library</li><li><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=144&amp;fromuid=1/" target="_blank" rel="noopener">OpenSceneryX</a></li></ul><p>上面的插件，只是提供3D物体<br>你还需要OpenStreetMap的数据，就是道路，建筑物的地理位置数据，这个数据包非常大<br><a href="http://download.geofabrik.de/" target="_blank" rel="noopener">http://download.geofabrik.de/</a></p><p>然后World2XPlane是一个转换工具，将 3D物体+OpenStreetMap=地景数据<br>最终你需要的是地景数据</p><p>有个网站<br><a href="http://simheaven.com/" target="_blank" rel="noopener">http://simheaven.com/</a><br>这里有最后的成品，地景数据。你就需要World2Xplane去转换</p><p>我终于把World2XPlane和SimHeaven的关系理解清楚了</p>]]></content>
       
       
       <categories>
@@ -2382,7 +2401,7 @@
       <link href="/2016/02/21/forum-old150/"/>
       <url>/2016/02/21/forum-old150/</url>
       
-        <content type="html"><![CDATA[<p>今天发现一个收费的ATC，针对模拟飞行的。每月收费20美金。</p><p><img src="http://www.pilotedge.net/assets/logo-c5ad135c4428e6f44bf909411a67f128.png" alt=""></p><p><a href="http://www.pilotedge.net/" target="_blank" rel="external">http://www.pilotedge.net/</a></p><p>同时兼容如下模拟飞行软件<br>Microsoft? Flight Simulator 2004, Flight Simulator X, Prepar3d, or X-Plane</p><p>我听了一下ATC，是非常专业的网站，花钱是有道理的</p>]]></content>
+        <content type="html"><![CDATA[<p>今天发现一个收费的ATC，针对模拟飞行的。每月收费20美金。</p><p><img src="http://www.pilotedge.net/assets/logo-c5ad135c4428e6f44bf909411a67f128.png" alt></p><p><a href="http://www.pilotedge.net/" target="_blank" rel="noopener">http://www.pilotedge.net/</a></p><p>同时兼容如下模拟飞行软件<br>Microsoft? Flight Simulator 2004, Flight Simulator X, Prepar3d, or X-Plane</p><p>我听了一下ATC，是非常专业的网站，花钱是有道理的</p>]]></content>
       
       
       <categories>
@@ -2401,7 +2420,7 @@
       <link href="/2016/02/21/forum-old149/"/>
       <url>/2016/02/21/forum-old149/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane它不仅是个游戏，是一个完整的引擎，还能用还测试飞机的气动性。最近才发现一个逆天的插件，而且是免费的。地景终结者Ortho4XP</p><p><img src="/images/data/attachment/201602/21/095342owxpxpmmtmfwuxm2.jpg" alt="cpuwolf"></p><p>这是旧金山的地景</p><p>插件只有14MB，下载地址<br><a href="http://forums.x-plane.org/index.php?app=downloads&amp;showfile=29120" target="_blank" rel="external">http://forums.x-plane.org/index.php?app=downloads&amp;showfile=29120</a></p><p>看一下它生产的地景的海岸线完美吧</p><p><img src="/images/data/attachment/201602/21/193521z4ubhbzh13p444vf.jpg" alt="cpuwolf"></p><p>国外有网友说，Ortho4XP，第一次安装非常麻烦，因为要用到python3，但是对于出来的效果，是值得麻烦的</p><p>Ortho4XP的背后的真实功能有两个：</p><ol><li>生成地形的3D网格（地表）</li><li>在地形上贴上照片级地表贴图</li></ol><p>所以你可以看到Ortho4XP和<a href="http://simflie.cn/thread-143-1-1.html" target="_blank" rel="external">World2XPlane</a>其实并没人任何矛盾。因为World2XPlane是生产地表以上的东西，比如树木，房屋之类。</p><p>如果把这连个家伙联合在一起，那么X-Plane就几乎复制了一个地球</p><p>问题来了，Ortho4XP这么一个小工具，他怎么知道全地球的地形信息？</p><p>Ortho4XP是需要访问。。。又来了OpenStreetMap服务器的，那里会有全球的地形信息。<br><a href="https://www.openstreetmap.org/" target="_blank" rel="external">https://www.openstreetmap.org/</a></p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane它不仅是个游戏，是一个完整的引擎，还能用还测试飞机的气动性。最近才发现一个逆天的插件，而且是免费的。地景终结者Ortho4XP</p><p><img src="/images/data/attachment/201602/21/095342owxpxpmmtmfwuxm2.jpg" alt="cpuwolf"></p><p>这是旧金山的地景</p><p>插件只有14MB，下载地址<br><a href="http://forums.x-plane.org/index.php?app=downloads&amp;showfile=29120" target="_blank" rel="noopener">http://forums.x-plane.org/index.php?app=downloads&amp;showfile=29120</a></p><p>看一下它生产的地景的海岸线完美吧</p><p><img src="/images/data/attachment/201602/21/193521z4ubhbzh13p444vf.jpg" alt="cpuwolf"></p><p>国外有网友说，Ortho4XP，第一次安装非常麻烦，因为要用到python3，但是对于出来的效果，是值得麻烦的</p><p>Ortho4XP的背后的真实功能有两个：</p><ol><li>生成地形的3D网格（地表）</li><li>在地形上贴上照片级地表贴图</li></ol><p>所以你可以看到Ortho4XP和<a href="http://simflie.cn/thread-143-1-1.html" target="_blank" rel="noopener">World2XPlane</a>其实并没人任何矛盾。因为World2XPlane是生产地表以上的东西，比如树木，房屋之类。</p><p>如果把这连个家伙联合在一起，那么X-Plane就几乎复制了一个地球</p><p>问题来了，Ortho4XP这么一个小工具，他怎么知道全地球的地形信息？</p><p>Ortho4XP是需要访问。。。又来了OpenStreetMap服务器的，那里会有全球的地形信息。<br><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">https://www.openstreetmap.org/</a></p>]]></content>
       
       
       <categories>
@@ -2432,7 +2451,7 @@
       <link href="/2016/02/20/forum-old148/"/>
       <url>/2016/02/20/forum-old148/</url>
       
-        <content type="html"><![CDATA[<p>X-Crafts组合的Embraer E175无论外观还是，3D座舱都达到非常高的水平，现在的售价是240元人民币</p><p><img src="/images/data/attachment/201602/20/224244dgtlmm29l9ojoxmy.jpg" alt="cpuwolf"></p><p>Steve Wilson实现了真实版的FMC功能</p><p><img src="/images/data/attachment/201602/20/224251qsohwlzhloaczonn.jpg" alt="cpuwolf"></p><p>还有一点值得一提的，wing flex，就是飞机遇到气流时，机翼的抖动，是非常完美的</p><p><img src="/images/data/attachment/201602/20/234206b1onof1n138qbn31.jpg" alt="cpuwolf"></p><p>购买链接<br><a href="http://store.x-plane.org/Embraer-E-175_p_437.html" target="_blank" rel="external">http://store.x-plane.org/Embraer-E-175_p_437.html</a><br>关于驾驶舱我找了一个真实飞机的对比</p><p>下面的是模拟的</p><p><img src="/images/data/attachment/201602/20/233157nqye4vveny3zsvn9.jpg" alt="cpuwolf"></p><p>下面是真实的</p><p><img src="/images/data/attachment/201602/20/233804grfyefzdt5z0so01.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201602/20/233233a602zt5yafhvozya.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>X-Crafts组合的Embraer E175无论外观还是，3D座舱都达到非常高的水平，现在的售价是240元人民币</p><p><img src="/images/data/attachment/201602/20/224244dgtlmm29l9ojoxmy.jpg" alt="cpuwolf"></p><p>Steve Wilson实现了真实版的FMC功能</p><p><img src="/images/data/attachment/201602/20/224251qsohwlzhloaczonn.jpg" alt="cpuwolf"></p><p>还有一点值得一提的，wing flex，就是飞机遇到气流时，机翼的抖动，是非常完美的</p><p><img src="/images/data/attachment/201602/20/234206b1onof1n138qbn31.jpg" alt="cpuwolf"></p><p>购买链接<br><a href="http://store.x-plane.org/Embraer-E-175_p_437.html" target="_blank" rel="noopener">http://store.x-plane.org/Embraer-E-175_p_437.html</a><br>关于驾驶舱我找了一个真实飞机的对比</p><p>下面的是模拟的</p><p><img src="/images/data/attachment/201602/20/233157nqye4vveny3zsvn9.jpg" alt="cpuwolf"></p><p>下面是真实的</p><p><img src="/images/data/attachment/201602/20/233804grfyefzdt5z0so01.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201602/20/233233a602zt5yafhvozya.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -2445,7 +2464,7 @@
       <link href="/2016/02/20/forum-old147/"/>
       <url>/2016/02/20/forum-old147/</url>
       
-        <content type="html"><![CDATA[<p>这些免费插件都可以在<a href="http://forum.x-plane.org/" target="_blank" rel="external">forum.x-plane.org</a><br>上下载。<br>选出你最爱的机场吧</p>]]></content>
+        <content type="html"><![CDATA[<p>这些免费插件都可以在<a href="http://forum.x-plane.org/" target="_blank" rel="noopener">forum.x-plane.org</a><br>上下载。<br>选出你最爱的机场吧</p>]]></content>
       
       
       <categories>
@@ -2499,7 +2518,7 @@
       <link href="/2016/02/19/forum-old145/"/>
       <url>/2016/02/19/forum-old145/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://marginal.org.uk/x-planescenery/hangar_tutorial/index.html" target="_blank" rel="external">http://marginal.org.uk/x-planescenery/hangar_tutorial/index.html</a></p><p>这个例子非常完整，甚至包括blender如何使用</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://marginal.org.uk/x-planescenery/hangar_tutorial/index.html" target="_blank" rel="noopener">http://marginal.org.uk/x-planescenery/hangar_tutorial/index.html</a></p><p>这个例子非常完整，甚至包括blender如何使用</p>]]></content>
       
       
       
@@ -2518,7 +2537,7 @@
       <link href="/2016/02/19/forum-old144/"/>
       <url>/2016/02/19/forum-old144/</url>
       
-        <content type="html"><![CDATA[<p>这是我目前发现的最好用的X-plane10 地景编辑器，实在太简单， 太好用了。<br><img src="/images/data/attachment/201602/20/000211mtmdxm0whw1btdm1.jpg" alt="cpuwolf"></p><p><a href="http://forums.x-plane.org/index.php?app=downloads&amp;showfile=726" target="_blank" rel="external">http://forums.x-plane.org/index.php?app=downloads&amp;showfile=726</a></p><p>有好几个版本，只是mac os, linux , windows。我的理解是这个工具完全不需要培训，实在太直观，稍微有点基础，肯定立即上手。</p><p>这个工具也个官方网站</p><p><a href="http://marginal.org.uk/x-planescenery/tools.html" target="_blank" rel="external">http://marginal.org.uk/x-planescenery/tools.html</a></p><p>看来是个英国人写的，我看了一下下载下来的东西，是用python写成，跑题了。</p>]]></content>
+        <content type="html"><![CDATA[<p>这是我目前发现的最好用的X-plane10 地景编辑器，实在太简单， 太好用了。<br><img src="/images/data/attachment/201602/20/000211mtmdxm0whw1btdm1.jpg" alt="cpuwolf"></p><p><a href="http://forums.x-plane.org/index.php?app=downloads&amp;showfile=726" target="_blank" rel="noopener">http://forums.x-plane.org/index.php?app=downloads&amp;showfile=726</a></p><p>有好几个版本，只是mac os, linux , windows。我的理解是这个工具完全不需要培训，实在太直观，稍微有点基础，肯定立即上手。</p><p>这个工具也个官方网站</p><p><a href="http://marginal.org.uk/x-planescenery/tools.html" target="_blank" rel="noopener">http://marginal.org.uk/x-planescenery/tools.html</a></p><p>看来是个英国人写的，我看了一下下载下来的东西，是用python写成，跑题了。</p>]]></content>
       
       
       <categories>
@@ -2622,7 +2641,7 @@
       <link href="/2016/01/26/forum-old91/"/>
       <url>/2016/01/26/forum-old91/</url>
       
-        <content type="html"><![CDATA[<p>波音737MAX计划于西雅图时间1月29日上午十点，也就是北京时间1月30日凌晨两点，首飞。并且在线直播</p><p><img src="/images/data/attachment/201601/26/120308lnlamc0cflcct3wb.jpg" alt="cpuwolf"></p><p><a href="http://www.boeing.com/commercial/737max/first-flight/" target="_blank" rel="external">直播地址</a></p>]]></content>
+        <content type="html"><![CDATA[<p>波音737MAX计划于西雅图时间1月29日上午十点，也就是北京时间1月30日凌晨两点，首飞。并且在线直播</p><p><img src="/images/data/attachment/201601/26/120308lnlamc0cflcct3wb.jpg" alt="cpuwolf"></p><p><a href="http://www.boeing.com/commercial/737max/first-flight/" target="_blank" rel="noopener">直播地址</a></p>]]></content>
       
       
       
@@ -2635,7 +2654,7 @@
       <link href="/2016/01/26/forum-old90/"/>
       <url>/2016/01/26/forum-old90/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane 10 最新地景编辑器 <a href="http://developer.x-plane.com/tools/worldeditor/" target="_blank" rel="external">WorldEditor 1.41</a>，同时支持Windows, Mac, Linux操作系统</p><p>作为X-Plane地景初学者，需要一上来就想造个地景，我们可以先从如何修改地景开始</p><p><a href="http://developer.x-plane.com/?article=correctly-forming-taxiways-and-junctions" target="_blank" rel="external">http://developer.x-plane.com/?article=correctly-forming-taxiways-and-junctions</a></p><p><img src="http://developer.x-plane.com/wp-content/uploads/2015/12/Apt_guidelines_badt.jpg" alt=""></p><p>本教程就是修改机场跑道的教材</p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane 10 最新地景编辑器 <a href="http://developer.x-plane.com/tools/worldeditor/" target="_blank" rel="noopener">WorldEditor 1.41</a>，同时支持Windows, Mac, Linux操作系统</p><p>作为X-Plane地景初学者，需要一上来就想造个地景，我们可以先从如何修改地景开始</p><p><a href="http://developer.x-plane.com/?article=correctly-forming-taxiways-and-junctions" target="_blank" rel="noopener">http://developer.x-plane.com/?article=correctly-forming-taxiways-and-junctions</a></p><p><img src="http://developer.x-plane.com/wp-content/uploads/2015/12/Apt_guidelines_badt.jpg" alt></p><p>本教程就是修改机场跑道的教材</p>]]></content>
       
       
       
@@ -2790,7 +2809,7 @@
       <link href="/2016/01/10/forum-old79/"/>
       <url>/2016/01/10/forum-old79/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://www.navigraph.com/FmsDataManualInstall.aspx" target="_blank" rel="external">https://www.navigraph.com/FmsDataManualInstall.aspx</a></p><p><img src="/images/data/attachment/201601/10/205840sqsjfq8feoyotijn.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://www.navigraph.com/FmsDataManualInstall.aspx" target="_blank" rel="noopener">https://www.navigraph.com/FmsDataManualInstall.aspx</a></p><p><img src="/images/data/attachment/201601/10/205840sqsjfq8feoyotijn.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -2893,7 +2912,7 @@
       <link href="/2015/11/28/forum-old69/"/>
       <url>/2015/11/28/forum-old69/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://store.x-plane.org/" target="_blank" rel="external">http://store.x-plane.org/</a></p><p>看再来打折最恨的是worldliner boeing 777 pro extended pack 85美金打折到60美金，降幅达到25美金</p><p><img src="/images/data/attachment/201511/28/215946cbjbxm1njjj33d1x.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://store.x-plane.org/" target="_blank" rel="noopener">http://store.x-plane.org/</a></p><p>看再来打折最恨的是worldliner boeing 777 pro extended pack 85美金打折到60美金，降幅达到25美金</p><p><img src="/images/data/attachment/201511/28/215946cbjbxm1njjj33d1x.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -3028,7 +3047,7 @@
       <link href="/2015/10/31/forum-old60/"/>
       <url>/2015/10/31/forum-old60/</url>
       
-        <content type="html"><![CDATA[<p>最近出了新版的V3，此版本老用户并不能免费升级。但是有半价优惠。<br><a href="http://www.x-aviation.com/catalog/product_info.php/skymaxx-pro-p-115" target="_blank" rel="external">http://www.x-aviation.com/catalo … p/skymaxx-pro-p-115</a></p><p>不废话直接看看效果，比X-Plane 原本的云引擎速度还快</p><p><img src="/images/data/attachment/201510/31/121259l4r0m443l0rzx4mm.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/31/193534c8i1g6b3ab3paub3.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/31/193534tu0rl7o036ee8mu0.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>最近出了新版的V3，此版本老用户并不能免费升级。但是有半价优惠。<br><a href="http://www.x-aviation.com/catalog/product_info.php/skymaxx-pro-p-115" target="_blank" rel="noopener">http://www.x-aviation.com/catalo … p/skymaxx-pro-p-115</a></p><p>不废话直接看看效果，比X-Plane 原本的云引擎速度还快</p><p><img src="/images/data/attachment/201510/31/121259l4r0m443l0rzx4mm.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/31/193534c8i1g6b3ab3paub3.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/31/193534tu0rl7o036ee8mu0.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -3060,7 +3079,7 @@
       <link href="/2015/10/26/forum-old58/"/>
       <url>/2015/10/26/forum-old58/</url>
       
-        <content type="html"><![CDATA[<p>以美国洛杉矶Van Nuys airport的16R跑道为主线，讲述飞行员联盟这个与世隔绝的世界的故事<br><a href="http://static.video.qq.com/TPout.swf?vid=u0162svb643&amp;auto=0" target="_blank" rel="external">http://static.video.qq.com/TPout.swf?vid=u0162svb643&amp;auto=0</a></p>]]></content>
+        <content type="html"><![CDATA[<p>以美国洛杉矶Van Nuys airport的16R跑道为主线，讲述飞行员联盟这个与世隔绝的世界的故事<br><a href="http://static.video.qq.com/TPout.swf?vid=u0162svb643&amp;auto=0" target="_blank" rel="noopener">http://static.video.qq.com/TPout.swf?vid=u0162svb643&amp;auto=0</a></p>]]></content>
       
       
       
@@ -3073,7 +3092,7 @@
       <link href="/2015/10/26/forum-old57/"/>
       <url>/2015/10/26/forum-old57/</url>
       
-        <content type="html"><![CDATA[<p>旧金山机场租来，空气之王B200，前往约塞米帝国家公园.<br>空气之王B200旧金山（KSFO）起飞，沿途进过，约塞米帝国家公园，降落妈妈湖/马姆莫斯湖（KMMH）。拍摄于X-Plane 10.41</p><p><img src="/images/data/attachment/201510/26/112331srcrxaxszctadsmu.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112346fo26zv6fv7lrv1nw.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112359hbn22hkykxh2hwbz.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112411t9g73owdgg7dbo85.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112428wa8p5q465ni5rido.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112441zoqdkqtqxfxdqrkj.jpg" alt="cpuwolf"></p><p><a href="http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html</a></p><p>KMMH降落的航迹</p><p><img src="/images/data/attachment/201510/26/125128jw00sm6690sznitz.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>旧金山机场租来，空气之王B200，前往约塞米帝国家公园.<br>空气之王B200旧金山（KSFO）起飞，沿途进过，约塞米帝国家公园，降落妈妈湖/马姆莫斯湖（KMMH）。拍摄于X-Plane 10.41</p><p><img src="/images/data/attachment/201510/26/112331srcrxaxszctadsmu.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112346fo26zv6fv7lrv1nw.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112359hbn22hkykxh2hwbz.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112411t9g73owdgg7dbo85.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112428wa8p5q465ni5rido.jpg" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/26/112441zoqdkqtqxfxdqrkj.jpg" alt="cpuwolf"></p><p><a href="http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTM2OTM5NzI1Ng==.html</a></p><p>KMMH降落的航迹</p><p><img src="/images/data/attachment/201510/26/125128jw00sm6690sznitz.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -3086,7 +3105,7 @@
       <link href="/2015/10/19/forum-old56/"/>
       <url>/2015/10/19/forum-old56/</url>
       
-        <content type="html"><![CDATA[<p>10.40不到半个月的时间，就升级到了10.41回复后获得更详细信息。本次升级和10.35相比，系统流畅度有了很大提高，立即升级吧</p><p>(<a href="http://pan.baidu.com/s/1dDAZJvb" target="_blank" rel="external">http://pan.baidu.com/s/1dDAZJvb</a>)<br>解压密码: simflie</p>]]></content>
+        <content type="html"><![CDATA[<p>10.40不到半个月的时间，就升级到了10.41回复后获得更详细信息。本次升级和10.35相比，系统流畅度有了很大提高，立即升级吧</p><p>(<a href="http://pan.baidu.com/s/1dDAZJvb" target="_blank" rel="noopener">http://pan.baidu.com/s/1dDAZJvb</a>)<br>解压密码: simflie</p>]]></content>
       
       
       
@@ -3099,7 +3118,7 @@
       <link href="/2015/10/18/forum-old55/"/>
       <url>/2015/10/18/forum-old55/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane 10.41是有史以来最流畅的一次升级，画面有很大的提升。插件机KingAir B200画面用Adobe After Effect做过调整，已经用sony vegas最后合成编辑。</p><p><img src="/images/data/attachment/201510/18/214741blln24nk2delo3a3.jpg" alt="cpuwolf"></p><p><a href="http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html</a></p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane 10.41是有史以来最流畅的一次升级，画面有很大的提升。插件机KingAir B200画面用Adobe After Effect做过调整，已经用sony vegas最后合成编辑。</p><p><img src="/images/data/attachment/201510/18/214741blln24nk2delo3a3.jpg" alt="cpuwolf"></p><p><a href="http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTM2Mjk5NDc5Ng==.html</a></p>]]></content>
       
       
       <categories>
@@ -3137,7 +3156,7 @@
       <link href="/2015/10/12/forum-old53/"/>
       <url>/2015/10/12/forum-old53/</url>
       
-        <content type="html"><![CDATA[<p>新功能与改进</p><ul><li>新的天气控制接口</li><li>DSF 多核、 少等待，远处场景看的更清晰</li><li>新的多核的 AVI 的录像机— — 替换 QuickTime，运行在所有平台上，32 或 64 位。</li><li>禁用屏幕保护程序</li><li>涡扇发动机PT-6 现在已经正确的模拟了</li><li>温度计和燃料指示灯故障模拟</li><li>拖缆是黑色的使它几乎不可能看到的。已变成灰色，使它更易于看到。</li><li>很酷: 故障允许随机发生!</li></ul><p><img src="/images/data/attachment/201510/14/220230pnk9cchcnxp8glhu.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/14/220313tumrd13fixuaftw1.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/14/220307qlhrhl8l6tidd8lm.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/" alt="cpuwolf"></p><p>不需要安装10.35，直接覆盖安装</p><p>(<a href="http://pan.baidu.com/s/1jGzZRmA" target="_blank" rel="external">http://pan.baidu.com/s/1jGzZRmA</a>)</p><p>7zip解压密码: cpuwolf</p>]]></content>
+        <content type="html"><![CDATA[<p>新功能与改进</p><ul><li>新的天气控制接口</li><li>DSF 多核、 少等待，远处场景看的更清晰</li><li>新的多核的 AVI 的录像机— — 替换 QuickTime，运行在所有平台上，32 或 64 位。</li><li>禁用屏幕保护程序</li><li>涡扇发动机PT-6 现在已经正确的模拟了</li><li>温度计和燃料指示灯故障模拟</li><li>拖缆是黑色的使它几乎不可能看到的。已变成灰色，使它更易于看到。</li><li>很酷: 故障允许随机发生!</li></ul><p><img src="/images/data/attachment/201510/14/220230pnk9cchcnxp8glhu.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/14/220313tumrd13fixuaftw1.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/201510/14/220307qlhrhl8l6tidd8lm.png" alt="cpuwolf"></p><p><img src="/images/data/attachment/" alt="cpuwolf"></p><p>不需要安装10.35，直接覆盖安装</p><p>(<a href="http://pan.baidu.com/s/1jGzZRmA" target="_blank" rel="noopener">http://pan.baidu.com/s/1jGzZRmA</a>)</p><p>7zip解压密码: cpuwolf</p>]]></content>
       
       
       
@@ -3163,7 +3182,7 @@
       <link href="/2015/08/01/forum-old51/"/>
       <url>/2015/08/01/forum-old51/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XMTI4NjQxNDcyNA==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTI4NjQxNDcyNA==.html</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XMTI4NjQxNDcyNA==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTI4NjQxNDcyNA==.html</a></p>]]></content>
       
       
       
@@ -3176,7 +3195,7 @@
       <link href="/2015/07/14/forum-old50/"/>
       <url>/2015/07/14/forum-old50/</url>
       
-        <content type="html"><![CDATA[<p>比奇航空KingAir B200b双引擎螺旋桨飞机希尔斯伯勒<br><a href="http://v.youku.com/v_show/id_XMTI4NDA4ODY3Ng==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTI4NDA4ODY3Ng==.html</a><br><img src="/images/data/attachment/201507/14/140819i61txhkzj1h6llqk.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p>比奇航空KingAir B200b双引擎螺旋桨飞机希尔斯伯勒<br><a href="http://v.youku.com/v_show/id_XMTI4NDA4ODY3Ng==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTI4NDA4ODY3Ng==.html</a><br><img src="/images/data/attachment/201507/14/140819i61txhkzj1h6llqk.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -3189,7 +3208,7 @@
       <link href="/2015/06/26/forum-old49/"/>
       <url>/2015/06/26/forum-old49/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://www.aip.net.nz/NavWalk.aspx?section=CHARTS" target="_blank" rel="external">http://www.aip.net.nz/NavWalk.aspx?section=CHARTS</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://www.aip.net.nz/NavWalk.aspx?section=CHARTS" target="_blank" rel="noopener">http://www.aip.net.nz/NavWalk.aspx?section=CHARTS</a></p>]]></content>
       
       
       
@@ -3215,7 +3234,7 @@
       <link href="/2015/06/19/forum-old47/"/>
       <url>/2015/06/19/forum-old47/</url>
       
-        <content type="html"><![CDATA[<p>【高清】X-Plane KingAir双引擎飞机轻柔降落</p><p>飞机插件Carenado KingAir B200<br>视角插件X-Camera 2.0</p><p><a href="http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html</a></p>]]></content>
+        <content type="html"><![CDATA[<p>【高清】X-Plane KingAir双引擎飞机轻柔降落</p><p>飞机插件Carenado KingAir B200<br>视角插件X-Camera 2.0</p><p><a href="http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTI2MzI2Mjc3Ng==.html</a></p>]]></content>
       
       
       <categories>
@@ -3253,7 +3272,7 @@
       <link href="/2015/06/07/forum-old45/"/>
       <url>/2015/06/07/forum-old45/</url>
       
-        <content type="html"><![CDATA[<p>产生人物的免费3D软件<br><a href="http://www.makehuman.org/" target="_blank" rel="external">http://www.makehuman.org/</a></p><p>著名免费3D软件<br><a href="http://www.blender.org/" target="_blank" rel="external">http://www.blender.org/</a></p><p>任务运动捕捉文件</p>]]></content>
+        <content type="html"><![CDATA[<p>产生人物的免费3D软件<br><a href="http://www.makehuman.org/" target="_blank" rel="noopener">http://www.makehuman.org/</a></p><p>著名免费3D软件<br><a href="http://www.blender.org/" target="_blank" rel="noopener">http://www.blender.org/</a></p><p>任务运动捕捉文件</p>]]></content>
       
       
       
@@ -3272,7 +3291,7 @@
       <link href="/2015/06/07/forum-old44/"/>
       <url>/2015/06/07/forum-old44/</url>
       
-        <content type="html"><![CDATA[<p>Navigraph致力于更新给导航数据给模拟飞行世界，当然也包括X-Plane</p><p><a href="https://www.navigraph.com/FmsDataManualInstall.aspx" target="_blank" rel="external">https://www.navigraph.com/FmsDataManualInstall.aspx</a><br>下载X-Plane导航数据，注意到了么？X-Plane的导航数据还是比较统一的</p><p><img src="/images/data/attachment/201506/07/132635uiii2k8hs7ff88k6.jpg" alt="cpuwolf"></p><ul><li>解压出 “apt.dat” 到X-Plane路径 “X-System | Resources | default scenery | default apt dat | Earth nav data”</li><li>解压出 (“earth_astro.dat”, “earth_awy.dat”, “earth_fix.dat” and “earth_nav.dat” 到X-Plane安装路径 “X-System | Resources | default data”</li></ul><p>下载地址</p><p>(<a href="http://pan.baidu.com/s/1gepyI6B" target="_blank" rel="external">http://pan.baidu.com/s/1gepyI6B</a>)</p>]]></content>
+        <content type="html"><![CDATA[<p>Navigraph致力于更新给导航数据给模拟飞行世界，当然也包括X-Plane</p><p><a href="https://www.navigraph.com/FmsDataManualInstall.aspx" target="_blank" rel="noopener">https://www.navigraph.com/FmsDataManualInstall.aspx</a><br>下载X-Plane导航数据，注意到了么？X-Plane的导航数据还是比较统一的</p><p><img src="/images/data/attachment/201506/07/132635uiii2k8hs7ff88k6.jpg" alt="cpuwolf"></p><ul><li>解压出 “apt.dat” 到X-Plane路径 “X-System | Resources | default scenery | default apt dat | Earth nav data”</li><li>解压出 (“earth_astro.dat”, “earth_awy.dat”, “earth_fix.dat” and “earth_nav.dat” 到X-Plane安装路径 “X-System | Resources | default data”</li></ul><p>下载地址</p><p>(<a href="http://pan.baidu.com/s/1gepyI6B" target="_blank" rel="noopener">http://pan.baidu.com/s/1gepyI6B</a>)</p>]]></content>
       
       
       <categories>
@@ -3360,7 +3379,7 @@
       <link href="/2015/06/06/forum-old40/"/>
       <url>/2015/06/06/forum-old40/</url>
       
-        <content type="html"><![CDATA[<p>ATR-72型飞机是法国与意大利合资的飞机制造商ATR公司制造的ATR-42支线客机的改进型。为双螺旋桨民航机，其结构上与ATR-42一样，但机身更长，载客数更多，航程超过1650公里。</p><p>Aerosoft/McPhat Studio联合开发的ATR 72-500,机模最初由Aerosoft研发，而McPhat Studio，还是干他的老本行，做高清涂装。同时他也是最终选择这款机模Aerosoft ATR 72-500为入手点，第一次在X-Plane尝试做高清涂装。结果还是不错的</p><p><img src="/images/data/attachment/201506/06/151723c9zy7c4zr79bc60w.jpg" alt="cpuwolf"></p><p>你可以看到X-Plane的渲染效果还是不错的。目前售价为25欧元，约250元人民币。花不到300块，就可以买一架飞机回家，还是很值得的。</p><p><a href="https://store-x-plane-org.3dcartstores.com/ATR-72--500_p_211.html" target="_blank" rel="external">https://store-x-plane-org.3dcartstores.com/ATR-72–500_p_211.html</a></p><p>你想想你坐一次飞机需要多少钱。<br>这家飞机有什么特点？<br>我就不多说了，该有的都有，驾驶舱细节，包括各种动画，反正什么都有。说说不足吧。<br>这个ATR72-500，唯一的缺点是FMC飞行管理系统，是用的X-Plane系统默认的，当然你可以外加x-fmc插件来弥补这个缺点。其实你玩多了，会发现各种飞机的FMC飞行管理系统千篇一律，没错，因为他们的供应商世界上也没几家。</p>]]></content>
+        <content type="html"><![CDATA[<p>ATR-72型飞机是法国与意大利合资的飞机制造商ATR公司制造的ATR-42支线客机的改进型。为双螺旋桨民航机，其结构上与ATR-42一样，但机身更长，载客数更多，航程超过1650公里。</p><p>Aerosoft/McPhat Studio联合开发的ATR 72-500,机模最初由Aerosoft研发，而McPhat Studio，还是干他的老本行，做高清涂装。同时他也是最终选择这款机模Aerosoft ATR 72-500为入手点，第一次在X-Plane尝试做高清涂装。结果还是不错的</p><p><img src="/images/data/attachment/201506/06/151723c9zy7c4zr79bc60w.jpg" alt="cpuwolf"></p><p>你可以看到X-Plane的渲染效果还是不错的。目前售价为25欧元，约250元人民币。花不到300块，就可以买一架飞机回家，还是很值得的。</p><p><a href="https://store-x-plane-org.3dcartstores.com/ATR-72--500_p_211.html" target="_blank" rel="noopener">https://store-x-plane-org.3dcartstores.com/ATR-72–500_p_211.html</a></p><p>你想想你坐一次飞机需要多少钱。<br>这家飞机有什么特点？<br>我就不多说了，该有的都有，驾驶舱细节，包括各种动画，反正什么都有。说说不足吧。<br>这个ATR72-500，唯一的缺点是FMC飞行管理系统，是用的X-Plane系统默认的，当然你可以外加x-fmc插件来弥补这个缺点。其实你玩多了，会发现各种飞机的FMC飞行管理系统千篇一律，没错，因为他们的供应商世界上也没几家。</p>]]></content>
       
       
       <categories>
@@ -3385,7 +3404,7 @@
       <link href="/2015/06/06/forum-old39/"/>
       <url>/2015/06/06/forum-old39/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html</a></p><p><img src="/images/data/attachment/201506/06/120317s5hovk705g70dfww.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTI1NTAwMjM3Ng==.html</a></p><p><img src="/images/data/attachment/201506/06/120317s5hovk705g70dfww.jpg" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -3410,7 +3429,7 @@
       <link href="/2015/06/06/forum-old38/"/>
       <url>/2015/06/06/forum-old38/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://jardesign.org/" target="_blank" rel="external">http://jardesign.org/</a><br><a href="http://flightfactor.aero/" target="_blank" rel="external">http://flightfactor.aero/</a><br><a href="http://www.x-aviation.com/" target="_blank" rel="external">http://www.x-aviation.com/</a><br><a href="http://www.vflyteair.com/" target="_blank" rel="external">http://www.vflyteair.com/</a><br><a href="http://www.aerosoft.com/" target="_blank" rel="external">http://www.aerosoft.com/</a><br><a href="http://www.qpac-us.com/" target="_blank" rel="external">http://www.qpac-us.com/</a><br><a href="http://www.flyjsim.com/" target="_blank" rel="external">http://www.flyjsim.com/</a><br><a href="http://www.carenado.com/" target="_blank" rel="external">http://www.carenado.com/</a><br><a href="http://www.alabeo.com/" target="_blank" rel="external">http://www.alabeo.com/</a><br><a href="http://www.mcphatstudios.net/" target="_blank" rel="external">http://www.mcphatstudios.net/</a><br><a href="http://www.khamsin.org/" target="_blank" rel="external">http://www.khamsin.org/</a><br><a href="http://www.dai-media.com/" target="_blank" rel="external">http://www.dai-media.com/</a><br><a href="http://beti-x.com/" target="_blank" rel="external">http://beti-x.com/</a></p><p>注意到了么，本站是允许外链的</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://jardesign.org/" target="_blank" rel="noopener">http://jardesign.org/</a><br><a href="http://flightfactor.aero/" target="_blank" rel="noopener">http://flightfactor.aero/</a><br><a href="http://www.x-aviation.com/" target="_blank" rel="noopener">http://www.x-aviation.com/</a><br><a href="http://www.vflyteair.com/" target="_blank" rel="noopener">http://www.vflyteair.com/</a><br><a href="http://www.aerosoft.com/" target="_blank" rel="noopener">http://www.aerosoft.com/</a><br><a href="http://www.qpac-us.com/" target="_blank" rel="noopener">http://www.qpac-us.com/</a><br><a href="http://www.flyjsim.com/" target="_blank" rel="noopener">http://www.flyjsim.com/</a><br><a href="http://www.carenado.com/" target="_blank" rel="noopener">http://www.carenado.com/</a><br><a href="http://www.alabeo.com/" target="_blank" rel="noopener">http://www.alabeo.com/</a><br><a href="http://www.mcphatstudios.net/" target="_blank" rel="noopener">http://www.mcphatstudios.net/</a><br><a href="http://www.khamsin.org/" target="_blank" rel="noopener">http://www.khamsin.org/</a><br><a href="http://www.dai-media.com/" target="_blank" rel="noopener">http://www.dai-media.com/</a><br><a href="http://beti-x.com/" target="_blank" rel="noopener">http://beti-x.com/</a></p><p>注意到了么，本站是允许外链的</p>]]></content>
       
       
       <categories>
@@ -3487,7 +3506,7 @@
       <link href="/2015/05/31/forum-old33/"/>
       <url>/2015/05/31/forum-old33/</url>
       
-        <content type="html"><![CDATA[<p><strong>跑道旁拍摄到水陆两栖飞机降落</strong><br>仔细看飞机的动作，非常细腻，还有起落架的减震效果而导致的飞机晃动，在接着机轮擦烟的效果，无不透露X-Plane是飞行员练习飞行的利器</p><p><a href="http://v.youku.com/v_show/id_XMTI1MTM5Njg4MA==.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XMTI1MTM5Njg4MA==.html</a></p><p><img src="/images/data/attachment/201505/31/225400z6tc1zet191tqt75.jpg" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>跑道旁拍摄到水陆两栖飞机降落</strong><br>仔细看飞机的动作，非常细腻，还有起落架的减震效果而导致的飞机晃动，在接着机轮擦烟的效果，无不透露X-Plane是飞行员练习飞行的利器</p><p><a href="http://v.youku.com/v_show/id_XMTI1MTM5Njg4MA==.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XMTI1MTM5Njg4MA==.html</a></p><p><img src="/images/data/attachment/201505/31/225400z6tc1zet191tqt75.jpg" alt="cpuwolf"></p>]]></content>
       
       
       
@@ -3583,7 +3602,7 @@
       <link href="/2015/05/26/forum-old27/"/>
       <url>/2015/05/26/forum-old27/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane SDK 2.1.3</p><p>如果你不是开发人员，请忽略本帖</p><p>这已是目前最新的SDK，而且SDK非常小，可见X-Plane接口最兼容性非常好，一直都没有太大的变动，稳定。<br>SDK2.1需要X-Plane 10以上的平台</p><p>编译器的需求</p><ul><li>MAC平台： X-Code 3.2 or newer, 32 and 64-bit Intel</li><li>Windows平台：Microsoft Visual Studio 2010 (32 and 64-bit)</li><li>Linux平台：makefile for GCC 4.x (32 and 64-bit)</li></ul><p>SDK下载地址</p><p>(<a href="http://pan.baidu.com/s/1bnyIJQB" target="_blank" rel="external">http://pan.baidu.com/s/1bnyIJQB</a>)</p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane SDK 2.1.3</p><p>如果你不是开发人员，请忽略本帖</p><p>这已是目前最新的SDK，而且SDK非常小，可见X-Plane接口最兼容性非常好，一直都没有太大的变动，稳定。<br>SDK2.1需要X-Plane 10以上的平台</p><p>编译器的需求</p><ul><li>MAC平台： X-Code 3.2 or newer, 32 and 64-bit Intel</li><li>Windows平台：Microsoft Visual Studio 2010 (32 and 64-bit)</li><li>Linux平台：makefile for GCC 4.x (32 and 64-bit)</li></ul><p>SDK下载地址</p><p>(<a href="http://pan.baidu.com/s/1bnyIJQB" target="_blank" rel="noopener">http://pan.baidu.com/s/1bnyIJQB</a>)</p>]]></content>
       
       
       <categories>
@@ -3608,7 +3627,7 @@
       <link href="/2015/05/26/forum-old26/"/>
       <url>/2015/05/26/forum-old26/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane作为一个开放平台，X-Plane SDK提供了公开的接口，共开发者们进行二次开发<br>X-Plane SDK 2.1.3插件开发包 开发人员专用<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=37&amp;fromuid=1" target="_blank" rel="external">http://simflie.cn/forum.php?mod=viewthread&amp;tid=37&amp;fromuid=1</a><br>(出处: SimFlie.cn中国模拟飞行)</p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane作为一个开放平台，X-Plane SDK提供了公开的接口，共开发者们进行二次开发<br>X-Plane SDK 2.1.3插件开发包 开发人员专用<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=37&amp;fromuid=1" target="_blank" rel="noopener">http://simflie.cn/forum.php?mod=viewthread&amp;tid=37&amp;fromuid=1</a><br>(出处: SimFlie.cn中国模拟飞行)</p>]]></content>
       
       
       <categories>
@@ -3646,7 +3665,7 @@
       <link href="/2015/05/24/forum-old24/"/>
       <url>/2015/05/24/forum-old24/</url>
       
-        <content type="html"><![CDATA[<p><strong>Real Terra Haze v2.03b3</strong>可以让X-Plane 10的真实度增加不少，但是它需要LlyWithLua的支持，因为它本身只是个脚本</p><p>请首先安装插件<br>FlyWithLua 2.3.3 X-Plane 10 Lua脚本系统<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=33&amp;fromuid=8" target="_blank" rel="external">http://simflie.cn/forum.php?mod=viewthread&amp;tid=33&amp;fromuid=8</a><br>(出处: SimFlie.cn中国模拟飞行)</p><p>效果图<br>XP默认效果</p><p><img src="/images/data/attachment/201505/24/201130qiinlrd2nhtwzhhu.jpg" alt="cpuwolf"></p><p>RTH打开后的效果</p><p><img src="/images/data/attachment/201505/24/201140bdsgcszh5lcx05vh.jpg" alt="cpuwolf"></p><p>下载地址</p><p>(<a href="http://pan.baidu.com/s/1jGAFEEa" target="_blank" rel="external">http://pan.baidu.com/s/1jGAFEEa</a>)</p><p>使用方法</p><p>如果你需要显示RTH(Real Terra Haze)的菜单,在 plugin中选择 FlyWithLua Macro菜单</p><p><img src="/images/data/attachment/201505/24/195513gnn55xs446x8w66x.gif" alt="cpuwolf"></p><p>然后显示出来的效果，在整个屏幕的左侧,会有RTH的一个半透明菜单</p><p><img src="/images/data/attachment/201505/24/195832fct00906qgooeg6g.gif" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>Real Terra Haze v2.03b3</strong>可以让X-Plane 10的真实度增加不少，但是它需要LlyWithLua的支持，因为它本身只是个脚本</p><p>请首先安装插件<br>FlyWithLua 2.3.3 X-Plane 10 Lua脚本系统<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=33&amp;fromuid=8" target="_blank" rel="noopener">http://simflie.cn/forum.php?mod=viewthread&amp;tid=33&amp;fromuid=8</a><br>(出处: SimFlie.cn中国模拟飞行)</p><p>效果图<br>XP默认效果</p><p><img src="/images/data/attachment/201505/24/201130qiinlrd2nhtwzhhu.jpg" alt="cpuwolf"></p><p>RTH打开后的效果</p><p><img src="/images/data/attachment/201505/24/201140bdsgcszh5lcx05vh.jpg" alt="cpuwolf"></p><p>下载地址</p><p>(<a href="http://pan.baidu.com/s/1jGAFEEa" target="_blank" rel="noopener">http://pan.baidu.com/s/1jGAFEEa</a>)</p><p>使用方法</p><p>如果你需要显示RTH(Real Terra Haze)的菜单,在 plugin中选择 FlyWithLua Macro菜单</p><p><img src="/images/data/attachment/201505/24/195513gnn55xs446x8w66x.gif" alt="cpuwolf"></p><p>然后显示出来的效果，在整个屏幕的左侧,会有RTH的一个半透明菜单</p><p><img src="/images/data/attachment/201505/24/195832fct00906qgooeg6g.gif" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -3671,7 +3690,7 @@
       <link href="/2015/05/24/forum-old23/"/>
       <url>/2015/05/24/forum-old23/</url>
       
-        <content type="html"><![CDATA[<p><strong>FlyWithLua for XP9 and XP10 2.3.3 (win, lin, mac)</strong><br><img src="/images/data/attachment/201505/24/192548okppvvqyk6qfq66o.jpg" alt="cpuwolf"></p><p>Lua其实是一种脚本语言,但是 X-Friese 为 X-Plane开发了插件 FlyWithLua,这样你只需要写个简单的脚本,就可以帮你自动出一些事情,当然这本身须对编程有一些概念。也就是说FlyWithLua是一个二次开发的平台<br>经过亲自测试，需要升级XP10.35后再，安装插件<br>X-Plane 10.35离线升级包<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=30&amp;fromuid=8" target="_blank" rel="external">http://simflie.cn/forum.php?mod=viewthread&amp;tid=30&amp;fromuid=8</a><br>(出处: SimFlie.cn中国模拟飞行)</p><p>下载地址<br>(<a href="http://pan.baidu.com/s/1c0exQZQ" target="_blank" rel="external">http://pan.baidu.com/s/1c0exQZQ</a>)</p><p>使用方法</p><p>其实并不需要特别的使用,FlyWithLua是随着XP系统的启动,自动运行的.<br>确认插件运行正常的方法,是看它已经在插件菜单里出现</p><p><img src="/images/data/attachment/201505/24/200519wqkr2lgl2kl8n5hk.gif" alt="cpuwolf"></p>]]></content>
+        <content type="html"><![CDATA[<p><strong>FlyWithLua for XP9 and XP10 2.3.3 (win, lin, mac)</strong><br><img src="/images/data/attachment/201505/24/192548okppvvqyk6qfq66o.jpg" alt="cpuwolf"></p><p>Lua其实是一种脚本语言,但是 X-Friese 为 X-Plane开发了插件 FlyWithLua,这样你只需要写个简单的脚本,就可以帮你自动出一些事情,当然这本身须对编程有一些概念。也就是说FlyWithLua是一个二次开发的平台<br>经过亲自测试，需要升级XP10.35后再，安装插件<br>X-Plane 10.35离线升级包<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=30&amp;fromuid=8" target="_blank" rel="noopener">http://simflie.cn/forum.php?mod=viewthread&amp;tid=30&amp;fromuid=8</a><br>(出处: SimFlie.cn中国模拟飞行)</p><p>下载地址<br>(<a href="http://pan.baidu.com/s/1c0exQZQ" target="_blank" rel="noopener">http://pan.baidu.com/s/1c0exQZQ</a>)</p><p>使用方法</p><p>其实并不需要特别的使用,FlyWithLua是随着XP系统的启动,自动运行的.<br>确认插件运行正常的方法,是看它已经在插件菜单里出现</p><p><img src="/images/data/attachment/201505/24/200519wqkr2lgl2kl8n5hk.gif" alt="cpuwolf"></p>]]></content>
       
       
       <categories>
@@ -3709,7 +3728,7 @@
       <link href="/2015/05/24/forum-old21/"/>
       <url>/2015/05/24/forum-old21/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201505/24/150209w4g7iri3wux49076.jpg" alt="cpuwolf"></p><p>下载地址<br>ISO文件非常大,下载需要告诉网络的支持</p><p>(<a href="http://pan.baidu.com/s/1sj9fxBB" target="_blank" rel="external">http://pan.baidu.com/s/1sj9fxBB</a>)</p><p>先决条件<br>对于Windows客户，你需要先安装虚拟光驱程序</p><p>安装步骤<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=9" target="_blank" rel="external">http://simflie.cn/forum.php?mod=viewthread&amp;tid=9</a></p><p>X-Plane 10是什么<br>？<br>X-Plane 10全球是世界上最全面，最强大的飞行模拟器为个人电脑，它提供了最真实的飞行模式可用<br>X-Plane不是一个游戏，而是一个工程工具，可以用来预测固定翼和旋转翼飞机的飞行品质以令人难以置信的精度。<br>由于X-Plane预测的性能和处理几乎任何飞机，这是一个伟大的工具，飞行员保持本国货币的苍蝇像真正的飞机，为工程师来预测一个新的飞机将飞行模拟器，并为航空爱好者探索飞行器飞行动力学的世界。</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201505/24/150209w4g7iri3wux49076.jpg" alt="cpuwolf"></p><p>下载地址<br>ISO文件非常大,下载需要告诉网络的支持</p><p>(<a href="http://pan.baidu.com/s/1sj9fxBB" target="_blank" rel="noopener">http://pan.baidu.com/s/1sj9fxBB</a>)</p><p>先决条件<br>对于Windows客户，你需要先安装虚拟光驱程序</p><p>安装步骤<br><a href="http://simflie.cn/forum.php?mod=viewthread&amp;tid=9" target="_blank" rel="noopener">http://simflie.cn/forum.php?mod=viewthread&amp;tid=9</a></p><p>X-Plane 10是什么<br>？<br>X-Plane 10全球是世界上最全面，最强大的飞行模拟器为个人电脑，它提供了最真实的飞行模式可用<br>X-Plane不是一个游戏，而是一个工程工具，可以用来预测固定翼和旋转翼飞机的飞行品质以令人难以置信的精度。<br>由于X-Plane预测的性能和处理几乎任何飞机，这是一个伟大的工具，飞行员保持本国货币的苍蝇像真正的飞机，为工程师来预测一个新的飞机将飞行模拟器，并为航空爱好者探索飞行器飞行动力学的世界。</p>]]></content>
       
       
       <categories>
@@ -3728,7 +3747,7 @@
       <link href="/2015/05/24/forum-old20/"/>
       <url>/2015/05/24/forum-old20/</url>
       
-        <content type="html"><![CDATA[<p>X-Plane 10.35离线升级包<br>请先确保你已经拥有X-Plane 10.xx版本，下面是升级后的启动画面，注意版本10.35</p><p><img src="/images/data/attachment/201505/24/094703ynnxnn4ftt4ilvve.gif" alt="cpuwolf"></p><p>分享链接<br>(<a href="http://pan.baidu.com/s/1bnjj5BD" target="_blank" rel="external">http://pan.baidu.com/s/1bnjj5BD</a>)</p><p>此下载包有约3GB，希望你的网速足够快，或者整晚让它下载。</p><p>安装方法<br>下载后，解压缩，合并覆盖原安装路径即可</p><p>版本信息</p><p>相对于10.30版本，增加了792个3D机场的场景</p>]]></content>
+        <content type="html"><![CDATA[<p>X-Plane 10.35离线升级包<br>请先确保你已经拥有X-Plane 10.xx版本，下面是升级后的启动画面，注意版本10.35</p><p><img src="/images/data/attachment/201505/24/094703ynnxnn4ftt4ilvve.gif" alt="cpuwolf"></p><p>分享链接<br>(<a href="http://pan.baidu.com/s/1bnjj5BD" target="_blank" rel="noopener">http://pan.baidu.com/s/1bnjj5BD</a>)</p><p>此下载包有约3GB，希望你的网速足够快，或者整晚让它下载。</p><p>安装方法<br>下载后，解压缩，合并覆盖原安装路径即可</p><p>版本信息</p><p>相对于10.30版本，增加了792个3D机场的场景</p>]]></content>
       
       
       <categories>
@@ -3877,7 +3896,7 @@
       <link href="/2015/05/16/forum-old11/"/>
       <url>/2015/05/16/forum-old11/</url>
       
-        <content type="html"><![CDATA[<p>飞机KingAirC90B在机场地面遇到40节大风你认为会是什么样子?这种细节的模拟也只有X-Plane 10可以做到，FSX， P3D只能望而却步</p><p><a href="http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html" target="_blank" rel="external">http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html</a></p>]]></content>
+        <content type="html"><![CDATA[<p>飞机KingAirC90B在机场地面遇到40节大风你认为会是什么样子?这种细节的模拟也只有X-Plane 10可以做到，FSX， P3D只能望而却步</p><p><a href="http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XOTU3MTIxMjM2.html</a></p>]]></content>
       
       
       
@@ -3890,7 +3909,7 @@
       <link href="/2015/05/16/forum-old10/"/>
       <url>/2015/05/16/forum-old10/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2" target="_blank" rel="external">http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2" target="_blank" rel="noopener">http://v.youku.com/v_show/id_XOTMyMjUwMjgw.html?from=y1.7-1.2</a></p>]]></content>
       
       
       
@@ -3986,7 +4005,7 @@
       <link href="/2015/05/07/forum-old4/"/>
       <url>/2015/05/07/forum-old4/</url>
       
-        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg" alt="cpuwolf"></p><p>本教程的目的<br>飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。<br>希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不管三七二十一加了油门就冲上云霄。但这会很难操作，并且会最终让你失望，如果你在上天前完全不懂的飞行的基本飞行原理。FSX, Prepar3D, X-plane, Flightgear等，这些模拟器有的会模拟的非常精准，所以如果你可以理解一些空气动力学，明白一个飞行原理，会让你的飞行旅程更加愉快。本教程的有些知识可能超出初学者范畴，但是他们会引导你进入更高层次的飞行境界。</p><p>用于本教程中使用的飞行模拟器<br>市面上有许多模拟器，但是我不得不选择一个。下面图片是截取自X-Plane，然而在本教程适用于所有的飞行模拟器，甚至实际的飞机。</p><p>本教程中使用的飞机<br>飞行培训的目的，我们将使用单发动机通用航空飞机Cessna 172 Skyhawk。</p><p>如何讨论<br>知识点深度根据读者的不同而不同。有一些人只是想知道如何飞起来，这并没有什么错。还有一些想知道更详细的信息，以及为什么飞机有着各种理论。为了满足双方要求，我只讲述一些最需要的基本知识。有些段落会有些更深入的知识点，你不是必须去读这些的章节，但它会提升你的知识水平。</p><p>“真实世界”与“模拟世界”</p><p>但我们讨论飞行模拟器的时候，我对“真实世界”这个词汇过于敏感。在我看来，这有些自命不凡，所以请不要只是幻想所谓的“真实世界”。但是许多模拟飞行飞行员，他们很认真的对待自己每一次飞行，其中有些是有执照的飞行员，他们使用模拟器来提高自己的技能。<br>不得不说，这个词是公认的，所以用它我会，但我会退缩一点每次。如果你能拿出一个更好的词，请让我知道。<br>（荷兰的Bas Cost Budde说过：我对“物理世界”的理解是操作错误会导致死亡，而“计算机世界”不会）</p><p>让我们点火启动飞机<br>当画面出现在您的显示器，而你坐在驾驶舱。这是X-Plane Cessna 172前面板。它可能出现与你的模拟器软件有些不同。没有问题的，请不要担心。这东西是标准的，面板上的仪表几乎相同，无论你用的是什么模拟器软件。然而，如果你把你的头塞进一架现代的塞斯纳172，这画面也是大同小异。</p><p>不要让这些仪表吓倒你。有的你可能从未见过。飞行员经常津津乐道于“冷舱”。事实上，这些东西很一目了然。<br>仪表板。这是什么东西？</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Cessna%20172%20panel.gif" alt=""></p><p>失速警告指示器</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Stall%20indicator.gif" alt=""></p><p>指示灯会点亮：这表明（连同“蜂鸣器/喇叭”）飞机处于或接近失速状态。这意味着机翼太慢，不足以产生升力使飞机保持在空中。<br>飞机的尾号</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/N%20number.gif" alt=""></p><p>在使用无线电通话时，使用字眼“Cessna 8742 Golf”或者简称为“42 Golf”。<br>每架飞机都有它自己的尾号。在美国，标识飞机使用尾号，而世界上其他国家也有自己的标准，有的采用严格的没有任何数字的字母序列。哦，你为什么要说“Golf”？航空界使有音标字母，军方也使用类似的东西。Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf等。</p><p>空速表</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Airspeed%20%20indicator.gif" alt=""></p><p>这个仪表单位是”节“。这里颜色带标注一些重要的信息。<br>白色的弧线代表的襟翼可操作的速度范围。襟翼放下的最大速度在白色弧线的底端是85节。弧线顶端代表的飞机的失速速度与全襟翼，在这种情况下，30节左右。</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/images/data/attachment/201505/07/172718j6ntgnfv7snttnfy.jpg" alt="cpuwolf"></p><p>本教程的目的<br>飞行模拟器软件，算是电脑游戏的一类，可是它上手就没那么容易了。说实话，这类软件不算是游戏，更可能被归类为非常严肃的个人爱好。很多飞行模拟器飞行员认真的读各种手册，非常严肃的对待自己的每一次飞行，并尽可能按流程把每个动作都做对。你会发现在后面的讨论中，我会假设你就坐在飞机里，这有利于你有如真实飞行员一样的敏感。<br>希望本教程能给你足够的知识点，从飞天，到落地，一气呵成的感觉。当然你也可以不管三七二十一加了油门就冲上云霄。但这会很难操作，并且会最终让你失望，如果你在上天前完全不懂的飞行的基本飞行原理。FSX, Prepar3D, X-plane, Flightgear等，这些模拟器有的会模拟的非常精准，所以如果你可以理解一些空气动力学，明白一个飞行原理，会让你的飞行旅程更加愉快。本教程的有些知识可能超出初学者范畴，但是他们会引导你进入更高层次的飞行境界。</p><p>用于本教程中使用的飞行模拟器<br>市面上有许多模拟器，但是我不得不选择一个。下面图片是截取自X-Plane，然而在本教程适用于所有的飞行模拟器，甚至实际的飞机。</p><p>本教程中使用的飞机<br>飞行培训的目的，我们将使用单发动机通用航空飞机Cessna 172 Skyhawk。</p><p>如何讨论<br>知识点深度根据读者的不同而不同。有一些人只是想知道如何飞起来，这并没有什么错。还有一些想知道更详细的信息，以及为什么飞机有着各种理论。为了满足双方要求，我只讲述一些最需要的基本知识。有些段落会有些更深入的知识点，你不是必须去读这些的章节，但它会提升你的知识水平。</p><p>“真实世界”与“模拟世界”</p><p>但我们讨论飞行模拟器的时候，我对“真实世界”这个词汇过于敏感。在我看来，这有些自命不凡，所以请不要只是幻想所谓的“真实世界”。但是许多模拟飞行飞行员，他们很认真的对待自己每一次飞行，其中有些是有执照的飞行员，他们使用模拟器来提高自己的技能。<br>不得不说，这个词是公认的，所以用它我会，但我会退缩一点每次。如果你能拿出一个更好的词，请让我知道。<br>（荷兰的Bas Cost Budde说过：我对“物理世界”的理解是操作错误会导致死亡，而“计算机世界”不会）</p><p>让我们点火启动飞机<br>当画面出现在您的显示器，而你坐在驾驶舱。这是X-Plane Cessna 172前面板。它可能出现与你的模拟器软件有些不同。没有问题的，请不要担心。这东西是标准的，面板上的仪表几乎相同，无论你用的是什么模拟器软件。然而，如果你把你的头塞进一架现代的塞斯纳172，这画面也是大同小异。</p><p>不要让这些仪表吓倒你。有的你可能从未见过。飞行员经常津津乐道于“冷舱”。事实上，这些东西很一目了然。<br>仪表板。这是什么东西？</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Cessna%20172%20panel.gif" alt></p><p>失速警告指示器</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Stall%20indicator.gif" alt></p><p>指示灯会点亮：这表明（连同“蜂鸣器/喇叭”）飞机处于或接近失速状态。这意味着机翼太慢，不足以产生升力使飞机保持在空中。<br>飞机的尾号</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/N%20number.gif" alt></p><p>在使用无线电通话时，使用字眼“Cessna 8742 Golf”或者简称为“42 Golf”。<br>每架飞机都有它自己的尾号。在美国，标识飞机使用尾号，而世界上其他国家也有自己的标准，有的采用严格的没有任何数字的字母序列。哦，你为什么要说“Golf”？航空界使有音标字母，军方也使用类似的东西。Alpha, Bravo, Charlie, Delta, Echo, Foxtrot, Golf等。</p><p>空速表</p><p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/New%20172%20panel%20images/Airspeed%20%20indicator.gif" alt></p><p>这个仪表单位是”节“。这里颜色带标注一些重要的信息。<br>白色的弧线代表的襟翼可操作的速度范围。襟翼放下的最大速度在白色弧线的底端是85节。弧线顶端代表的飞机的失速速度与全襟翼，在这种情况下，30节左右。</p>]]></content>
       
       
       
@@ -4005,7 +4024,7 @@
       <link href="/2015/05/07/forum-old3/"/>
       <url>/2015/05/07/forum-old3/</url>
       
-        <content type="html"><![CDATA[<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/172%20photo.jpg" alt=""></p><p>本教程的目的</p>]]></content>
+        <content type="html"><![CDATA[<p><img src="http://www.stoenworks.com/images/How%20to%20fly%20flight%20sims%2C%20images/172%20photo.jpg" alt></p><p>本教程的目的</p>]]></content>
       
       
       
@@ -4031,7 +4050,7 @@
       <link href="/2015/05/01/forum-old1/"/>
       <url>/2015/05/01/forum-old1/</url>
       
-        <content type="html"><![CDATA[<p><a href="http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf" target="_blank" rel="external">http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf</a></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf" target="_blank" rel="noopener">http://player.youku.com/player.php/sid/XOTMyMjUwMjgw/v.swf</a></p>]]></content>
       
       
       

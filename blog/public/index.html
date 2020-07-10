@@ -160,6 +160,59 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2020/07/11/kerneljoystickmax/">
+        Linux Kernel joystick max button number limitation is 80
+      </a>
+    </h2>
+    
+    <time>
+      7月 11, 2020
+    </time>
+		
+  </section>
+  <section class="article typo">
+	  <img src="/2020/07/11/kerneljoystickmax/linux_joystick_maxbutton.jpg" title="x-plane 11">
+<p>Today latest Linux kernel stable version is 5.7.8.</p>
+<p>we found Linux kernel has max joystick buttons up to 80, no more</p>
+<p>We are selling USB joystick device QMCP737C for flight simulator, which is nothing but common USB HID joystick. it has physical 104 buttons</p>
+<p>Product link<br><a href="https://x-plane.vip/quickmade/qmcp737c/">https://x-plane.vip/quickmade/qmcp737c/</a></p>
+<p>it works good on Windows, Mac, but not on Linux.<br>Linux kernel exposes /dev/input/js0 max to 80 button, but we have 104 buttons.</p>
+<p>I did a lots of google search, but nothing I got. then I have to look at Kernel source, to find out where this number max 80 comes from</p>
+<p>Eventually I found the final limitation</p>
+<p>#define BTN_JOYSTICK 0x120</p>
+<p>#define BTN_DEAD 0x12f</p>
+<p>#define BTN_TRIGGER_HAPPY 0x2c0</p>
+<p>#define KEY_MAX 0x2ff</p>
+<p>include/uapi/linux/input-event-codes.h</p>
+<p>according to function hidinput_configure_usage() in file drivers/hid/hid-input.c</p>
+<p>the joystick button mapping is not a continues space, general speak the mapping space is from</p>
+<p>BTN_JOYSTICK~BTN_DEAD<br>BTN_TRIGGER_HAPPY~KEY_MAX</p>
+<p>and finally I got the max limitation is 80.</p>
+<p>my question is why KEY_MAX is 0x2ff?<br>this number 0x2ff looks like not align with char? integer? the answer is no</p>
+<p>so may I ask to expand KEY_MAX to such as 0x4ff?</p>
+<p>I did a quick test on Ubuntu, all 104 buttons are showing up</p>
+<img src="/2020/07/11/kerneljoystickmax/after_linux_joystick_patch.jpg" title="x-plane 11">
+<p>then a patch is submitted to kernel driver input group<br><a href="https://patchwork.kernel.org/patch/11655815/" target="_blank" rel="noopener">https://patchwork.kernel.org/patch/11655815/</a></p>
+
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/插件/">插件</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class="post-wrapper">
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2020/06/19/X-Plane-11-50b11/">
         X-Plane 11.50b11
       </a>
@@ -503,48 +556,13 @@
   </section>
   <section class="article typo">
 	  <p>airfoillabs收费机场KAWO,位于美国西雅图波音工厂的北侧，是一个非常适合通航（GA）飞行的机场。而且这个机场包说是只有一个机场，但是其实包含了三个机场：KAWO, Fugios ranch, Gabriel’s farm。不好翻译，我就不翻译了。</p>
-<img src="/2019/05/24/kawo/kawo.jpg" alt="x-plane 11" title="x-plane 11">
+<img src="/2019/05/24/kawo/kawo.jpg" title="x-plane 11">
 <p>正版价格现在30美金呢</p>
-<p><a href="https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html" target="_blank" rel="external">https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html</a></p>
+<p><a href="https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html" target="_blank" rel="noopener">https://store.x-plane.org/KAWO-Arlington-Area-UHD_p_722.html</a></p>
 <p>关键是，我不确定是不是airfoillabs product manager出了bug，你拿任意一款AFL 172SP或者AFL kingair 350的序列号，放在KAWO的序列号里面，就可以激活。此方法其他人也验证过有效。</p>
-<img src="/2019/05/24/kawo/afl_manager.jpg" alt="x-plane 11" title="x-plane 11">
+<img src="/2019/05/24/kawo/afl_manager.jpg" title="x-plane 11">
 <p>不管是不是bug，有AFL飞机的正版飞友们，赶紧动起来吧，免费机场快下载呀</p>
 
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/插件/">插件</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2019/05/23/quickmake/">
-        BiliBili模拟飞行硬件制造大神-【奎克质造】入住本站
-      </a>
-    </h2>
-    
-    <time>
-      5月 23, 2019
-    </time>
-		
-  </section>
-  <section class="article typo">
-	  <p>奎克质造B站空间</p>
-<p><a href="https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="external">https://space.bilibili.com/323386663?spm_id_from=333.788.b_765f7570696e666f.1</a></p>
-<p>奎克质造官方地址</p>
-<p><a href="https://x-plane.vip/quickmake/">https://x-plane.vip/quickmake/</a></p>
-<img src="/2019/05/23/quickmake/quickmake_nav_logo.jpg" alt="x-plane 11" title="x-plane 11">
 
     
     
