@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x-plane.vip/"/>
-  <updated>2021-01-14T13:33:02.860Z</updated>
+  <updated>2021-01-14T13:42:02.939Z</updated>
   <id>http://x-plane.vip/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C90B MOD优秀免费机模</title>
+    <link href="http://x-plane.vip/2021/01/14/post/"/>
+    <id>http://x-plane.vip/2021/01/14/post/</id>
+    <published>2021-01-14T13:38:52.000Z</published>
+    <updated>2021-01-14T13:42:02.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>插件飞机下载地址</p><p><a href="https://forums.x-plane.org/index.php?/files/file/68876-king-air-c90b-jongepionier-evolution/" target="_blank" rel="noopener">https://forums.x-plane.org/index.php?/files/file/68876-king-air-c90b-jongepionier-evolution/</a></p><img src="/2021/01/14/post/C90B_1.jpg" title="x-plane 11"><img src="/2021/01/14/post/C90B_2.jpg" title="x-plane 11">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;插件飞机下载地址&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://forums.x-plane.org/index.php?/files/file/68876-king-air-c90b-jongepionier-evolution/&quot; target=&quot;_blank&quot; re
+      
+    
+    </summary>
+    
+    
+      <category term="插件飞机" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6%E9%A3%9E%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Kernel joystick max button number limitation is 80</title>
@@ -492,33 +516,6 @@
       <category term="连飞" scheme="http://x-plane.vip/tags/%E8%BF%9E%E9%A3%9E/"/>
     
       <category term="局域网" scheme="http://x-plane.vip/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>国人不知道的语音副驾planecommand</title>
-    <link href="http://x-plane.vip/2017/08/11/planecommand/"/>
-    <id>http://x-plane.vip/2017/08/11/planecommand/</id>
-    <published>2017-08-11T01:58:29.000Z</published>
-    <updated>2017-09-12T23:08:36.248Z</updated>
-    
-    <content type="html"><![CDATA[<p>连飞时，一边要和管制沟通，一边还要旋转各种按钮，你忙的过来么？</p><p>你需要一个副驾来帮你飞行，对，早在X-Plane 10就有个语音副驾了，叫planecommand。因为是老外开发的，所以只能对副驾说英文。开飞机的学习专业英语也是必要的。</p><p>插件安装完毕后，你的屏幕右上角会多个耳机图标。</p><img src="/2017/08/11/planecommand/planecommand.jpg" title="x-plane 11"><p>你需要设置一个键盘，或者摇杆上的按钮，来对着老外副驾说话。我记得默认是键盘A</p><p>对着这个老外语音副驾我们能说些什么呢？</p><h3 id="起落架"><a href="#起落架" class="headerlink" title="起落架"></a>起落架</h3><p>gear up<br>gear down</p><h3 id="襟翼"><a href="#襟翼" class="headerlink" title="襟翼"></a>襟翼</h3><p>set flaps 0<br>set flpas 2</p><h3 id="灯光"><a href="#灯光" class="headerlink" title="灯光"></a>灯光</h3><p>Beacon lights on<br>Taxi lights off<br>Strobe lights on<br>landing lights on</p><h3 id="无线电"><a href="#无线电" class="headerlink" title="无线电"></a>无线电</h3><p>Flip COM1<br>Set COM2 to 124.3</p><h3 id="刹车"><a href="#刹车" class="headerlink" title="刹车"></a>刹车</h3><p>Set the parking brake<br>Release the brakes<br>Disengage the brakes</p><h3 id="应答机"><a href="#应答机" class="headerlink" title="应答机"></a>应答机</h3><p>Put the transponder on standby<br>Set the transponder to 4 2 5 5<br>Turn on the transponder</p><p>以上命令是免费区的，花20美金就可以升级为专业版</p><p>你就会有NAV调频率和自动驾驶等等的功能，我就不详述了，自己研究吧。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;连飞时，一边要和管制沟通，一边还要旋转各种按钮，你忙的过来么？&lt;/p&gt;
-&lt;p&gt;你需要一个副驾来帮你飞行，对，早在X-Plane 10就有个语音副驾了，叫planecommand。因为是老外开发的，所以只能对副驾说英文。开飞机的学习专业英语也是必要的。&lt;/p&gt;
-&lt;p&gt;插件安装
-      
-    
-    </summary>
-    
-    
-      <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-      <category term="声控" scheme="http://x-plane.vip/tags/%E5%A3%B0%E6%8E%A7/"/>
     
   </entry>
   
