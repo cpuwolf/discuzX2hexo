@@ -63,4 +63,4 @@ I did a quick test on Ubuntu, all 104 buttons are showing up
 {% asset_img after_linux_joystick_patch.jpg x-plane 11 %}
 
 then a patch is submitted to kernel driver input group
-https://patchwork.kernel.org/patch/11655815/
+https://patchwork.kernel.org/patch/11657985/
