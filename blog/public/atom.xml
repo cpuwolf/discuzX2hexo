@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://x-plane.vip/"/>
-  <updated>2021-01-14T13:42:02.939Z</updated>
+  <updated>2021-01-16T11:53:27.984Z</updated>
   <id>http://x-plane.vip/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微软模拟飞行2020我目前最爱的飞机G36</title>
+    <link href="http://x-plane.vip/2021/01/16/msfs2020/"/>
+    <id>http://x-plane.vip/2021/01/16/msfs2020/</id>
+    <published>2021-01-16T11:50:16.000Z</published>
+    <updated>2021-01-16T11:53:27.984Z</updated>
+    
+    <content type="html"><![CDATA[<p>Bonanza G36是比奇公司生产的复杂类飞机</p><img src="/2021/01/16/msfs2020/l35_g36_taxi.jpg" title="x-plane 11"><img src="/2021/01/16/msfs2020/l35_g36_to.jpg" title="x-plane 11"><img src="/2021/01/16/msfs2020/kavx_g36.jpg" title="x-plane 11">]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Bonanza G36是比奇公司生产的复杂类飞机&lt;/p&gt;
+&lt;img src=&quot;/2021/01/16/msfs2020/l35_g36_taxi.jpg&quot; title=&quot;x-plane 11&quot;&gt;
+&lt;img src=&quot;/2021/01/16/msfs2020/l35_g36_
+      
+    
+    </summary>
+    
+    
+      <category term="插件" scheme="http://x-plane.vip/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>C90B MOD优秀免费机模</title>
@@ -487,35 +512,6 @@
     
     
       <category term="主程序" scheme="http://x-plane.vip/tags/%E4%B8%BB%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>X-Plane 11虚拟局域网联网飞行</title>
-    <link href="http://x-plane.vip/2017/09/13/multiplayer/"/>
-    <id>http://x-plane.vip/2017/09/13/multiplayer/</id>
-    <published>2017-09-12T23:10:23.000Z</published>
-    <updated>2019-01-18T08:47:26.023Z</updated>
-    
-    <content type="html"><![CDATA[<p>闲话少说，先看看连飞能不能吸引你。</p><img src="/2017/09/13/multiplayer/taxing.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/chase.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/bridge.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/mountain.jpg" title="x-plane 11"><img src="/2017/09/13/multiplayer/water.jpg" title="x-plane 11"><p>X-Plane 11局域网连飞的飞机是会参与气动运算的。也就是说前面的飞机有尾流。这是其他飞行模拟器没有的。</p><p>我要谈的是局域网联网。而不是一般说的连飞，一般的连飞，自己可以上各种飞行论坛，他们都有连飞服务器，这个不在这篇文章的范围内。</p><p>局域网联网是没有中心服务器的概念，每个小伙伴都是对等的。可是除了上大学时，宿舍里的同学可以局域网，在家怎么和小伙伴局域网？有个概念，就这样诞生了，叫虚拟局域网</p><embed src="https://vswf.douyucdn.cn/share/vshare.swf?vid=p2V0JMV85j4vRY5k" allowfullscreen="true" quality="high" width="400" height="300" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash"><h2 id="虚拟局域网"><a href="#虚拟局域网" class="headerlink" title="虚拟局域网"></a>虚拟局域网</h2><p>经过一段学习，找到一个国外的网站提供虚拟局域网的服务。先注册账号，每个小伙伴都需要注册，就是邮箱和密码</p><p><a href="https://accounts.logme.in/registration.aspx" target="_blank" rel="noopener">https://accounts.logme.in/registration.aspx</a></p><p>注册完之后，需要到你的邮箱点击一个网站发给你的确认链接。</p><p>然后在我们群里有个叫hamachi的软件，需要安装，这个程序会为你的计算机安装驱动和后台服务，以后每次启动，默认都会加入虚拟局域网</p><p>重要：安装过程中，windows会提示你是否选择为工作网络，一定要选是。</p><p>如果一切顺利，程序启动后，会提示你输入注册的用户名和密码。</p><p>如果登陆也一切顺利，程序会提示你选择新建网络，还是加入现有网络。本群里有已有的虚拟局域网络，所以选加入已有的。</p><p>输入网络ID，群里已经公布</p><p>如果审核通过，你就正式加入了虚拟局域网，你的局域网IP地址就显示在hamachi这个软件上。我的IP是25.21.94.206</p><h2 id="X-plane-11"><a href="#X-plane-11" class="headerlink" title="X-plane 11"></a>X-plane 11</h2><p>XP的设置里面有多人游戏设置，如图</p><img src="/2017/09/13/multiplayer/setting.jpg" title="x-plane 11"><p>这里的逻辑是，把除你之外的其他所有小伙伴的IP，都要加进来。</p><h2 id="Hamachi安装错误"><a href="#Hamachi安装错误" class="headerlink" title="Hamachi安装错误"></a>Hamachi安装错误</h2><p>如果hamachi.msi安装错误，那么导入下面的注册表，到你的系统。</p><a href="/2017/09/13/multiplayer/msi_runas_admin.reg" title="msi_runas_admin.reg">msi_runas_admin.reg</a><p>之后，右键点击hamachi.msi文件，会多一个”Run as administrator“菜单，点击运行即可</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;闲话少说，先看看连飞能不能吸引你。&lt;/p&gt;
-&lt;img src=&quot;/2017/09/13/multiplayer/taxing.jpg&quot; title=&quot;x-plane 11&quot;&gt;
-&lt;img src=&quot;/2017/09/13/multiplayer/chase.jpg&quot; titl
-      
-    
-    </summary>
-    
-    
-      <category term="多人游戏" scheme="http://x-plane.vip/tags/%E5%A4%9A%E4%BA%BA%E6%B8%B8%E6%88%8F/"/>
-    
-      <category term="连飞" scheme="http://x-plane.vip/tags/%E8%BF%9E%E9%A3%9E/"/>
-    
-      <category term="局域网" scheme="http://x-plane.vip/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
     
   </entry>
   
