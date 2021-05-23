@@ -31,6 +31,11 @@ jobs:
         npm install
         hexo generate
         git status
+        git config user.name "Wei Shuai"
+        git config user.email cpuwolf@gmail.com
+        git add public
+        git commit -m "github actions generated"
+        git push
       
     - name: Upload build
       uses: actions/upload-artifact@v2
