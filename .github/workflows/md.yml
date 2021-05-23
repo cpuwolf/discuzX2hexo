@@ -26,13 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-      cd blog
-      npm install hexo-cli -g
-      hexo g
+        cd blog
+        npm install hexo-cli -g
+        hexo g
       
     - name: Upload build
       uses: actions/upload-artifact@v2
       with:
-        name: buildoutput
+        name: public
         path: ${{github.workspace}}/blog/public
 
