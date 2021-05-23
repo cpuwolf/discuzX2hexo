@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: |
         cd ${{github.workspace}}/blog
-        npm install hexo-cli -g
+        npm install
         hexo g
       
     - name: Upload build
