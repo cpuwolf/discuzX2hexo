@@ -30,7 +30,8 @@ jobs:
         rm package.json
         npm install hexo-cli -g
         npm install
-        hexo g
+        hexo generate
+        git status
       
     - name: Upload build
       uses: actions/upload-artifact@v2
