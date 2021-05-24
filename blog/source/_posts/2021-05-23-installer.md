@@ -17,7 +17,11 @@ But if you have multiple copies of X-Plane 11, in the following steps you will d
 
 {% asset_img 1.jpg x-plane 11 %}
 
-Quickmade products information, notice that you need to have flywithlua installed, click Next
+Quickmade products information
+
+Notice that you need to have flywithlua installed
+
+Then click Next
 
 {% asset_img 2.jpg x-plane 11 %}
 
