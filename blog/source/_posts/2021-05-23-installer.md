@@ -19,7 +19,11 @@ But if you have multiple copies of X-Plane 11, in the following steps you will d
 
 Quickmade products information
 
-Notice that you need to have flywithlua installed
+Notice that you need to have FlyWithLua installed
+
+FlyWithLua can be free download from
+
+https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/
 
 Then click Next
 
