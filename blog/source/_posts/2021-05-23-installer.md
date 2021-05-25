@@ -29,7 +29,7 @@ Then click Next
 
 {% asset_img 2.jpg x-plane 11 %}
 
-License Agreement, click Next
+License Agreement, click I Agree
 
 {% asset_img 3.jpg x-plane 11 %}
 
