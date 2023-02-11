@@ -25,6 +25,6 @@
     "hexo-renderer-sass": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
-    "npm-check-updates": "^11.5.13"
+    "npm-check-updates": "^16.7.4"
   }
 }
